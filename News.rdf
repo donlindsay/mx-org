@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://my.netscape.com/rdf/simple/0.9/">
+<channel>
+<title>MekWars Server News Feed</title>
+<link>none</link>
+<description>Campaign News</description>
+</channel>
+<item>
+<title>[2014/02/07 23:52:47 PST] MekWars Server Started!</title>
+<description></description>
+<link>none</link>
+</item>
+</rdf:RDF>

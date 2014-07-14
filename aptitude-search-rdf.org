@@ -1,0 +1,48 @@
+p   fusionforge-plugin-doaprdf      - collaborative development tool - DOAP RDF 
+p   liblicense-rdf                  - RDF metadata about media license choices  
+v   liblrdf-dev                     -                                           
+i A liblrdf0                        - library to manipulate RDF files describing
+p   liblrdf0-dev                    - liblrdf0 development files                
+i A libmodule-install-rdf-perl      - advanced metadata for your Perl packaging 
+i   libmodule-package-rdf-perl      - drive your distribution with RDF          
+p   librdf-acl-perl                 - access control lists for the semantic web 
+p   librdf-closure-perl             - pure Perl RDF inferencing                 
+p   librdf-crypt-perl               - semantic cryptography                     
+v   librdf-dev                      -                                           
+i   librdf-endpoint-perl            - SPARQL Protocol Endpoint implementation   
+p   librdf-generator-void-perl      - generate VoID descriptions based on data i
+p   librdf-helper-properties-perl   - shortcuts to retrieve certain information 
+i   librdf-icalendar-perl           - convert between RDF and iCalendar         
+p   librdf-kml-exporter-perl        - export RDF geo data to KML (Google Earth) 
+p   librdf-linkeddata-perl          - simple Linked Data implementation         
+i A librdf-ns-perl                  - just use popular RDF namespace prefixes fr
+i A librdf-perl                     - Perl language bindings for the Redland RDF
+i A librdf-prefixes-perl            - simple way to turn URIs into QNames       
+i   librdf-query-client-perl        - get data from W3C SPARQL Protocol 1.0 serv
+i A librdf-query-perl               - complete SPARQL 1.1 Query and Update imple
+i A librdf-rdfa-generator-perl      - generate some data in RDFa                
+i A librdf-rdfa-parser-perl         - flexible RDFa parser                      
+i   librdf-ruby                     - Ruby 1.8 language bindings for the Redland
+i   librdf-storage-mysql            - RDF library, MySQL backend                
+p   librdf-storage-postgresql       - RDF library, PostGreSQL backend           
+p   librdf-storage-sqlite           - RDF library, SQLite backend               
+i   librdf-storage-virtuoso         - RDF library, Virtuoso backend             
+i A librdf-trin3-perl               - notation 3 extensions for RDF::Trine      
+i A librdf-trine-node-literal-xml-p - RDF Node class for XML Literals           
+i A librdf-trine-perl               - RDF Framework for Perl                    
+i A librdf-trinex-functions-perl    - shortcut functions for RDF::Trine's object
+i   librdf-trinex-serializer-mocktu - RDF/Turtle serializer pleasant for humans 
+i A librdf-vcard-perl               - convert between RDF and vCard             
+i   librdf0                         - Redland Resource Description Framework (RD
+i   librdf0-dev                     - Redland RDF library development libraries 
+i A libtest-rdf-doap-version-perl   - tests 'meta/changes.ttl' is up to date    
+i   libtest-rdf-perl                - Test RDF data for validity and equality   
+i   perlrdf                         - RDF command line utils                    
+i   php5-librdf                     - PHP5 language bindings for the Redland RDF
+i   python-librdf                   - Python language bindings for the Redland R
+i   python-rdflib                   - RDF library containing an RDF triple store
+v   python2.6-rdflib                -                                           
+v   python2.7-librdf                -                                           
+v   python2.7-rdflib                -                                           
+i   rdfind                          - find duplicate files utility              
+i   virtuoso-vad-rdfmappers         - high-performance database - RDF mappers mo

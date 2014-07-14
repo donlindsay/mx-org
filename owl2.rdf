@@ -1,0 +1,101 @@
+<owl:AllDifferent> <rdf:type> <rdfs:Class> .
+
+<owl:AllDifferent> <rdfs:subClassOf> <rdfs:Resource?> .
+
+<owl:AllDisjointClasses> <rdf:type> <rdfs:Class> .
+
+<owl:AllDisjointClasses> <rdfs:subClassOf> <rdfs:Resource> .
+
+<owl:AllDisjointProperties> <rdf:type> <rdfs:Class> .
+
+<owl:AllDisjointProperties> <rdfs:subClassOf> <rdfs:Resource> .
+
+<owl:Annotation> <rdf:type> <rdfs:Class> .
+
+<owl:Annotation> <rdfs:subClassOf> <rdfs:Resource> .
+
+<owl:AnnotationProperty> <rdf:type> <rdfs:Class> .
+
+<owl:AnnotationProperty> <rdfs:subClassOf> <rdf:Property> .
+
+<owl:AsymmetricProperty> <rdf:type> <rdfs:Class> .
+
+<owl:AsymmetricProperty> <rdfs:subClassOf> <owl:ObjectProperty> .
+
+<owl:Axiom> <rdf:type> <rdfs:Class> .
+
+<owl:Axiom> <rdfs:subClassOf> <rdfs:Resource> .
+
+<owl:Class> <rdf:type> <rdfs:Class> .
+
+<owl:Class> <rdfs:subClassOf> <rdfs:Class> .
+
+<owl:DataRange> <rdf:type> <rdfs:Class> .
+
+<owl:DataRange> <rdfs:subClassOf> <rdfs:Datatype> .
+
+<owl:DatatypeProperty> <rdf:type> <rdfs:Class> .
+
+<owl:DatatypeProperty> <rdfs:subClassOf> <rdf:Property> .
+
+<owl:DeprecatedClass> <rdf:type> <rdfs:Class> .
+
+<owl:DeprecatedClass> <rdfs:subClassOf> <rdfs:Class> .
+
+<owl:DeprecatedProperty> <rdf:type> <rdfs:Class> .
+
+<owl:DeprecatedProperty> <rdfs:subClassOf> <rdf:Property> .
+
+<owl:FunctionalProperty> <rdf:type> <rdfs:Class> .
+
+<owl:FunctionalProperty> <rdfs:subClassOf> <rdf:Property> .
+
+<owl:InverseFunctionalProperty> <rdf:type> <rdfs:Class> .
+
+<owl:InverseFunctionalProperty> <rdfs:subClassOf> <owl:ObjectProperty> .
+
+<owl:IrreflexiveProperty> <rdf:type> <rdfs:Class> .
+
+<owl:IrreflexiveProperty> <rdfs:subClassOf> <owl:ObjectProperty> .
+
+<owl:NamedIndividual> <rdf:type> <rdfs:Class> .
+
+<owl:NamedIndividual> <rdfs:subClassOf> <owl:Thing> .
+
+<owl:NegativePropertyAssertion> <rdf:type> <rdfs:Class> .
+
+<owl:NegativePropertyAssertion> <rdfs:subClassOf> <rdfs:Resource> .
+
+<owl:Nothing> <rdf:type> <owl:Class> .
+
+<owl:Nothing> <rdfs:subClassOf> <owl:Thing> .
+
+<owl:ObjectProperty> <rdf:type> <rdfs:Class> .
+
+<owl:ObjectProperty> <rdfs:subClassOf> <rdf:Property> .
+
+<owl:Ontology> <rdf:type> <rdfs:Class> .
+
+<owl:Ontology> <rdfs:subClassOf> <rdfs:Resource> .
+
+<owl:OntologyProperty> <rdf:type> <rdfs:Class> .
+
+<owl:OntologyProperty> <rdfs:subClassOf> <rdf:Property> .
+
+<owl:ReflexiveProperty> <rdf:type> <rdfs:Class> .
+
+<owl:ReflexiveProperty> <rdfs:subClassOf> <owl:ObjectProperty> .
+
+<owl:Restriction> <rdf:type> <rdfs:Class> .
+
+<owl:Restriction> <rdfs:subClassOf> <owl:Class> .
+
+<owl:SymmetricProperty> <rdf:type> <rdfs:Class> .
+
+<owl:SymmetricProperty> <rdfs:subClassOf> <owl:ObjectProperty> .
+
+<owl:Thing> <rdf:type> <owl:Class> .
+
+<owl:TransitiveProperty> <rdf:type> <rdfs:Class> .
+
+<owl:TransitiveProperty> <rdfs:subClassOf> <owl:ObjectProperty> .
