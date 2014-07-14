@@ -1,4 +1,4 @@
-* owl2.org owl2 tags and stuff
+
 #+tags: subpropertyof
 #+tags: alldifferent 
 #+tags: alldisjointclasses 
