@@ -1,25 +1,50 @@
-(defun  startup 
+(defun mx/rdf-startup ()) 
 
-(defvar startup:  overview hideblocks
+(defvar mx-rdf-startup
+  (cond
+   (overview)
+    (hideblocks)))
 
-(defun  drawers 
+(defun  mx-drawers ())
 
-(defvar drawer:   hidden state properties owl2-rdfs org-n3 n3
+(defvar mx-rdf-drawer (drawer)
+  '((mx-org-hidden . nil)
+  (mx-org-state . nil)
+  (mx-org-properties . nil)
+  (mx-rdfs-owl2 . nil)
+  (mx-n3 . nil)))
 
-(defun  tags 
-   (setq org-tag-alist '((:startgroup . nil)
-                           ("@work" . ?w) ("@home" . ?h)
-                           ("@tennisclub" . ?t)
-                           (:endgroup . nil)
-                           ("laptop" . ?l) ("pc" . ?p)))
-@file 
-@buffer 
-@window 
-@frame 
-(defvar tags:     { @doc @src @lob } 
-(defvar tags:     { @import @export @org-n3 }
-(defvar tags:     org elisp n3 owl2 rdfs prolog lisp shell axiom
-(defvar tags:     { proof theorem def desc example } grammar
+(defun mx-dev-tags ()
+  (setq org-tag-alist '((:startgroup . nil)
+			("@file" . ?f)
+			("@buffer" . ?b)
+			("@window" . ?w)
+			("@frame" . ?f)
+			(:endgroup . nil)
+			(:startgroup . nil)
+			("@doc" . ?d)
+			("@src" . ?s)
+			("@block" . ?bl)
+			("@import" . ?i)
+			("@export" . ?e)
+			(:endgroup . nil)
+			(:startgroup . nil)
+			("org" . ?o)
+			("elisp" . ?el)
+			("n3" . ?n3)
+			("owl2" . ?owl)
+			("rdfs" . ?r)
+			("shell" . ?s)
+			("axiom" . ?a)
+			("grammar" . ?g)
+			(:endgroup . nil)
+			(:startgroup . nil)
+			("proof" . ?p)
+			("theorem" . ?t)
+			("def" . ?d)
+			("desc" . ?ds)
+			("example" . ?ex)
+			(:endgroup . nil) ) )
 
 (defun  header-args 
 
