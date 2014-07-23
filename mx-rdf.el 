@@ -16,7 +16,7 @@
 			   (mx-n3               . nil))
 		       )))
 
-(defun mx-dev-tags ()
+(defun mx/dev-tags ()
   (setq org-tag-alist '((:startgroup . nil)
 			("@file" . ?f)
 			("@buffer" . ?b)
@@ -46,37 +46,41 @@
 			("def" . ?d)
 			("desc" . ?ds)
 			("example" . ?ex)
-			(:endgroup . nil) ) )
+			(:endgroup . nil))
+	)
+  )
 
-(defun  header-args 
+(defun mx/org-header-args ()
+  (setq mx-org-src-block-properties
+	'((mx-org-header-arg . '((:export . results)
+				 (:header-args . mx-rdf)
+				 (:session . *mx-rdf*))
+			     )
+	  )
+	)
+  )
 
-(defvar property: header-args         :export results
-(defvar property: header-args:mx-rdf  :session (defun mx-rdf(defun 
+(defun mx/org-rdf-properties () 
+  (setq mx-org-rdf-properties . '(:see-also
+  . org-property-allowed-value-functions)))
 
-(defun  properties 
-   :properties:
-   :see-also org-property-allowed-value-functions
-   :end:
+(defun mx/org-global-properties ()
+  "'List of property/value pairs that can be inherited by any entry.
+This list will be combined with the constant
+`org-global-properties-fixed'.  The entries in this list are cons
+cells where the car is a property name and cdr is a string with
+the value.'  
 
-(defun  TODO do i want a (defvar property: list of all owl2 and rdfs? 
-    
-(defun  or elisp via org-global-properties
-
-     "List of property/value pairs that can be inherited by any entry.
-     This list will be combined with the constant
-     `org-global-properties-fixed'.  The entries in this list are cons
-     cells where the car is a property name and cdr is a string with the
-     value."
- 
-(defun  mx-org-global-properties 'format
-
-  '(("org-n3-triple-part" . "subject predicate object"))
-
-   it might make sense to make a separate file for holding the list
-   since it might be somewhat long and can be imported.
-
-   a related question is if i want to define all the owl2 and rdfs as
-   tags.
+Note: it might make sense to make a separate file for holding the
+list since it might be somewhat long and can be imported.A
+related question is if you want to define all the owl2 and rdfs
+only tags."
+  (setq org-global-properties
+	'((mx-org-n3-triple . '((mx-subject     . nil)
+				(mx-predicate   . nil)
+				(mx-object . nil)) ) ) ) )
+	
+   
 
    this may be where drawers will be appropriate as they are easily
    handled, are custom definable, and have good code support.
