@@ -4,6 +4,10 @@
 ;; gpl2 boiler
 ;; hammertime:
 
+(setq org-properties-postprocess-alist
+      '(("\"MX-RDF\"" . ignore)))
+
+
 (defun mx/rdf1and4 (?x ?p ?y)
   -> (?p rdf:type rdf:Property), (?x rdf:type rdfs:Resource), (?y rdf:type rdfs:Resource))
 
