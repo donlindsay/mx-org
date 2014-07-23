@@ -17,7 +17,7 @@
 ** header-args 
 
 #+property: header-args         :export results
-#+property: header-args:mx-rdf  :session *mx-rdf*
+#+property: header-args:org-n3  :session *org-n3*
 
 ** properties 
    :properties:
@@ -59,9 +59,10 @@
   :end:
 #+END_EXAMPLE
 
-#+property: mx-rdf_all          mx-rdfs-type
-#+property: mx-rdf+             mx-n3-predicate
-#+property: mx-rdf+             rdfs-type
+#+property: org-n3_all          org-n3-rdfs-type
+
+#+property: org-n3+             org-n3-predicate
+#+property: org-n3-predicate    rdfs-type
 
 **** or elisp via org-file-properties
    

@@ -75,12 +75,12 @@
   
    "#+call [<inside header arguments>] (<arguments>) <end header arguments>"
 
-#+call: org-n3-imenu-add-to-menubar
-#+call: org-n3-button-panel
-#+call: org-n3-ac-predictive
+#+call: mx-rdf-imenu-add-to-menubar
+#+call: mx-rdf-button-panel
+#+call: mx-rdf-ac-predictive
 #+CALL: factorial(n=5)
 #+CALL: factorial[:session special](n=5)
-#+CALL: org-n3-todo-keywords (<arguments>)
+#+CALL: mx-rdf-todo-keywords (<arguments>)
 
 
 * functions 
@@ -93,10 +93,10 @@
    periodic, having an imaginary period, and the elliptic
    functions have not only a real but an imaginary period,
    and are hence called doubly periodic.
-** org-n3-org-ac 
-#+name: org-n3-org-ac
+** mx-rdf-org-ac 
+#+name: mx-rdf-org-ac
 #+BEGIN_SRC emacs-lisp
-  (defun org-n3-ac-predictive ()
+  (defun mx-rdf-ac-predictive ()
     "Enable org-ac and predictive mode. Warning: resource intensive."
     (interactive)
     (progn
@@ -105,8 +105,8 @@
     )
 #+END_SRC
 
-** org-n3-todo 
-#+name:     org-n3-todo-keywords
+** mx-rdf-todo 
+#+name:     mx-rdf-todo-keywords
 #+headers:  :var data1=1
 #+begin_src emacs-lisp          :var data2=2
 (progn 
@@ -131,7 +131,7 @@
 #+results: named-block
 : data:2
 
-** org-n3-button-panel 
+** mx-rdf-button-panel 
    :properties:
    :doc-string  "A panel window with a set of custom buttons for common tasks."
    :import      buffer-buttons.el
@@ -145,8 +145,8 @@
    provide quick access to executions and editing functions. Source
    blocks, like repls, with buttons.
 
-*** org-n3-button-definitions
-#+name: org-n3-button-definitions
+*** mx-rdf-button-definitions
+#+name: mx-rdf-button-definitions
 #+BEGIN_SRC emacs-lisp
   ; eval-last-sexp
   (define-buffer-button (elisp-eval b
@@ -173,7 +173,7 @@
 
 ***  define the buttons in source blocks
 
-** org-n3-yas 
+** mx-rdf-yas 
 #+name: yasnippet-functions
 #+BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook
@@ -196,14 +196,14 @@
               (yas/expand)))
 
 #+END_SRC
-** org-n3-imenu
-** org-n3-predictive-mode
-** org-n3-lob-ingest 
+** mx-rdf-imenu
+** mx-rdf-predictive-mode
+** mx-rdf-lob-ingest 
  :properties:
- :org-n3-lob-file ~/src/lisp/org-n3/org-n3-library-of-babel.org
+ :mx-rdf-lob-file ~/src/lisp/mx-rdf/mx-rdf-library-of-babel.org
  :end:
 
-#+name: org-n3-lob-ingest
+#+name: mx-rdf-lob-ingest
 #+BEGIN_SRC emacs-lisp
 ; (org-babel-lob-ingest)
 
@@ -222,638 +222,15 @@ can load into gruff, which at this point means turtle and hence, n3.
 ** determine the significance of (:how) (:what) and (seq (:how :much))
 ** TODO do i want a #+property: list of all owl2 and rdfs? 
 
-#+property: org-n3_all          org-n3-rdfs-type
-#+property: org-n3+             org-n3-predicate
-#+property: org-n3-predicate    rdfs-type
+#+property: mx-rdf_all          mx-rdf-rdfs-type
+#+property: mx-rdf+             mx-rdf-predicate
+#+property: mx-rdf-predicate    rdfs-type
 
 *** drawers
 #+drawer:   hidden state
 
-** TODO edit for org-n3-lob-file
+** TODO edit for mx-rdf-lob-file
 *** utilities							      :shell:
-**** raptor							 :rdf:parser:
-***** TODO define functions to run rapper
-****** this is a start
-#+NAME: raptor
-#+BEGIN_SRC sh :var filename=(buffer-file-name) :exports both
-       rapper -i turtle -o ntriples $filename
-#+END_SRC
-***** man raptor
-****** Raptor RDF Syntax Library - Raptor RDF parser utility	 :rdf:raptor:
-******* NAME
-       	rapper − Raptor RDF parsing and serializing utility
-
-******* SYNOPSIS
-       	rapper [OPTIONS] INPUT-URI [INPUT-BASE-URI]
-
-******* EXAMPLE
-       	rapper -o ntriples http://planetrdf.com/guide/rss.rdf
-       	rapper -i rss-tag-soup -o rss-1.0 pile-of-rss.xml
-	     http://example.org/base/ 
-       	rapper --count http://example.org/index.rdf
-
-******* DESCRIPTION
-       	The rapper utility allows parsing of RDF content by the
-       	Raptor RDF parser toolkit emitting the results as RDF
-       	triples in a choice of syntaxes. The INPUT-URI can be a
-       	file name, ’-’ for standard input or if Raptor is built
-       	with a WWW retrieval library, a general URI. The optional
-       	INPUT-BASE-URI is used as the document parser base URI if
-       	present otherwise defaults to the INPUT-URI. A value of
-       	’-’ means no base URI.
-
-******* OPTIONS
-       	rapper uses the usual GNU command line syntax, with long
-       	options starting with two dashes (’-’) if supported by
-       	the getopt_long function. Otherwise the short options are
-       	only available.
-
-       	−h, −−help
-
-       	Show a summary of the options.
-
-       	−i, −−input FORMAT
-
-       	Set the input FORMAT to one of ’rdfxml’ (RDF/XML,
-       	default), ’ntriples’ (N-Triples, see below), ’turtle’
-       	(Turtle, see below) or ’rss-tag-soup’ (RSS Tag Soup). The
-       	RSS Tag Soup parser can turn the many XML RSS formats and
-       	Atom 0.3 into RDF triples.
-
-       	The list of parsers depends on how libraptor(3) was
-       	built. The list of supported parsers is given in the help
-       	summary given by −h.
-
-       	−I, −−input-uri URI
-
-       	Set the input/parser base URI or use value ’-’ for no
-       	base. The default is the INPUT-URI argument value.
-
-       	−o, −−output FORMAT
-
-       	Set the output FORMAT to ’ntriples’ (N-Triples, default),
-       	’rdfxml’ (RDF/XML), ’rdfxml-abbrev’ (RDF/XML with
-       	abbreviations) or ’rss-1.0’ (RSS 1.0, also an RDF/XML
-       	syntax).
-
-       	The list of serializers depends on how libraptor(3) was
-       	built. The list of supported serializers is given in the
-       	help summary given by −h.
-
-       	−O, −−output-uri URI
-
-       	Set the output/serializer base URI or use value ’-’ for
-       	no base. The default is the input base uri, either set by
-       	the argument INPUT-BASE-URI or via options −I,
-       	−−input-uri URI
-
-       	−c, −−count
-
-       	Only count the triples and produce no other output.
-
-       	−e, −−ignore-errors
-
-       	Ignore errors, do not emit the messages and try to
-       	continue parsing.
-
-       	−f, −−feature FEATURE[=VALUE]
-
-       	Set a parser or serializer feature FEATURE to a value, or
-       	to 1 if VALUE is omitted, Use −f help to get lists of
-       	valid parser and serializer features.
-
-       	If the form −f ’xmlns:prefix="uri"’ is used, the prefix
-       	and namespace uri given will be set for serializing. The
-       	syntax matches XML in that either or both of prefix or
-       	uri can be omitted.
-
-       	−g, −−guess
-
-       	Guess the parser to use from the source-URI rather than
-       	use the −i FORMAT.
-
-       	−q, −−quiet
-
-       	No extra information messages.
-
-       	−r, −−replace-newlines
-
-       	Replace newlines in multi-line literals with spaces.
-
-       	−−show-graphs
-
-       	Print graph names (URIs) as they are seen in the input. This only has
-       	a meaning for parsers that support graph names such as the TRiG
-       	parser.
-
-       	−−show-namespaces
-
-       	Print namespaces as they are seen in the input.
-
-       	−t, −−trace
-
-       	Print URIs retrieved during parsing. Especially useful
-       	for monitoring what the guess and GRDDL parsers are
-       	doing.
-
-       	−w, −−ignore-warnings
-
-       	Ignore warnings, do not emit the messages.
-
-       	−v, −−version
-
-       	Print the raptor version and exit.  
-
-******* EXAMPLES
-
-       	rapper -q -i ntriples -o rdfxml 
-       	-f ’xmlns:rss="http://purl.org/rss/1.0/"’ 
-       	-f ’xmlns:ex="http://example.org/"’ 
-       	   tests/test.nt
-
-       	rapper -q -o rdfxml 
-       	-f ’xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"’ 
-       	   tests/rdf-schema.rdf 
-       	   ’http://www.w3.org/2000/01/rdf-schema#’
-
-******* Examples
-     rapper -q -i ntriples -o rdfxml 
-	    -f ’xmlns:rss="http://purl.org/rss/1.0/"’
-	    -f ’xmlns:ex="http://example.org/"’ tests/test.nt
-
-     rapper -q -o rdfxml 
-	    -f ’xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"’ tests/rdf-schema.rdf 
-	       ’http://www.w3.org/2000/01/rdf-schema#’
-
-#+begin_src elisp
-(defun rapper)
-(interactive)
-(shell-command rapper)
-(insert results at point)
-(append-results-to-buffer-or-file)
-#+end_src
-**** ebnf2ps							   :meta:rdf:
-       	 `ebnf'	ebnf2ps recognizes the syntax described in ebnf2ps
-   		   documentation.
-   		   The following variables *ONLY* have effect with this
-   		   setting:
-   		   `ebnf-terminal-regexp', `ebnf-case-fold-search',
-   		   `ebnf-lex-comment-char' and `ebnf-lex-eop-char'.
-      
-       	 `abnf'	ebnf2ps recognizes the syntax described in the URL:
-   		   `http://www.ietf.org/rfc/rfc2234.txt'
-   		   ("Augmented BNF for Syntax Specifications: ABNF").
-      
-       	 `iso-ebnf'	ebnf2ps recognizes the syntax described in the URL:
-   		   `http://www.cl.cam.ac.uk/~mgk25/iso-ebnf.html'
-   		   ("International Standard of the ISO EBNF Notation").
-   		   The following variables *ONLY* have effect with this
-   		   setting:
-   		   `ebnf-iso-alternative-p' and `ebnf-iso-normalize-p'.
-      
-       	 `yacc'	ebnf2ps recognizes the Yacc/Bison syntax.
-   		   The following variable *ONLY* has effect with this
-   		   setting:
-   		   `ebnf-yac-ignore-error-recovery'.
-      
-       	 `ebnfx'	ebnf2ps recognizes the syntax described in the URL:
-   		   `http://www.w3.org/TR/2004/REC-xml-20040204/#sec-notation'
-   		   ("Extensible Markup Language (XML) 1.0 (Third Edition)")
-      
-       	 `dtd'	ebnf2ps recognizes the syntax described in the URL:
-   		   `http://www.w3.org/TR/2004/REC-xml-20040204/'
-   		   ("Extensible Markup Language (XML) 1.0 (Third Edition)")
-      
-      Any other value is treated as `ebnf'.
-**** bnf2xml							:ebnf:parser:
-#+begin_src elisp
-(defun bnf2xml)
-(interactive)
-(on-region (shell-command bnf2xml))
-(insert results at point)
-(append-results-to-buffer-or-file)
-#+end_src
-***** BNF parser:
-	recursively does lookups from L to R
-	that stops (returns) if terminals are found.
-	for each LHS item
-	1) search for each RHS, or failing that, ...
-	2) try to match it (a terminal) against input
-	If all LHS items on a line finally get matched to terminals: done.
-
-LHS : RHS
-<a> : <b>
-<b> : <c> <b>
-<b> : <d> <b>
-<d> : <e>
-
-	Any RHS with no LHS in a bnf table is terminal.
-	c and d are terminal (no c and d on LHS)
-	d isn't ever found so e is questionable
-
-What that does is group how terminals are matched, and so one can,
-with a full bnf file, have a language specified (ie, C) is one use.
-
-
-===============================
-this was the initial design
-before functions were 
-#+begin_src language
-
-#+end_src
-hardly writen yet
-===============================
-
-
-	this implementation was mostly written in early to early '90s when you
-	couldn't hardly find / download such things (before XML, mid-90's)
-	development was halted by 1) college  2) health emergencies 3) money
-	too bad.  not that xml isn't nice.
-
-	This parser byte compiles (makes op codes) of the BNF table.
-	It's a multi-line table.  NOTE: input string is seen as flat
-	there's no "lines of input of file" - none
-
-					// ---- BnfSym ----
-	WHAT IS last ?  		// LogLHS uses it to tell FindRHS "fake logical match
-					// ignore / don't do any action (record, pop, any)
-	word4symbol, symbol4word	// dictionary lookup / uncrack op code table
-	SVec3 ssBNFv3 ; 		// BNF text file v3{string, line, word in line}
-	DVec1<long, uint> slRHSv1 ;	// RHS symbols for a line (after byte compiles bnf table)
-	SVec2 ssTRMv2 ; 		// list of terminal strings (last symbol+1 = termbase, 
-					// ssTRMv2[symb-termbase]=terminal string)
-					// (for indexing each input char to bnf terminal char table)
-	DVec2<long, uint> slLHSv2 ; 	// LHS symbols for a line
-					// ---- Parse ----
-        // all four pushed after each successful search
-	// and _found (ones pushed in search) is remarked depending on ret_val
-        DVec1<long, uint> lresv1_found ; // T/F per group
-        DVec1<long, uint> lresv1_found_item ; // T/F  per item
-	DVec1<long, uint> lresv1_rec_lvl ; // how deep
-					// so print can know if repeat push due to recursive search
-					// no of the other pushes can be used to show repeasts
-					// possible to not push if not necessary?  but using logic for when
-					// to push removes what happened (if you did want to trace failed
-	// matches) and could get complicated
-        DVec1<long, uint> lresv1_line ;  // current atline of
-        DVec1<long, uint> lresv1_n ;     // n of line[n] == symb if any
-        DVec1<long, uint> lresv1_symb ;  // symbol if any
-
-		// these support a "quick find" only of top of search
-		// and report is only input and line # really
-	DVec1<long, uint> slResV1 ;	// Results vec, pushed, List of symbols for input.
-	DVec1<long, uint> slSymbLineV1 ; // list of lines numbers matched, pushed
-	DVec1<long, uint> slSymbV1 ;	// Index for ea. symbol in ssTRMv2 for input.
-					// A convenience since option based.
-					// list made just before exit by listing slResV1
-
-	SVec2 ssStrV2 ;			// List of matched words in input from BNF file
-					// (no caps for common, etc).
-					// list made just before exit by listing slResV1
-					// ---- Program codes for matches ----
-	DVec1<long, uint> slMapedTrmV1 ; // prog id for terminal strings
-					// ss, "str / str" table
-					// sl, "str / long" (string / number)
-					// (has nothing to do with parsing)
-
-
-    ret_val  is 0 False no !retval, 1 true yes ret_val
-            (unsigned int) -1 is a special yes check for in one place
-
-
-	"this is a FIRST LEVEL parse; this rule file can (in turn)
-	 define more complicated rule files which can then in
-	 turn be used to parse more complicated files"
-
-		Sat Jul  2 21:50:26 EDT 2011
-
-	HOW?? (took me an hour to remmeber)
-		* each parsed input can be a new bnf line
-		  (instead of getting input from FileArr, recycled)
-		* after being parsed it needs end up being
-		  the form this parser reads (basic bnf)
-	INTERNALS
-		* FileArr(filename)->BnfSym(file)->BnfParse(txt)->FindRHS(txt, syms)
-			c++ Parse:BnfParse:BnfSym:FileArr
-		* BnfSym has no specification of what terminals are
-		  any RHS with no LHS is mapped as 'terminal'
-		* the built in terminators {=,<,>,\t,:,|, ,',"} seem limiting
-		  on a 1st parse but if bnf is recyled they are the target format
-		  (are muted, bnf terminators used to read final input).
-		* but what IS limiting is built-in operators (&,|,=,~)
-		  These reduce size of final RHS LHS table provide search rules.
-		  A 2nd level bnf can combine ot act like new ones.
-			  * I'm unsure if that has the same cost.
-	WHAT IS VARIABLE 'last' ?
-		LogLHS uses it to tell FindRHS "fake logical match - ignore"
-		LogLHS -> MatchLHS -> FindRHS (which must know it's fake)
-
-orig. bnf features
-	& is implied always by bnf form and
-		<ab> : <a> <b>
-	bnf parser can list recursive matches (a recursive searcher)
-		<white> : <whitechar> <white>
-
-3 enhacements, meant to be strong yet still basic
-
-	1) | logical search operator - for tech. reasons
-
-	2) ==  is for simpler callers to limit matching to a dictionary
-	   (otherwise a simple caller couldn't read report: too comlicated)
-	   (also a bnf shortcut: "find these [terminal] or quit")
-		with <repl> and <sys> (see features)
-
-	3) 3 REPORT : 
-		a) simple reflection of input matched
-		b) a quick report showing top line, symbols, and words
-		   matched (highest line fully matched)
-		   NOTE: based on report a, not report c
-		c) extended report dump of all non-failed searches
-		   trace what you need
-
-	FindRHS can be invoke to begin at whatever line for which symb.
-
-todo, if ever: search enhancements
-
-	ex. to specify groups <being> <end> that "fail one skip the rest of group"
-	search enhancements, operators, anything to reduce table, extend searching,
-	or reduce needless searching smartly / by standards
-
-	support for OPS was added later and (I hope) is completely
-	separable from the basic code (don't use them in bnf
-	and the more complex yet separate code is never used)
-
-*/
-/*
-	TODOS
-		* simple reflexion requires more though to print
-			<w> : <wc> <w> 
-			<w> : w <wc> <w> /w /w
-			-->	W " " W " " /W /W
-			<a> <a> <b> is inf rec
-		* the fact that ie, 9 30 W 9 30 W repeated pushes
-			likely means something (ie, logLHS last 0)
-			maybe never needs to push or pop
-				though easily skipped
-
-	// Sat Oct 13 17:05:58 EDT 2012
-
-	// printing results better...
-
-	two basic ways:
-
-		 1)  some complicated way that pushes only "wanted info"
-		*2)  push all that didn't fail, extra data, and you can
-		    trace into what you want l8tr
-
-    done
-*/
-
-
-===============================
-this was the initial design
-before functions were 
-hardly writen yet
-===============================
-
-/*
-Report generation for parser:
-	Lvec2 ComTab () const ;
-	Svec2 ComStr () const ;
-ex. "look at room"
-ComTab:
-	3			10		9		4			8
-	3			200		300		400			500
-ComSym:
-	<com>		<verb>	<prep>	<article>	<noun>
-	command		look	at		the			room
-*/
-
-// ------------------------------------------------------------------------
-/*
-Contents of Symbol table:
-
-	- The recursive algorithm only needs unique symbols
-	in place of long form, thus:
-		char *strtok( char *string1, const char *string2 );
-	can be (is) used to identify tokens to symbolize.
-
-	- Symbols have to express whether their token is terminal (T/F &mask).
-
-	- The table must contain references to use to match tokens
-	(note that most terminals are not characters).
-*/
-// ------------------------------------------------------------------------
-/*
-
-**	Note that the below ignores the difficulty in actually providing the 
-correct solution when substitution, identity, and other such features exist.
-	Symbols for partial matches musted be pushed as found and poped
-if a full statement can't be matched.  Some statements will not need to be
-matched.  Complete information on all previous operations would be 
-hard to maintain and hard to analyze.
-	The sol. is notated somewhat in the source code.  A parameter is used
-to keep track of whether the current frame is a frame which will cause all
-of the input to be matched.  Frames which aren't responsible in this manner
-do not cause the solutions stack to be poped.
-
-1. find a matching RHS element (noting first is on line 0)
-1. STARTS on same line as LHS
-1.1R if exits
-	2 determin lhs elements
-	2.1 if <>== found, do 2.2 else 3.1
-	2.2 * matches aggregates to pre-defined terminals
-		1. feed <> to rhs MUST return 1 (or return char *)
-			if ( !(FindRHS(match, atline)) ) // note: we don't want atline changed now...
-		2. match <> to terminal and return result
-		3. lhs should be listed to rhs
-		3.1 if () found: () here groups logics
-			- start from inner most () (& recurse ?)
-		3.2 first | found
-			- feed left and right to this function return |
-		* this is where to add other logicals
-		3.3 feed remaining to rhs, return with && logic
-			a. if T return T
-			b. if symlst () (the set?) F, match terminal(s)
-				1. match downward only
-				2. match () RHS
-				3. ' ','\t','\r','\n' are term separators, ret T?
-				4. if F and ! end line, keep checking
-1.2E if not exits LHS item was terminal, ret T
-*/
-// ------------------------------------------------------------------------
-
-
-// ------------------------------------------------------------------------
-/*
-	Notes in source specify a difference from the process below.
-	The aim of the notes is to define avail. syntax
-*/
-/*
-1. find a matching RHS element (noting first is on line 0)
-1. STARTS on same line as LHS
-1.1R if exits
-	2 determin lhs elements
-	2.1 if <>== found, do 2.2 else 3.1
-	2.2 * matches aggregates to pre-defined terminals
-		1. feed <> to rhs MUST return 1 (or return char *)
-			if ( !(FindRHS(match, atline)) ) // note: we don't want atline changed now...
-		2. match <> to terminal and return result
-		3. lhs should be listed to rhs
-		3.1 if () found: () here groups logics
-		() never found in first level parse - see PROC: list symbols
-		3.2 an | found
-			- feed left and right to this function return |
-		* this is where to add other logicals
-		3.3 feed remaining to rhs, return with && logic
-			a. if T return T
-			b. if symlst () (the set?) F, match terminal(s)
-				1. match downward only
-				2. match () RHS
-				3. r','\n' are term separators, ret T?
-				4. if F and ! end line, keep checking
-1.2E if not exits LHS item was terminal, ret T
-
-  PROC: list symbols:
-	- use start, end idecies
-	- =
-		(if symb exits after =)
-		AndLhs(st, end(OP=)) || AndLhs(OP=+1, end)
-	- |
-		do
-		find end
-		AndLhs(st, end(OP|))
-		st = OP+1 end = st
-		until finished
-		| return logic
-	- ~ not
-		same as | except !(...) in symbol table 
-		is in form ~...~ 
-	- &
-		do
-		AndLhs(st) to findrhs
-		++st 
-		until st==end
-		& return logic
-*/
-// ------------------------------------------------------------------------
-/*
-Table Build Format:
-	note that: 6|>5rhs and 8t>5rhs; 
-				1|2= allows term determination: (!RHS>lhs)
-start	guess		guess			finish
-rlll	1 2|143		1 26143			3 4165		
-rlllll	2 23|342	2 236342		4 451564
-rllll	3 4=s|s+s	3 47868??		5 6218
-rltt	4 tttt		4 9??			6 9
-rttt	5 t		5 (10)			7 (10...)
-
-NOTE: 8,9,>10 are terminal that are stored for matching
-PROCESS: rhs and lhs are stored seperately
-	rhs is a 1 to ... count
-	lhs is the same - but terminals must have a symbol
-		differing from bnf identifiers - so they have a 
-		number higher than any of those...
-	termbase is the lowest non bnf identifier in table
-	termstr[lhs[i]-termbase] is a terminal to match
-
-Q: sym for ea. term in rhs or one for ea. rhs ?
-A: 1 uniq. for ea. + lookup allows efficient storage...
-	   --> AND easy lookup
-
-OOPS: or (|) begins at 1 - 0 will be the unassigned constant
-
-ANTIQUITY:
-	- no assignment for operators; they are assumed first (1,2,...)
-	- this is a FIRST LEVEL parse; this rule file can (in turn)
-    define more complicated rule files which can then in
-	turn be used to parse more complicated files
-*/	
-// ------------------------------------------------------------------------
-
-
-
-***** bnf2xml
-FEATURES:
-	fully reflexive (don't need *, automatic)
-	OR, AND, == (bnf bnf a maybe, see below)
-
-	REPLACE / DO something hack , 2 ways to match
-		form   <a> : <repl> "" ""
-		repl <a_r> : <foo> "" ""
-			if <a> take parallel <a_r>
-			replaces in output: REPORT c (not report a or b)
-			does not change input
-		form   <a> : <subst> "" ""
-		repl <a_s> : <foo> "" ""
-			if <a> take parallel <a_r>
-			replace input during search
-			restars search on that line and continues
-			downward (do not start at line 0)
-			replaces in all REPORT a,b,c
-		form   <a> : <sys> "" ""
-		repl <a_S> : <foo> "" ""
-			if <a> system(<a_r>)
-		NOTES:
-		* lines must be one after the other, _r is
-		  actuall <a_foo> (use positionally)
-		* #define SYS_FOO_PRINTONLY is default
-		* Note input subst remains once done, so
-		  plan ahead not to depend on whether the
-		  line where <a> is found wholey matches)
-TODOS
-	this looks easiest, or getop if must
-		cat opts bnf1 bnf2 | parse
-
-	input is one line only (can't parse input file)
-
-	cannot yet use input to use 1st bnf to read in a 2nd bnf
-		which would then read input
-		point being to allow varied bnf syntax support
-
-	output is not very useable yet but mostly complete
-
-	WARNING: having read Ale I guaruntee the naming is confusing
-	and not good enough.  see parse.discussion about many parsers /
-	analyzers
-**** rdf2rdf							 :rdf:parser:
-#+begin_src elisp
-(defun rdf2rdf)
-(interactive)
-(shell-command bnf2xml)
-(insert results at point)
-(append-results-to-buffer-or-file)
-#+end_src
-**** rdf.sh (perl)						   :rdf:perl:
-#+begin_src elisp
-(defun rdf.sh)
-(interactive)
-(shell-command rdf.sh)
-(insert results at point)
-(append-results-to-buffer-or-file)
-#+end_src
-#+begin_src turtle
-<http://sebastian.tramp.name/Projects/rdf.sh> a :Project;
-    <http://purl.org/dc/terms/updated> "2013-05-05T17:52:26Z"^^xsd:dateTime;
-         :description "A multi-tool shell script for doing Semantic Web jobs on the command line.";
-         :developer <http://sebastian.tramp.name>;
-         :download-page <https://github.com/seebi/rdf.sh/archives/master>;
-         :homepage <https://github.com/seebi/rdf.sh/>;
-         :programming-language "Shell";
-         :name "rdf.sh".
-#+end_src
-**** pellet.sh
-     file:///home/xk05/apps/pellet-2.3.1
-
-
-*** exclusive-or
-#+name: exclusive-or
-#+begin_src emacs-lisp
-       (defun org-xor (a b)
-          "Exclusive or."
-          (if a (not b) b))
-#+end_src
-
 *** XPath							     :rdf:fn:
 
     [Definition: XPath operates on the abstract, logical structure of an
