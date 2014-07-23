@@ -2,11 +2,11 @@
 
 (defvar startup:  overview hideblocks
 
-(defun (defun  drawers 
+(defun  drawers 
 
 (defvar drawer:   hidden state properties owl2-rdfs org-n3 n3
 
-(defun (defun  tags 
+(defun  tags 
    (setq org-tag-alist '((:startgroup . nil)
                            ("@work" . ?w) ("@home" . ?h)
                            ("@tennisclub" . ?t)
@@ -21,19 +21,19 @@
 (defvar tags:     org elisp n3 owl2 rdfs prolog lisp shell axiom
 (defvar tags:     { proof theorem def desc example } grammar
 
-(defun (defun  header-args 
+(defun  header-args 
 
 (defvar property: header-args         :export results
 (defvar property: header-args:mx-rdf  :session (defun mx-rdf(defun 
 
-(defun (defun  properties 
+(defun  properties 
    :properties:
    :see-also org-property-allowed-value-functions
    :end:
 
-(defun (defun (defun  TODO do i want a (defvar property: list of all owl2 and rdfs? 
+(defun  TODO do i want a (defvar property: list of all owl2 and rdfs? 
     
-(defun (defun (defun (defun  or elisp via org-global-properties
+(defun  or elisp via org-global-properties
 
      "List of property/value pairs that can be inherited by any entry.
      This list will be combined with the constant
@@ -41,9 +41,9 @@
      cells where the car is a property name and cdr is a string with the
      value."
  
-(defun (defun (defun (defun  org-global-properties format
+(defun  mx-org-global-properties 'format
 
-   '(("org-n3-triple-part" . "subject predicate object"))
+  '(("org-n3-triple-part" . "subject predicate object"))
 
    it might make sense to make a separate file for holding the list
    since it might be somewhat long and can be imported.
@@ -70,7 +70,7 @@
 (defvar property: mx-rdf+             mx-n3-predicate
 (defvar property: mx-rdf+             rdfs-type
 
-(defun (defun (defun (defun  or elisp via org-file-properties
+(defun  or elisp via org-file-properties
    
      "You can set buffer-local values for the same purpose in the variable
      `org-file-properties' this by adding lines like
@@ -79,7 +79,7 @@
 
 org-entry-put-multivalued-property pom property &rest values
 
-(defun (defun  calls 
+(defun  calls 
   
    "(defvar call [<inside header arguments>] (<arguments>) <end header arguments>"
 
@@ -92,7 +92,7 @@ org-entry-put-multivalued-property pom property &rest values
 
 
 (defun  functions 
-(defun (defun  Periodic Functions 
+(defun  Periodic Functions 
    Captured [2014-06-18 Wed 08:14]
    {Periodic function} (Math.), a function whose values recur at
    fixed intervals as the variable uniformly increases. The
@@ -101,7 +101,7 @@ org-entry-put-multivalued-property pom property &rest values
    periodic, having an imaginary period, and the elliptic
    functions have not only a real but an imaginary period,
    and are hence called doubly periodic.
-(defun (defun  mx-rdf-org-ac 
+(defun  mx-rdf-org-ac 
 (defvar name: mx-rdf-org-ac
 (defvar BEGIN_SRC emacs-lisp
   (defun mx-rdf-ac-predictive ()
@@ -113,7 +113,7 @@ org-entry-put-multivalued-property pom property &rest values
     )
 (defvar END_SRC
 
-(defun (defun  mx-rdf-todo 
+(defun  mx-rdf-todo 
 (defvar name:     mx-rdf-todo-keywords
 (defvar headers:  :var data1=1
 (defvar begin_src emacs-lisp          :var data2=2
@@ -139,7 +139,7 @@ org-entry-put-multivalued-property pom property &rest values
 (defvar results: named-block
 : data:2
 
-(defun (defun  mx-rdf-button-panel 
+(defun  mx-rdf-button-panel 
    :properties:
    :doc-string  "A panel window with a set of custom buttons for common tasks."
    :import      buffer-buttons.el
@@ -153,7 +153,7 @@ org-entry-put-multivalued-property pom property &rest values
    provide quick access to executions and editing functions. Source
    blocks, like repls, with buttons.
 
-(defun (defun (defun  mx-rdf-button-definitions
+(defun  mx-rdf-button-definitions
 (defvar name: mx-rdf-button-definitions
 (defvar BEGIN_SRC emacs-lisp
   ; eval-last-sexp
@@ -179,9 +179,9 @@ org-entry-put-multivalued-property pom property &rest values
       (org-execute-source-block nil)))
 (defvar end_src
 
-(defun (defun (defun   define the buttons in source blocks
+(defun   define the buttons in source blocks
 
-(defun (defun  mx-rdf-yas 
+(defun  mx-rdf-yas 
 (defvar name: yasnippet-functions
 (defvar BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook
@@ -204,9 +204,9 @@ org-entry-put-multivalued-property pom property &rest values
               (yas/expand)))
 
 (defvar END_SRC
-(defun (defun  mx-rdf-imenu
-(defun (defun  mx-rdf-predictive-mode
-(defun (defun  mx-rdf-lob-ingest 
+(defun  mx-rdf-imenu
+(defun  mx-rdf-predictive-mode
+(defun  mx-rdf-lob-ingest 
  :properties:
  :mx-rdf-lob-file ~/src/lisp/mx-rdf/mx-rdf-library-of-babel.org
  :end:
@@ -219,7 +219,7 @@ org-entry-put-multivalued-property pom property &rest values
 
 
 (defun  tasks 
-(defun (defun  dfa-dg.org
+(defun  dfa-dg.org
 This file has mainly become about deterministic finite automata and
 directed graphs. This is progress because my targets have been source
 blocks and n3. (defvar begin_src might read as (defvar deterministic-finite-automata
@@ -227,19 +227,19 @@ and n3 might read as directed-graph. My current interest is developing
 this code along those lines and with a focus on producing code that i
 can load into gruff, which at this point means turtle and hence, n3.
 
-(defun (defun  determine the significance of (:how) (:what) and (seq (:how :much))
-(defun (defun  TODO do i want a (defvar property: list of all owl2 and rdfs? 
+(defun  determine the significance of (:how) (:what) and (seq (:how :much))
+(defun  TODO do i want a (defvar property: list of all owl2 and rdfs? 
 
 (defvar property: mx-rdf_all          mx-rdf-rdfs-type
 (defvar property: mx-rdf+             mx-rdf-predicate
 (defvar property: mx-rdf-predicate    rdfs-type
 
-(defun (defun (defun  drawers
+(defun  drawers
 (defvar drawer:   hidden state
 
-(defun (defun  TODO edit for mx-rdf-lob-file
-(defun (defun (defun  utilities							      :shell:
-(defun (defun (defun  XPath							     :rdf:fn:
+(defun  TODO edit for mx-rdf-lob-file
+(defun  utilities							      :shell:
+(defun  XPath							     :rdf:fn:
 
     [Definition: XPath operates on the abstract, logical structure of an
     XML document, rather than its surface syntax. This logical
@@ -261,7 +261,7 @@ can load into gruff, which at this point means turtle and hence, n3.
     source to ensure consistency, and the editors of these
     specifications work together closely.
 
-(defun (defun (defun (defun  IRI is an extention of URI.					:rdf:
+(defun  IRI is an extention of URI.					:rdf:
   URI is still used in documentation for backward compatibility
   with the larger corpus of specifications.
 
@@ -295,19 +295,19 @@ determine which documents are available. A URI
 need not be found in the statically known
 documents to be accessed using fn:doc.
 
-(defun (defun (defun (defun  XPath is defined 
+(defun  XPath is defined 
      in terms of the data model and the expression context.
-(defun (defun (defun (defun  XPath defines						  :rdf:debug:
+(defun  XPath defines						  :rdf:debug:
      two phases of processing called the static
      analysis phase and the dynamic evaluation phase
-(defun (defun (defun (defun (defun  thus
+(defun (defun  thus
       (((data-model) (expression-context)) 
       (xpath) 
       ((static-analysis-phase) (dynamic-evalution-phase)))
-(defun (defun (defun (defun  rdf							  :rdf:debug:
-(defun (defun (defun (defun  owl							    :rdf:owl:
-(defun (defun (defun (defun (defun  owl2 in triples						    :rdf:owl:
-(defun (defun (defun (defun (defun (defun  Annotations
+(defun  rdf							  :rdf:debug:
+(defun  owl							    :rdf:owl:
+(defun (defun  owl2 in triples						    :rdf:owl:
+(defun (defun  Annotations
 
        "... the OWL 2 RDF-Based Semantics includes many semantic
        conditions that can in a sense be regarded as being
@@ -315,9 +315,9 @@ documents to be accessed using fn:doc.
        the missing axiomatic triples."
        [[file:///usr/share/doc/w3-recs/html/www.w3.org/TR/2009/REC-owl2-rdf-based-semantics-20091027/index.html#Appendix:_Axiomatic_Triples_.28Informative.29]]
 
-(defun (defun (defun (defun (defun (defun  owl2 in turtle
+(defun  (defun  owl2 in turtle
 
-owl:AllDifferent rdf:type rdfs:Class .
+(defun owl:AllDifferent rdf:type rdfs:Class .
 
 owl:AllDifferent rdfs:subClassOf rdfs:Resource .
 
@@ -419,7 +419,7 @@ owl:TransitiveProperty rdf:type rdfs:Class .
 
 owl:TransitiveProperty rdfs:subClassOf owl:ObjectProperty .
 
-(defun (defun (defun (defun (defun (defun (defun  Axiomatic Triples for the Properties
+(defun (defun  Axiomatic Triples for the Properties
 
 owl:allValuesFrom rdf:type rdf:Property .
 
@@ -733,7 +733,7 @@ owl:withRestrictions rdfs:domain rdfs:Datatype .
 
 owl:withRestrictions rdfs:range rdf:List .
 	
-(defun (defun (defun (defun (defun (defun (defun  Axiomatic Triples for the Datatypes
+(defun (defun  Axiomatic Triples for the Datatypes
 
 xsd:anyURI rdf:type rdfs:Datatype .
 
@@ -867,7 +867,7 @@ rdf:XMLLiteral rdf:type rdfs:Datatype .
 
 rdf:XMLLiteral rdfs:subClassOf rdfs:Literal .
 	
-(defun (defun (defun (defun (defun (defun (defun  Axiomatic Triples for the Facets
+(defun (defun  Axiomatic Triples for the Facets
 
 <rdf:langRange> <rdf:type> <owl:DatatypeProperty> .
 
@@ -923,7 +923,7 @@ xsd:pattern rdfs:domain rdfs:Resource .
 
 xsd:pattern rdfs:range rdfs:Literal .
 	
-(defun (defun (defun (defun (defun (defun (defun  Additional Axiomatic Triples for Classes and Properties
+(defun (defun  Additional Axiomatic Triples for Classes and Properties
 
 <rdfs:Class> <rdfs:subClassOf> <owl:Class> .
 
@@ -958,9 +958,9 @@ xsd:pattern rdfs:range rdfs:Literal .
 <rdfs:seeAlso> <rdfs:domain> <rdfs:Resource> .
 
 <rdfs:seeAlso> <rdfs:range> <rdfs:Resource> .
-(defun (defun (defun (defun (defun  misc owl2								:rdf:
+(defun (defun  misc owl2								:rdf:
       ICEXT(I(ex:c1)) ⊆ ICEXT(I(ex:c2)) ∪ ICEXT(I(ex:c3)) . 
-(defun (defun (defun (defun (defun  owl2 basic gloss
+(defun (defun  owl2 basic gloss
 
       owl:AllDifferent 
 
@@ -1116,7 +1116,7 @@ xsd:pattern rdfs:range rdfs:Literal .
 
       owl:withRestrictions 
 
-(defun (defun (defun (defun (defun  About owl2 and axiomatic triples
+(defun (defun  About owl2 and axiomatic triples
 
 _:x rdf:type owl:Class.
 
@@ -1423,9 +1423,9 @@ E rdf:type owl:DatatypeProperty .
 E rdfs:domain rdfs:Resource .
 
 E rdfs:range rdfs:Literal .
-(defun (defun (defun (defun  sparql							 :sparql:rdf:
-(defun (defun (defun (defun (defun  DONE tracker-sparql					 :sparql:rdf:
-(defun (defun (defun (defun (defun (defun  DONE tracker-sparql -q "SELECT ?cl WHERE { ?cl a rdfs:Class }"
+(defun  sparql							 :sparql:rdf:
+(defun (defun  DONE tracker-sparql					 :sparql:rdf:
+(defun (defun  DONE tracker-sparql -q "SELECT ?cl WHERE { ?cl a rdfs:Class }"
 Results:
   http://www.w3.org/2001/XMLSchema#string
   http://www.w3.org/2001/XMLSchema#boolean
@@ -1661,7 +1661,7 @@ Results:
   http://www.tracker-project.org/temp/slo#Route
   http://www.tracker-project.org/ontologies/osinfo#Installer
 
-(defun (defun (defun (defun (defun (defun  DONE tracker-sparql -q "SELECT ?prefix ?ns WHERE {
+(defun (defun  DONE tracker-sparql -q "SELECT ?prefix ?ns WHERE {
    >                     ?ns a tracker:Namespace ;
    >                     tracker:prefix ?prefix
    >                 }"
@@ -1690,7 +1690,7 @@ Results:
   slo, http://www.tracker-project.org/temp/slo#
   osinfo, http://www.tracker-project.org/ontologies/osinfo#
 
-(defun (defun (defun (defun (defun  CONSTRUCT
+(defun (defun  CONSTRUCT
     "The CONSTRUCT query form returns a single RDF graph
     specified by a graph template. The result is an RDF graph
     formed by taking each query solution in the solution
@@ -1705,8 +1705,8 @@ CONSTRUCT {
     , owl:Members ("?altar" "?choir")
     }
 (defvar end_src
-(defun (defun (defun  elisp							      :elisp:
-(defun (defun (defun (defun  (if TRUE-OR-FALSE-TEST ACTION-TO-CARRY-OUT-IF-TEST-IS-TRUE)
+(defun  elisp							      :elisp:
+(defun  (if TRUE-OR-FALSE-TEST ACTION-TO-CARRY-OUT-IF-TEST-IS-TRUE)
 
 (defvar BEGIN_SRC emacs-lisp
 (if (> 5 4)                             ; if-part
@@ -1741,7 +1741,7 @@ CONSTRUCT {
        BODY: THE `if' EXPRESSION)
 (defvar END_EXAMPLE
 
-(defun (defun (defun (defun  (let VARLIST BODY)
+(defun  (let VARLIST BODY)
 
 (defvar begin_example
 (let ((VARIABLE VALUE)
@@ -1757,8 +1757,8 @@ CONSTRUCT {
            zebra tiger))
 (defvar end_src
 
-(defun (defun (defun (defun  TODO problems with macros					      :debug:
-(defun (defun (defun (defun (defun  repeated expansion (how many times is the macro expanded?)
+(defun  TODO problems with macros					      :debug:
+(defun (defun  repeated expansion (how many times is the macro expanded?)
 Captured [2014-06-06 Fri 18:47]
   13.5.5 How Many Times is the Macro Expanded?
   --------------------------------------------
@@ -1803,7 +1803,7 @@ Captured [2014-06-06 Fri 18:47]
   calls.  If `initialize' is compiled, then the macro `empty-object' is
   expanded during compilation, producing a single "constant" `(nil)' that
   is reused and altered each time `initialize' is called.
-(defun (defun (defun (defun (defun (defun  think of 'empty-object' as a funny kind of constant  
+(defun (defun  think of 'empty-object' as a funny kind of constant  
      One way to avoid pathological cases like this is to think of
   `empty-object' as a funny kind of constant, not as a memory allocation
   construct.  You wouldn't use `setcar' on a constant such as `'(nil)',
@@ -1813,7 +1813,7 @@ Captured [2014-06-06 Fri 18:47]
 
 empty-object is not a memory allocation construct
 
-(defun (defun (defun (defun (defun  evaluating macro arguments in expansion
+(defun (defun  evaluating macro arguments in expansion
 Captured [2014-06-06 Fri 18:46]
   13.5.4 Evaluating Macro Arguments in Expansion
   ----------------------------------------------
@@ -1845,7 +1845,7 @@ Captured [2014-06-06 Fri 18:46]
   compiler runs macro definitions while compiling the program, when the
   program's own computations (which you might have wished to access with
   `eval') don't occur and its local variable bindings don't exist.
-(defun (defun (defun (defun (defun (defun  don't evaluate an argument expression while computing the macro expansion  
+(defun (defun  don't evaluate an argument expression while computing the macro expansion  
        To avoid these problems, (defun don't evaluate an argument expression
     while computing the macro expansion(defun .  Instead, substitute the
     expression into the macro expansion, so that its value will be computed
@@ -1854,7 +1854,7 @@ Captured [2014-06-06 Fri 18:46]
     
     [[info:elisp#Eval%20During%20Expansion][info:elisp#Eval During Expansion]]
 
-(defun (defun (defun (defun (defun  local variables in macro expansions
+(defun (defun  local variables in macro expansions
 Captured [2014-06-06 Fri 18:45]
   13.5.3 Local Variables in Macro Expansions
   ------------------------------------------
@@ -1908,7 +1908,7 @@ Captured [2014-06-06 Fri 18:45]
   
   [[info:elisp#Surprising%20Local%20Vars][info:elisp#Surprising Local Vars]]
 
-(defun (defun (defun (defun (defun  evaluating macro arguments repeatedly
+(defun (defun  evaluating macro arguments repeatedly
 Captured [2014-06-06 Fri 18:44]
   File: elisp.info,  Node: Argument Evaluation,  Next: Surprising Local Vars,  Prev: Wrong Time,  Up: Problems with Macros
   
@@ -1992,7 +1992,7 @@ Captured [2014-06-06 Fri 18:44]
   
   [[info:elisp#Argument%20Evaluation][info:elisp#Argument Evaluation]]
 
-(defun (defun (defun (defun (defun  wrong time
+(defun (defun  wrong time
 Captured [2014-06-06 Fri 18:43]
   13.5.1 Wrong Time
   -----------------
@@ -2021,7 +2021,7 @@ Captured [2014-06-06 Fri 18:43]
   is actually run.
   [[info:elisp#Wrong%20Time][info:elisp#Wrong Time]]
 
-(defun (defun (defun (defun  kill ring concepts
+(defun  kill ring concepts
 Captured [2014-06-06 Fri 14:00]
   32.8.1 Kill Ring Concepts
   -------------------------
@@ -2044,14 +2044,14 @@ Captured [2014-06-06 Fri 14:00]
   the ring.  Some yank commands "rotate" the ring by designating a
   [[info:elisp#Kill%20Ring%20Concepts][info:elisp#Kill Ring Concepts]]
 
-(defun (defun (defun (defun  (setq list (cons newelt list))
-(defun (defun (defun (defun  use of a special variable as a formal argument in a function 
+(defun  (setq list (cons newelt list))
+(defun  use of a special variable as a formal argument in a function 
      is discouraged.
-(defun (defun (defun (defun  resist the temptation to use error handling to transfer control
+(defun  resist the temptation to use error handling to transfer control
  Resist the temptation to use error handling to transfer control from
 one part of the program to another; use `catch' and `throw' instead.
 (defun Note Catch and Throw::.
-(defun (defun (defun (defun  TODO function definitions
+(defun  TODO function definitions
      It is helpful to think of the five parts of a function definition
      as being organized in a template, with slots for each part:
 
@@ -2060,15 +2060,15 @@ one part of the program to another; use `catch' and `throw' instead.
        	 (interactive ARGUMENT-PASSING-INFO)     ; optional
        	 BODY...)
 
-(defun (defun (defun (defun (defun  the 5 parts
+(defun (defun  the 5 parts
       function-name
       arguments
       optional-documentation
       argument-passing-info
       body
 
-(defun (defun (defun (defun  TODO errors						:elisp:debug:
-(defun (defun (defun (defun (defun  10.5.3.4 Error Symbols and Condition Names
+(defun  TODO errors						:elisp:debug:
+(defun (defun  10.5.3.4 Error Symbols and Condition Names
 Captured [2014-06-01 Sun 22:33]
   File: elisp.info,  Node: Error Symbols,  Prev: Handling Errors,  Up: Errors
   
@@ -2153,7 +2153,7 @@ Captured [2014-06-01 Sun 22:33]
   
   [[info:elisp#Error%20Symbols][info:elisp#Error Symbols]]
 
-(defun (defun (defun (defun  Completion::M-TAB knows what you need
+(defun  Completion::M-TAB knows what you need
 
      Emacs would not be Emacs without completion, and Org mode uses it
      whenever it makes sense.  If you prefer an iswitchb- or ido-like
@@ -2198,9 +2198,9 @@ Captured [2014-06-01 Sun 22:33]
 
           (defun  Elsewhere, complete dictionary words using Ispell.
 
-(defun (defun (defun (defun  (defun we discourage redefinition of primitive functions(defun 
+(defun  (defun we discourage redefinition of primitive functions(defun 
 
-(defun (defun (defun  catch and throw example
+(defun  catch and throw example
 Captured [2014-06-06 Fri 11:26]
   (defun search-foo ()
          (catch 'loop
@@ -2214,7 +2214,7 @@ Captured [2014-06-06 Fri 11:26]
                (setq i (1+ i))))))
   [[info:elisp#Examples%20of%20Catch][info:elisp#Examples of Catch]]
 
-(defun (defun (defun  xml and n3
+(defun  xml and n3
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -2243,14 +2243,14 @@ inform org-babel-tangle of their existence and file extensions
   n3 stuff
 (defvar end_src
 
-(defun (defun (defun  custom query of user before evaluating code block
+(defun  custom query of user before evaluating code block
    :PROPERTIES:
    :DATE:     2012-02-08
    :END:
 (defvar begin_src sh :eval (if (y-or-n-p "Run operation X?") "yes" "no")
   echo "Going ahead with operation X!"
 (defvar end_src
-(defun (defun (defun  call line which dumps out its own header argument info
+(defun  call line which dumps out its own header argument info
    :PROPERTIES:
    :DATE:     2012-02-05
    :END:
@@ -2309,7 +2309,7 @@ the info using the same mechanisms used by =org-babel-lob-execute=.
                 (concat ":var results="
                         (mapconcat #'identity (butlast call-info) " "))))))))
 (defvar end_src
-(defun (defun (defun  noweb insertion edge cases
+(defun  noweb insertion edge cases
    :PROPERTIES:
    :DATE:     2012-01-24
    :END:
@@ -2331,7 +2331,7 @@ reference.
  echo "b"
 (defvar END_SRC
 
-(defun (defun (defun  issues with call lines result insertion
+(defun  issues with call lines result insertion
    :PROPERTIES:
    :session:  (defun R-babel(defun 
    :DATE:     2012-01-24
@@ -2384,7 +2384,7 @@ Should have all a3 stuff
 (defvar call: foo-for-R(a="a3.png")
 (defvar call: bar-for-R[id=3]()
 
-(defun (defun (defun  name src_emacs-lisp{org-current-export-file}
+(defun  name src_emacs-lisp{org-current-export-file}
    :PROPERTIES:
    :DATE:     2012-01-20
    :END:
@@ -2400,7 +2400,7 @@ One block to export.
   (message "I just tangled %S during export" foo)
 (defvar END_SRC
 
-(defun (defun (defun  inhibit some call line evaluation on export
+(defun  inhibit some call line evaluation on export
    :PROPERTIES:
    :DATE:     2012-01-20
    :END:
@@ -2420,7 +2420,7 @@ This will (defun not(defun  be run on export.
 This (defun will(defun  be run on export.
 (defvar call: foo("baz")
 
-(defun (defun (defun  code block export template
+(defun  code block export template
    :PROPERTIES:
    :DATE:     2012-01-14
    :END:
@@ -2478,7 +2478,7 @@ blocks is exported.
 : | You can customize this variable.
 : `----
 
-(defun (defun (defun  simple R session
+(defun  simple R session
    :PROPERTIES:
    :DATE:     2011-09-21
    :END:
@@ -2489,7 +2489,7 @@ blocks is exported.
 (defvar name:
 : Yep!
 
-(defun (defun (defun  should this throw an error for no variable definition
+(defun  should this throw an error for no variable definition
    :PROPERTIES:
    :DATE:     2011-09-15
    :END:
@@ -2509,7 +2509,7 @@ BEGIN
 END
 (defvar end_src
 
-(defun (defun (defun  header arguments on call lines
+(defun  header arguments on call lines
    :PROPERTIES:
    :DATE:     2011-09-11
    :END:
@@ -2528,7 +2528,7 @@ END
 (defvar name: simple-example()
 the result
 
-(defun (defun (defun  removing result with a silent header argument
+(defun  removing result with a silent header argument
    :PROPERTIES:
    :DATE:     2011-09-07
    :END:
@@ -2541,7 +2541,7 @@ evaluating the following code block will remove the related result.
 (defvar name:
 : 2011-09-07
 
-(defun (defun (defun  silent results in org but not in export
+(defun  silent results in org but not in export
    :PROPERTIES:
    :DATE:     2011-09-06
    :END:
@@ -2552,7 +2552,7 @@ interactive evaluation but will during export.
   echo  "I want to see this in HTML/PDF, but not in Org"
 (defvar end_src
 
-(defun (defun (defun  leading commas in code blocks
+(defun  leading commas in code blocks
    :PROPERTIES:
    :DATE:     2011-09-06
    :END:
@@ -2571,7 +2571,7 @@ interactive evaluation but will during export.
   ,(defvar end_src
 (defvar end_src
 
-(defun (defun (defun  returning file type to inline call line
+(defun  returning file type to inline call line
    :PROPERTIES:
    :DATE:     2011-09-04
    :END:
@@ -2589,7 +2589,7 @@ nisl.
   echo nothing
 (defvar end_src
 
-(defun (defun (defun  demarcation of indented blocks
+(defun  demarcation of indented blocks
    :PROPERTIES:
    :DATE:     2011-09-04
    :END:
@@ -2615,7 +2615,7 @@ becomes
       echo 4
     (defvar end_src
 
-(defun (defun (defun  simple indexing
+(defun  simple indexing
    :PROPERTIES:
    :DATE:     2011-09-01
    :END:
@@ -2631,7 +2631,7 @@ becomes
 (defvar name:
 : 1 4 7
 
-(defun (defun (defun  simple gnuplot plotting of Org-mode tables
+(defun  simple gnuplot plotting of Org-mode tables
    :PROPERTIES:
    :DATE:     2011-09-01
    :END:
@@ -2657,7 +2657,7 @@ set boxwidth 0.9
 plot data using 2:xtic(1)
 (defvar end_src
 
-(defun (defun (defun  simple short R block
+(defun  simple short R block
    :PROPERTIES:
    :DATE:     2011-08-29
    :END:
@@ -2671,7 +2671,7 @@ c(1,23,54,5)
 | 54 |
 |  5 |
 
-(defun (defun (defun  convert results to all string
+(defun  convert results to all string
    :PROPERTIES:
    :DATE:     2011-08-29
    :END:
@@ -2708,7 +2708,7 @@ c(1,23,54,5)
 | t | t | t | t |
 | t | t | t | t |
 
-(defun (defun (defun  two blocks and a table
+(defun  two blocks and a table
    :PROPERTIES:
    :DATE:     2011-08-28
    :END:
@@ -2730,7 +2730,7 @@ c(1,23,54,5)
 | 3   |
 (defvar TBLFM: @3$1='(sbe last-of-stuff)
 
-(defun (defun (defun  inheriting the file property
+(defun  inheriting the file property
    :PROPERTIES:
    :FILE: something.png
    :DATE:     2011-08-23
@@ -2753,7 +2753,7 @@ c(1,23,54,5)
 (defvar name:
 [[file:something.png]]
 
-(defun (defun (defun  a table with tags
+(defun  a table with tags
    :PROPERTIES:
    :DATE:     2011-08-23
    :END:
@@ -2769,7 +2769,7 @@ c(1,23,54,5)
 (defvar name:
 : ((1 2 3) (4 "org-babel" 6))
 
-(defun (defun (defun  shell script output not in table
+(defun  shell script output not in table
    :PROPERTIES:
    :DATE:     2011-08-21
    :END:
@@ -2784,7 +2784,7 @@ c(1,23,54,5)
 : 2
 : 3
 
-(defun (defun (defun  inline code block and downstream src blocks
+(defun  inline code block and downstream src blocks
    :PROPERTIES:
    :DATE:     2011-08-21
    :END:
@@ -2796,7 +2796,7 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 (defvar end_src
 EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
-(defun (defun (defun (defun  with R
+(defun  with R
     :PROPERTIES:
     :DATE:     2011-08-21
     :END:
@@ -2810,7 +2810,7 @@ CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 (defvar end_src
 DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
 
-(defun (defun (defun  updating a table
+(defun  updating a table
    :PROPERTIES:
    :DATE:     2011-08-19
    :END:
@@ -2825,7 +2825,7 @@ DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
   table
 (defvar end_src
 
-(defun (defun (defun  space around exported code blocks
+(defun  space around exported code blocks
    :PROPERTIES:
    :DATE:     2011-08-19
    :END:
@@ -2845,7 +2845,7 @@ and verbiage to end the same paragraph.
 
 and verbiage to end the same paragraph.
 
-(defun (defun (defun  simple ditaa block
+(defun  simple ditaa block
    :PROPERTIES:
    :DATE:     2011-08-19
    :END:
@@ -2860,7 +2860,7 @@ and verbiage to end the same paragraph.
 (defvar name:
 [[file:work-flow.png]]
 
-(defun (defun (defun  ruby code block
+(defun  ruby code block
    :PROPERTIES:
    :DATE:     2011-08-19
    :END:
@@ -2871,7 +2871,7 @@ and verbiage to end the same paragraph.
 (defvar name:
 : 3
 
-(defun (defun (defun  replacing a table
+(defun  replacing a table
    :PROPERTIES:
    :DATE:     2011-08-19
    :END:
@@ -2885,7 +2885,7 @@ and verbiage to end the same paragraph.
   (mapcar (lambda (row) (mapcar (lambda (cell) ((defun  cell 2)) row)) table)
 (defvar end_src
 
-(defun (defun (defun  tangle before evaluating a code block
+(defun  tangle before evaluating a code block
    :PROPERTIES:
    :DATE:     2011-08-05
    :END:
@@ -2901,7 +2901,7 @@ and verbiage to end the same paragraph.
   echo TEST
 (defvar end_src
 
-(defun (defun (defun  bug with undefined function copy-seq
+(defun  bug with undefined function copy-seq
    :PROPERTIES:
    :DATE:     2011-08-05
    :END:
@@ -2909,7 +2909,7 @@ and verbiage to end the same paragraph.
   1:10
 (defvar end_src
 
-(defun (defun (defun  plot results with org-plot
+(defun  plot results with org-plot
    :PROPERTIES:
    :DATE:     2011-08-02
    :END:
@@ -2928,7 +2928,7 @@ and verbiage to end the same paragraph.
 | none       |   3006056 |        0 |   3006056 |   0% | /var/lock |    |
 | /dev/sda7  | 144176824 | 72225604 |  64627420 |  53% | /home     |    |
 
-(defun (defun (defun  premature truncation of emacs-lisp results
+(defun  premature truncation of emacs-lisp results
    :PROPERTIES:
    :DATE:     2011-07-28
    :END:
@@ -2940,7 +2940,7 @@ and verbiage to end the same paragraph.
 (defvar name:
 : (nil nil nil nil)
 
-(defun (defun (defun  non-defined code blocks can still tangle
+(defun  non-defined code blocks can still tangle
    :PROPERTIES:
    :DATE:     2011-07-28
    :END:
@@ -2950,7 +2950,7 @@ and verbiage to end the same paragraph.
   may be nice.  
 (defvar end_src
 
-(defun (defun (defun  expand noweb refs
+(defun  expand noweb refs
    :PROPERTIES:
    :DATE:     2011-07-25
    :END:
@@ -2964,7 +2964,7 @@ and verbiage to end the same paragraph.
   echo $SOMETHING
 (defvar end_src
 
-(defun (defun (defun  returning file names -- interpreted as lists
+(defun  returning file names -- interpreted as lists
    :PROPERTIES:
    :DATE:     2011-07-21
    :END:
@@ -2982,7 +2982,7 @@ and verbiage to end the same paragraph.
 (defvar name:
 [[file:./cv.cls]]
 
-(defun (defun (defun  java code block
+(defun  java code block
    :PROPERTIES:
    :DATE:     2011-07-19
    :END:
@@ -2999,7 +2999,7 @@ and verbiage to end the same paragraph.
 (defvar name:
 : Hello World!
 
-(defun (defun (defun  including noweb refs w/o last newline
+(defun  including noweb refs w/o last newline
    :PROPERTIES:
    :DATE:     2011-07-19
    :END:
@@ -3018,7 +3018,7 @@ and verbiage to end the same paragraph.
   sed 's/^e/E/;s/ s/ S/'
 (defvar end_src
 
-(defun (defun (defun  exporting a ditaa example
+(defun  exporting a ditaa example
    :PROPERTIES:
    :DATE:     2011-07-19
    :END:
@@ -3033,7 +3033,7 @@ and verbiage to end the same paragraph.
 (defvar name:
 [[file:blue.png]]
 
-(defun (defun (defun  simple sbe example
+(defun  simple sbe example
    :PROPERTIES:
    :DATE:     2011-07-10
    :END:
@@ -3053,7 +3053,7 @@ and verbiage to end the same paragraph.
     (/ (float (+ num (apply #'+ nums))) (1+ (length nums))))
 (defvar end_src
 
-(defun (defun (defun  eval never
+(defun  eval never
    :PROPERTIES:
    :DATE:     2011-07-10
    :END:
@@ -3065,7 +3065,7 @@ and verbiage to end the same paragraph.
 (defvar name:
 : launch missles
 
-(defun (defun (defun  indexing into a list variable
+(defun  indexing into a list variable
    :PROPERTIES:
    :DATE:     2011-07-06
    :END:
@@ -3091,7 +3091,7 @@ or as a noweb reference
 (defvar name:
 : 0
 
-(defun (defun (defun  data alias for resname
+(defun  data alias for resname
    :PROPERTIES:
    :DATE:     2011-07-05
    :END:
@@ -3105,7 +3105,7 @@ or as a noweb reference
 (defvar name:
 : blahcontent
 
-(defun (defun (defun  find a resource by global id
+(defun  find a resource by global id
    :PROPERTIES:
    :DATE:     2011-07-01
    :END:
@@ -3118,7 +3118,7 @@ or as a noweb reference
 : 
 : here it is
 
-(defun (defun (defun (defun  I'm the resource
+(defun  I'm the resource
     :PROPERTIES:
     :ID:       990f3218-6fce-44fb-bd0c-5f6076c0dadc
     :DATE:     2011-07-01
@@ -3126,7 +3126,7 @@ or as a noweb reference
 
 here it is
 
-(defun (defun (defun  define a block with a name for noweb expansion
+(defun  define a block with a name for noweb expansion
    :PROPERTIES:
    :tangle:   yes
    :noweb:    yes
@@ -3143,7 +3143,7 @@ another block including the first block
   <<simple(something="something else")>>
 (defvar end_src
 
-(defun (defun (defun  longtable label and attr lines on code block results
+(defun  longtable label and attr lines on code block results
    :PROPERTIES:
    :DATE:     2011-06-29
    :END:
@@ -3159,7 +3159,7 @@ another block including the first block
 | foo | foo |
 | bar | baz |
 
-(defun (defun (defun  another test
+(defun  another test
    :PROPERTIES:
    :DATE:     2011-06-29
    :END:
@@ -3172,7 +3172,7 @@ Here is a call_square(it=4), stuck in the middle of some prose.
 
 Here is another 25^2=call_square(it=25).
 
-(defun (defun (defun  un-named variables
+(defun  un-named variables
    :PROPERTIES:
    :DATE:     2011-06-27
    :END:
@@ -3196,7 +3196,7 @@ then we can pass the argument unnamed with call_square(4) =16=
 To ensure that these arguments are passed in the correct order we can
 use the following call_minus(8, 4) =-4=
 
-(defun (defun (defun  un-named variables
+(defun  un-named variables
    :PROPERTIES:
    :DATE:     2011-06-27
    :END:
@@ -3220,7 +3220,7 @@ then we can pass the argument unnamed with call_square(4) =16=
 To ensure that these arguments are passed in the correct order we can
 use the following call_minus(8, 4) =-4=
 
-(defun (defun (defun  multiple variables
+(defun  multiple variables
    :PROPERTIES:
    :DATE:     2011-06-27
    :END:
@@ -3234,7 +3234,7 @@ Should work call_concat(1, 2, 3) =123= in order.
 
 Should be positive call_lob-minus(4, 3) =1= by order.
 
-(defun (defun (defun  inline call line
+(defun  inline call line
    :PROPERTIES:
    :DATE:     2011-06-27
    :END:
@@ -3262,7 +3262,7 @@ paragraph.
 And, a call with raw results call_double(4)[:results raw] should not
 have quoted results.
 
-(defun (defun (defun  text and graphics from R
+(defun  text and graphics from R
    :PROPERTIES:
    :DATE:     2011-06-24
    :END:
@@ -3278,7 +3278,7 @@ plot(seq(1,10))
 (defvar name:
 [[file:example.png]]
 
-(defun (defun (defun  large code in inline blocks
+(defun  large code in inline blocks
    :PROPERTIES:
    :DATE:     2011-06-22
    :END:
@@ -3290,7 +3290,7 @@ plot(seq(1,10))
 
 Here is some text with src_emacs-lisp[:var it=big-block]{it} in the middle.
 
-(defun (defun (defun  clojure =:results scalar=
+(defun  clojure =:results scalar=
    :PROPERTIES:
    :DATE:     2011-06-21
    :END:
@@ -3298,7 +3298,7 @@ Here is some text with src_emacs-lisp[:var it=big-block]{it} in the middle.
   '(1 2 3)
 (defvar end_src
 
-(defun (defun (defun  expand variable during tangling
+(defun  expand variable during tangling
    :PROPERTIES:
    :tangle:   yes
    :DATE:     2011-06-20
@@ -3308,7 +3308,7 @@ Here is some text with src_emacs-lisp[:var it=big-block]{it} in the middle.
   echo $VER
 (defvar end_src
 
-(defun (defun (defun  scalar emacs lisp results
+(defun  scalar emacs lisp results
    :PROPERTIES:
    :DATE:     2011-06-19
    :END:
@@ -3319,7 +3319,7 @@ Here is some text with src_emacs-lisp[:var it=big-block]{it} in the middle.
 (defvar name:
 : (1 2 3)
 
-(defun (defun (defun  python session
+(defun  python session
    :PROPERTIES:
    :DATE:     2011-06-19
    :END:
@@ -3349,7 +3349,7 @@ print "I throw an error"
 :   File "<stdin>", line 1, in <module>
 : NameError: name 'y' is not defined
 
-(defun (defun (defun  named code block export
+(defun  named code block export
    :PROPERTIES:
    :DATE:     2011-06-13
    :END:
@@ -3360,7 +3360,7 @@ This has a name which is not exported.
   runif(n)
 (defvar end_src
 
-(defun (defun (defun  tangle test
+(defun  tangle test
    :PROPERTIES:
    :DATE:     2011-06-10
    :END:
@@ -3369,7 +3369,7 @@ This is
 a test
 (defvar end_src
 
-(defun (defun (defun  ruby with xmpfilter
+(defun  ruby with xmpfilter
    :PROPERTIES:
    :DATE:     2011-06-10
    :END:
@@ -3387,7 +3387,7 @@ a test
 # >> hello
 (defvar END_SRC
 
-(defun (defun (defun  continued code blocks
+(defun  continued code blocks
    :PROPERTIES:
    :tangle:   yes
    :comments: yes
@@ -3423,7 +3423,7 @@ a test
     (eval-buffer))
 (defvar end_src
 
-(defun (defun (defun  simple shell
+(defun  simple shell
    :PROPERTIES:
    :DATE:     2011-06-06
    :END:
@@ -3451,7 +3451,7 @@ a test
 (defvar name:
 : nil
 
-(defun (defun (defun  quick testing new session code
+(defun  quick testing new session code
    :PROPERTIES:
    :DATE:     2011-06-06
    :END:
@@ -3469,7 +3469,7 @@ a test
 (defvar name:
 : foo
 
-(defun (defun (defun  =:file= and python
+(defun  =:file= and python
    :PROPERTIES:
    :DATE:     2011-06-06
    :END:
@@ -3480,7 +3480,7 @@ a test
 (defvar name:
 [[file:/tmp/test.png]]
 
-(defun (defun (defun  testing new data names
+(defun  testing new data names
    :PROPERTIES:
    :DATE:     2011-06-02
    :END:
@@ -3501,7 +3501,7 @@ my data is results
 (defvar name:
 : 246
 
-(defun (defun (defun  default directory examples in lisp
+(defun  default directory examples in lisp
    :PROPERTIES:
    :DATE:     2011-06-01
    :END:
@@ -3521,7 +3521,7 @@ my data is results
 (defvar name:
 : #P""
 
-(defun (defun (defun  lisp body with multiple forms
+(defun  lisp body with multiple forms
    :PROPERTIES:
    :DATE:     2011-05-31
    :END:
@@ -3534,7 +3534,7 @@ my data is results
 (defvar name:
 : 3
 
-(defun (defun (defun  passing values through to STDIN of shell code blocks
+(defun  passing values through to STDIN of shell code blocks
    :PROPERTIES:
    :DATE:     2011-05-26
    :END:
@@ -3557,7 +3557,7 @@ my data is results
 | middle |
 |      7 |
 
-(defun (defun (defun  awk example
+(defun  awk example
    :PROPERTIES:
    :DATE:     2011-05-26
    :END:
@@ -3576,7 +3576,7 @@ my data is results
 | 4 |
 | 7 |
 
-(defun (defun (defun  don't match end_src inside of a block
+(defun  don't match end_src inside of a block
    :PROPERTIES:
    :DATE:     2011-05-14
    :END:
@@ -3589,7 +3589,7 @@ my data is results
 (defvar name: the_issue
 : (defvar end_src block
 
-(defun (defun (defun  append tables
+(defun  append tables
    :PROPERTIES:
    :DATE:     2011-05-14
    :END:
@@ -3619,7 +3619,7 @@ my data is results
 | (c 3) | (d 4) |
 | (e 5) | (f 6) |
 
-(defun (defun (defun  ocaml
+(defun  ocaml
    :PROPERTIES:
    :DATE:     2011-05-06
    :END:
@@ -3631,7 +3631,7 @@ my data is results
 (defvar name:
 | 3 | 2 | 3 | 3 | 2 | 3 | 4 | 5 |
 
-(defun (defun (defun  new names for results
+(defun  new names for results
    :PROPERTIES:
    :DATE:     2011-05-06
    :END:
@@ -3662,7 +3662,7 @@ changing the variable used to label data
 (defvar name:
 : 2
 
-(defun (defun (defun  simple latex verbatim wrap example
+(defun  simple latex verbatim wrap example
    :PROPERTIES:
    :DATE:     2011-05-05
    :END:
@@ -3676,7 +3676,7 @@ changing the variable used to label data
   echo another
 (defvar end_src
 
-(defun (defun (defun  inserting complicated results
+(defun  inserting complicated results
    :PROPERTIES:
    :DATE:     2011-05-05
    :END:
@@ -3690,7 +3690,7 @@ changing the variable used to label data
 (defvar name:
 | :return | (:ok {:model #<MINLP f(x,y)={(x[0]-5)^2+(x[1]-3)^2-y(defun sqrt($x),2}>, :v #<Variables x={ 4.0, 4.0 } y={ 0 }>, :z nil}) | 13 |
 
-(defun (defun (defun  automatic org-mode formatting
+(defun  automatic org-mode formatting
    :PROPERTIES:
    :DATE:     2011-04-27
    :END:
@@ -3708,7 +3708,7 @@ changing the variable used to label data
 (defvar name:
 : t
 
-(defun (defun (defun  units in R plot
+(defun  units in R plot
    :PROPERTIES:
    :DATE:     2011-04-21
    :END:
@@ -3721,7 +3721,7 @@ changing the variable used to label data
 (defvar name:
 [[file:test.png]]
 
-(defun (defun (defun  simple Oz example
+(defun  simple Oz example
    :PROPERTIES:
    :DATE:     2011-04-19
    :END:
@@ -3729,7 +3729,7 @@ changing the variable used to label data
   {Browse 'Hello'}
 (defvar end_src
 
-(defun (defun (defun  Ocaml appending blocks
+(defun  Ocaml appending blocks
    :PROPERTIES:
    :DATE:     2011-04-19
    :END:
@@ -3742,7 +3742,7 @@ block
 (defvar name:
 | 1 | 2 | 3 |
 
-(defun (defun (defun  complex numbers in tables and python, reference in table formula
+(defun  complex numbers in tables and python, reference in table formula
    :PROPERTIES:
    :DATE:     2011-04-13
    :END:
@@ -3774,7 +3774,7 @@ block
 | #ERROR    |
 (defvar TBLFM: @2$1='(sbe quote (it @1$1))
 
-(defun (defun (defun (defun  using vectors to represent complex number is lisp
+(defun  using vectors to represent complex number is lisp
     :PROPERTIES:
     :DATE:     2011-04-15
     :END:
@@ -3788,7 +3788,7 @@ block
   (format "real:%d complex:%d" (aref it 0) (aref it 1))
 (defvar end_src
 
-(defun (defun (defun (defun  reference the table in a table formula
+(defun  reference the table in a table formula
     :PROPERTIES:
     :DATE:     2011-04-13
     :END:
@@ -3799,7 +3799,7 @@ block
 |                                   4 |
 (defvar TBLFM: @2$1='(sbe quote (it "complex-data"))
 
-(defun (defun (defun (defun  externally referencing the table
+(defun  externally referencing the table
     :PROPERTIES:
     :DATE:     2011-04-13
     :END:
@@ -3827,7 +3827,7 @@ block
 | (0.0356575682336,0.000574851263615) |
 | (0.0357806926897,0.000575051685084) |
 
-(defun (defun (defun  emacs-lisp printing with output to string
+(defun  emacs-lisp printing with output to string
    :PROPERTIES:
    :DATE:     2011-04-10
    :END:
@@ -3861,7 +3861,7 @@ block
 | cat  |                  7 |
 | fish |                    |
 
-(defun (defun (defun  session associated with R block
+(defun  session associated with R block
    :PROPERTIES:
    :DATE:     2011-04-02
    :END:
@@ -3874,7 +3874,7 @@ block
 (defvar name:
 : 1
 
-(defun (defun (defun  vc-log
+(defun  vc-log
    :PROPERTIES:
    :DATE:     2011-04-01
    :END:
@@ -3883,7 +3883,7 @@ A version control log of this file.  The =vc-log= code block lives in
 the library of babel.
 (defvar call: vc-log() :exports results
 
-(defun (defun (defun  tangling out vc information
+(defun  tangling out vc information
    :PROPERTIES:
    :DATE:     2011-04-01
    :END:
@@ -3903,7 +3903,7 @@ the library of babel.
   done
 (defvar end_src
 
-(defun (defun (defun  grabbing the current buffer during export
+(defun  grabbing the current buffer during export
    :PROPERTIES:
    :DATE:     2011-04-01
    :END:
@@ -3917,7 +3917,7 @@ Eric
   git log -1
 (defvar end_src
 
-(defun (defun (defun  detangling example
+(defun  detangling example
    :PROPERTIES:
    :tangle:   yes
    :comments: yes
@@ -3937,7 +3937,7 @@ Eric
   echo "this is an unnamed code block"
 (defvar end_src
 
-(defun (defun (defun  CL example
+(defun  CL example
    :PROPERTIES:
    :DATE:     2011-04-01
    :END:
@@ -3961,7 +3961,7 @@ Eric
 |  9 |
 | 10 |
 
-(defun (defun (defun  colnames with call lines
+(defun  colnames with call lines
    :PROPERTIES:
    :DATE:     2011-03-29
    :END:
@@ -3992,7 +3992,7 @@ Eric
 | parameter |
 | value     |
 
-(defun (defun (defun  macros during tangling
+(defun  macros during tangling
    :PROPERTIES:
    :ID:       d2ff9d6f-b413-4072-91a9-3ae8aa32032c
    :DATE:     2011-03-14
@@ -4018,7 +4018,7 @@ will be replaced.
   echo org-mode set CONFIG_PARAMETER to: {{{CONFIG_PARAM01}}}
 (defvar end_src
 
-(defun (defun (defun  conflicting header arguments
+(defun  conflicting header arguments
    :PROPERTIES:
    :DATE:     2011-03-14
    :END:
@@ -4035,7 +4035,7 @@ call line
 (defvar name: conflict-block()
 : eric
 
-(defun (defun (defun  looks like a pipe in a table
+(defun  looks like a pipe in a table
    :PROPERTIES:
    :DATE:     2011-03-07
    :END:
@@ -4061,7 +4061,7 @@ call line
 (defvar name:
 : (1|2)
 
-(defun (defun (defun  eval results as a list
+(defun  eval results as a list
    :PROPERTIES:
    :DATE:     2011-03-06
    :END:
@@ -4093,7 +4093,7 @@ call line
 (defvar name:
 : [1 2]
 
-(defun (defun (defun  simple mysql
+(defun  simple mysql
    :PROPERTIES:
    :DATE:     2011-03-03
    :END:
@@ -4101,7 +4101,7 @@ call line
   show tables;
 (defvar end_src
 
-(defun (defun (defun  export of inline R code
+(defun  export of inline R code
    :PROPERTIES:
    :DATE:     2011-03-03
    :END:
@@ -4119,7 +4119,7 @@ src_R[:session (defun R(defun ]{x} .
 
 Did the number 100 show up at the end of the previous sentence on export?
 
-(defun (defun (defun  results org raw wrap
+(defun  results org raw wrap
    :PROPERTIES:
    :DATE:     2011-03-02
    :END:
@@ -4136,7 +4136,7 @@ Did the number 100 show up at the end of the previous sentence on export?
 - second
 (defvar END_ORG
 
-(defun (defun (defun (defun  Version 1
+(defun  Version 1
     :PROPERTIES:
     :DATE:     2011-03-02
     :END:
@@ -4149,7 +4149,7 @@ This version only prints the org code for the table, but does not interprets it.
       )
 (defvar end_src
 
-(defun (defun (defun (defun  Version 2
+(defun  Version 2
     :PROPERTIES:
     :DATE:     2011-03-02
     :END:
@@ -4163,7 +4163,7 @@ This version prints the table including the graph as expected, but
       )
 (defvar end_src
 
-(defun (defun (defun (defun  Version 3
+(defun  Version 3
     :PROPERTIES:
     :DATE:     2011-03-02
     :END:
@@ -4176,7 +4176,7 @@ Finally this version does only export the R code
       )
 (defvar end_src
 
-(defun (defun (defun  leading/trailing spaces
+(defun  leading/trailing spaces
    :PROPERTIES:
    :DATE:     2011-03-02
    :END:
@@ -4190,11 +4190,11 @@ Finally this version does only export the R code
 (defvar name:
 :  pass through with space 
 
-(defun (defun (defun  reference to a commented out subtree
+(defun  reference to a commented out subtree
     :PROPERTIES:
     :DATE:     2011-02-28
     :END:
-(defun (defun (defun (defun  COMMENT I don't export
+(defun  COMMENT I don't export
     :PROPERTIES:
     :DATE:     2011-02-28
     :END:
@@ -4204,7 +4204,7 @@ Finally this version does only export the R code
 | 3 |
 | 4 |
 
-(defun (defun (defun (defun  I do export
+(defun  I do export
     :PROPERTIES:
     :DATE:     2011-02-28
     :END:
@@ -4212,7 +4212,7 @@ Finally this version does only export the R code
   params
 (defvar end_src
 
-(defun (defun (defun  literal reference in a table with sbe
+(defun  literal reference in a table with sbe
    :PROPERTIES:
    :DATE:     2011-02-28
    :END:
@@ -4225,7 +4225,7 @@ Finally this version does only export the R code
   (length in)
 (defvar end_src
 
-(defun (defun (defun  strip hline before processing a variables indices
+(defun  strip hline before processing a variables indices
    :PROPERTIES:
    :DATE:     2011-02-27
    :END:
@@ -4255,7 +4255,7 @@ Finally this version does only export the R code
   $a; $b;
 (defvar end_src 
 
-(defun (defun (defun  passing elisp-looking variables to code blocks
+(defun  passing elisp-looking variables to code blocks
    :PROPERTIES:
    :DATE:     2011-02-27
    :END:
@@ -4285,7 +4285,7 @@ Finally this version does only export the R code
 (defvar name:
 : (a b c)
 
-(defun (defun (defun  pass a vector to calc
+(defun  pass a vector to calc
    :PROPERTIES:
    :DATE:     2011-02-27
    :END:
@@ -4318,11 +4318,11 @@ Finally this version does only export the R code
 (defvar name:
 : 8
 
-(defun (defun (defun  new block regexp tests
+(defun  new block regexp tests
     :PROPERTIES:
     :DATE:     2011-02-27
     :END:
-(defun (defun (defun (defun  Block 1 (Exports OK)
+(defun  Block 1 (Exports OK)
     :PROPERTIES:
     :DATE:     2011-02-27
     :END:
@@ -4331,7 +4331,7 @@ Finally this version does only export the R code
 Block 1
 (defvar END_SRC
 
-(defun (defun (defun (defun  Block 2 (Exports OK - double blank line no white-space in Block)
+(defun  Block 2 (Exports OK - double blank line no white-space in Block)
     :PROPERTIES:
     :DATE:     2011-02-27
     :END:
@@ -4341,7 +4341,7 @@ Block 1
 
 (defvar END_SRC
 
-(defun (defun (defun (defun  Block 3 (Fails - single blank line no white-space in Block)
+(defun  Block 3 (Fails - single blank line no white-space in Block)
     :PROPERTIES:
     :DATE:     2011-02-27
     :END:
@@ -4350,7 +4350,7 @@ Block 1
 
 (defvar END_SRC
 
-(defun (defun (defun (defun  Block 4 (Gets consumed by previous Block)
+(defun  Block 4 (Gets consumed by previous Block)
     :PROPERTIES:
     :DATE:     2011-02-27
     :END:
@@ -4359,7 +4359,7 @@ Block 1
 Block 4
 (defvar END_SRC
 
-(defun (defun (defun (defun  Block 5 (Fails - no lines in Block)
+(defun  Block 5 (Fails - no lines in Block)
     :PROPERTIES:
     :DATE:     2011-02-27
     :END:
@@ -4367,7 +4367,7 @@ Block 4
 (defvar BEGIN_SRC sh :tangle test-out
 (defvar END_SRC
 
-(defun (defun (defun (defun  Block 6 (Gets consumed by previous Block
+(defun  Block 6 (Gets consumed by previous Block
     :PROPERTIES:
     :DATE:     2011-02-27
     :END:
@@ -4376,7 +4376,7 @@ Block 4
 Block 6
 (defvar END_SRC
 
-(defun (defun (defun  don't interpret tuples as elisp code
+(defun  don't interpret tuples as elisp code
    :PROPERTIES:
    :DATE:     2011-02-27
    :END:
@@ -4387,7 +4387,7 @@ Block 6
 (defvar name:
 : (1, 2)
 
-(defun (defun (defun  source block names in current buffer
+(defun  source block names in current buffer
    :PROPERTIES:
    :DATE:     2011-02-26
    :END:
@@ -4395,7 +4395,7 @@ Block 6
  (org-babel-src-block-names)
 (defvar end_src
 
-(defun (defun (defun  simple python block
+(defun  simple python block
    :PROPERTIES:
    :DATE:     2011-02-26
    :END:
@@ -4407,7 +4407,7 @@ Block 6
 (defvar name:
 : 9
 
-(defun (defun (defun  sh return a list of elements with spaces
+(defun  sh return a list of elements with spaces
    :PROPERTIES:
    :DATE:     2011-02-26
    :END:
@@ -4433,7 +4433,7 @@ Block 6
 : dan davison
 : seb vauban
 
-(defun (defun (defun  calc variables inside of parenthesis
+(defun  calc variables inside of parenthesis
    :PROPERTIES:
    :DATE:     2011-02-22
    :END:
@@ -4451,11 +4451,11 @@ testvar - 200
 (defvar name:
 : 7040000
 
-(defun (defun (defun  new lists
+(defun  new lists
     :PROPERTIES:
     :DATE:     2011-02-21
     :END:
-(defun (defun (defun (defun  results embedded inside of a list
+(defun  results embedded inside of a list
     :PROPERTIES:
     :DATE:     2011-02-22
     :END:
@@ -4470,7 +4470,7 @@ testvar - 200
    (defvar name:
    : foo
 
-(defun (defun (defun (defun  reading and writing
+(defun  reading and writing
     :PROPERTIES:
     :DATE:     2011-02-22
     :END:
@@ -4486,7 +4486,7 @@ testvar - 200
   (reverse lst)
 (defvar end_src
 
-(defun (defun (defun  catch the file name during export
+(defun  catch the file name during export
    :PROPERTIES:
    :DATE:     2011-02-21
    :END:
@@ -4495,7 +4495,7 @@ testvar - 200
   file-name
 (defvar end_src
 
-(defun (defun (defun  mentions of file names in file contents
+(defun  mentions of file names in file contents
    :PROPERTIES:
    :DATE:     2011-02-20
    :END:
@@ -4554,7 +4554,7 @@ graphing with dot
 (defvar name:
 [[file:files.png]]
 
-(defun (defun (defun  export of inline code blocks which are silent
+(defun  export of inline code blocks which are silent
    :PROPERTIES:
    :DATE:     2011-02-20
    :END:
@@ -4567,14 +4567,14 @@ graphing with dot
 
 Here is an inline code block src_sh{echo 8} <- there
 
-(defun (defun (defun  inline code block
+(defun  inline code block
    :PROPERTIES:
    :DATE:     2011-02-18
    :END:
 
 here is an inline block src_R{1+1}
 
-(defun (defun (defun  SQL --- example reading org-mode table into sql
+(defun  SQL --- example reading org-mode table into sql
    :PROPERTIES:
    :DATE:     2011-02-15
    :END:
@@ -4593,7 +4593,7 @@ here is an inline block src_R{1+1}
 load data infile "$table" into mytable;
 (defvar end_src
 
-(defun (defun (defun  recutils
+(defun  recutils
    :PROPERTIES:
    :DATE:     2011-02-15
    :END:
@@ -4654,7 +4654,7 @@ load data infile "$table" into mytable;
 | chapters.gnu.org administration guide | Nacho Gonzalez      | Jose E. Marchesi |
 | Yeelong User Manual                   |                     |                  |
 
-(defun (defun (defun  passing keywords inside header arguments
+(defun  passing keywords inside header arguments
    :PROPERTIES:
    :DATE:     2011-02-15
    :END:
@@ -4666,7 +4666,7 @@ load data infile "$table" into mytable;
 (defvar name:
 | :no-expand | other |
 
-(defun (defun (defun  two vars in a properties block -- not possible
+(defun  two vars in a properties block -- not possible
    :PROPERTIES:
    :var:      test1=7
    :var:      test2=8
@@ -4680,7 +4680,7 @@ load data infile "$table" into mytable;
 results in Error
 : let: Symbol's value as variable is void: test2
 
-(defun (defun (defun (defun  an alternative
+(defun  an alternative
     :PROPERTIES:
     :var:      tests=all-tests
     :DATE:     2011-02-10
@@ -4697,7 +4697,7 @@ results in Error
 (defvar name:
 : test1=7 test2=8
 
-(defun (defun (defun (defun  another alternative
+(defun  another alternative
     :PROPERTIES:
     :var:      vars=variables
     :DATE:     2011-06-21
@@ -4712,7 +4712,7 @@ results in Error
   print vars[1][1]
 (defvar end_src
 
-(defun (defun (defun  how to set no-expand in properties
+(defun  how to set no-expand in properties
    :PROPERTIES:
    :no-expand: yes
    :DATE:     2011-02-10
@@ -4724,7 +4724,7 @@ results in Error
 
 tangles to
 
-(defun (defun (defun  non-inlined inline code block
+(defun  non-inlined inline code block
    :PROPERTIES:
    :DATE:     2011-01-27
    :END:
@@ -4732,7 +4732,7 @@ The Date is src_sh[:results replace]{date} at the time of =this= export.
 
 src_sh[:results replace]{ls}
 
-(defun (defun (defun  simple calc example
+(defun  simple calc example
    :PROPERTIES:
    :DATE:     2011-01-25
    :END:
@@ -4743,7 +4743,7 @@ src_sh[:results replace]{ls}
 (defvar name:
 : 6
 
-(defun (defun (defun  results replace not always working
+(defun  results replace not always working
    :PROPERTIES:
    :DATE:     2011-01-25
    :END:
@@ -4763,11 +4763,11 @@ src_sh[:results replace]{ls}
 
 inline block src_emacs-lisp[:exports code :results replace]{(+ 1 1 1)} here is was
 
-(defun (defun (defun  inserting wrappers eats following characters
+(defun  inserting wrappers eats following characters
     :PROPERTIES:
     :DATE:     2011-01-20
     :END:
-(defun (defun (defun (defun  Test
+(defun  Test
      :PROPERTIES:
      :DATE:     2011-01-20
      :END:
@@ -4782,12 +4782,12 @@ inline block src_emacs-lisp[:exports code :results replace]{(+ 1 1 1)} here is w
    \end{equation}
    (defvar END_LaTeX
    
-(defun (defun (defun (defun  Watch me die :-(
+(defun  Watch me die :-(
      :PROPERTIES:
      :DATE:     2011-01-20
      :END:
 
-(defun (defun (defun  creating a directory when needed for tangling
+(defun  creating a directory when needed for tangling
    :PROPERTIES:
    :DATE:     2011-01-19
    :END:
@@ -4812,7 +4812,7 @@ There is now a new header argument controlling this behavior
   (message "contents")
 (defvar end_src
 
-(defun (defun (defun  passing arguments to the shell
+(defun  passing arguments to the shell
    :PROPERTIES:
    :DATE:     2011-01-18
    :END:
@@ -4838,7 +4838,7 @@ There is now a new header argument controlling this behavior
   (setq org-babel-sh-var-quote-fmt "`cat <<'BABEL_TABLE'\n%s\nBABEL_TABLE\n`")
 (defvar end_src
 
-(defun (defun (defun  wrap noweb references in comments
+(defun  wrap noweb references in comments
    :PROPERTIES:
    :DATE:     2011-01-16
    :END:
@@ -4854,7 +4854,7 @@ There is now a new header argument controlling this behavior
     (message "x=%s" x))
 (defvar end_src
 
-(defun (defun (defun  replace inline code block
+(defun  replace inline code block
    :PROPERTIES:
    :DATE:     2011-01-13
    :END:
@@ -4871,7 +4871,7 @@ This is src_emacs-lisp{(+ 1 2 3)} an inline block.
       (error "not inside of an inline source block.")))
 (defvar end_src
 
-(defun (defun (defun  noweb then variables
+(defun  noweb then variables
    :PROPERTIES:
    :DATE:     2011-01-13
    :END:
@@ -4890,7 +4890,7 @@ This is src_emacs-lisp{(+ 1 2 3)} an inline block.
   <<replaced-first>>
 (defvar end_src
 
-(defun (defun (defun  empty strings as arguments
+(defun  empty strings as arguments
    :PROPERTIES:
    :DATE:     2011-01-11
    :END:
@@ -4902,7 +4902,7 @@ This is src_emacs-lisp{(+ 1 2 3)} an inline block.
 (defvar name:
 : bar
 
-(defun (defun (defun  call lines
+(defun  call lines
    :PROPERTIES:
    :DATE:     2011-01-11
    :END:
@@ -4921,7 +4921,7 @@ This is src_emacs-lisp{(+ 1 2 3)} an inline block.
 (defvar name: doubler[:var n=3]()
 : 6
 
-(defun (defun (defun  language name abbreviations
+(defun  language name abbreviations
    :PROPERTIES:
    :DATE:     2011-01-07
    :END:
@@ -4934,7 +4934,7 @@ This is src_emacs-lisp{(+ 1 2 3)} an inline block.
   (map (partial + 1) (range 20))
 (defvar end_src
 
-(defun (defun (defun  eval query
+(defun  eval query
    :PROPERTIES:
    :DATE:     2010-12-21
    :END:
@@ -4957,7 +4957,7 @@ This is src_emacs-lisp{(+ 1 2 3)} an inline block.
   ---
 (defvar end_src
 
-(defun (defun (defun  new file handling
+(defun  new file handling
    :PROPERTIES:
    :DATE:     2010-12-20
    :END:
@@ -5015,7 +5015,7 @@ from http://www.graphviz.org/Gallery/directed/fsm.gv.txt
 (defvar name:
 [[file:fsa.png]]
 
-(defun (defun (defun  utf8 and latin-1 encodings
+(defun  utf8 and latin-1 encodings
    :PROPERTIES:
    :DATE:     2010-12-13
    :END:
@@ -5030,7 +5030,7 @@ from http://www.graphviz.org/Gallery/directed/fsm.gv.txt
 (defvar name:
 | 2 | 2 |
 
-(defun (defun (defun  tangle templates
+(defun  tangle templates
    :PROPERTIES:
    :DATE:     2010-12-13
    :END:
@@ -5066,7 +5066,7 @@ echo $footing
 : something new
 : some other stuff here
 
-(defun (defun (defun  missing lines on tangle
+(defun  missing lines on tangle
    :PROPERTIES:
    :ID:       83eb62fd-4147-405b-bdc2-567b2d5cbd70
    :DATE:     2010-12-13
@@ -5090,7 +5090,7 @@ echo $footing
 \end{itemize}
 (defvar END_LaTeX
 
-(defun (defun (defun  Python requires a utf-8 coding prefix
+(defun  Python requires a utf-8 coding prefix
    :PROPERTIES:
    :DATE:     2010-12-02
    :END:
@@ -5109,7 +5109,7 @@ print(s)
 (defvar name:
 : é
 
-(defun (defun (defun  empty lines in R session output
+(defun  empty lines in R session output
    :PROPERTIES:
    :DATE:     2010-12-01
    :END:
@@ -5125,7 +5125,7 @@ print(s)
 : [1] 2
 : [1] 5
 
-(defun (defun (defun  sql variables
+(defun  sql variables
    :PROPERTIES:
    :DATE:     2010-11-30
    :END:
@@ -5150,7 +5150,7 @@ BEGIN
 END
 (defvar end_src
 
-(defun (defun (defun  =:eval query= shows the name
+(defun  =:eval query= shows the name
    :PROPERTIES:
    :DATE:     2010-11-30
    :END:
@@ -5162,7 +5162,7 @@ END
 (defvar name: i-have-a-name
 : Tue Nov 30 22:03:25 MST 2010
 
-(defun (defun (defun  python with return header argument
+(defun  python with return header argument
    :PROPERTIES:
    :DATE:     2010-11-27
    :END:
@@ -5176,7 +5176,7 @@ END
 (defvar name:
 : 98
 
-(defun (defun (defun  un-named R code blocks
+(defun  un-named R code blocks
    :PROPERTIES:
    :DATE:     2010-11-23
    :END:
@@ -5205,7 +5205,7 @@ END
 (defvar name:
 : [1] 9
 
-(defun (defun (defun  safe lists for Haskell
+(defun  safe lists for Haskell
    :PROPERTIES:
    :DATE:     2010-11-23
    :END:
@@ -5230,7 +5230,7 @@ END
 (defvar name:
 | 1 | 2 | 3 | 4 |
 
-(defun (defun (defun  reading from single-quote-delim languages
+(defun  reading from single-quote-delim languages
    :PROPERTIES:
    :DATE:     2010-11-23
    :END:
@@ -5260,7 +5260,7 @@ return [['607', 'Show license short, name on the deed'],
 | 'single quotes' | b |
 | "double quotes" | d |
 
-(defun (defun (defun  add column to table with awk
+(defun  add column to table with awk
    :PROPERTIES:
    :question_author: Sébastien Vauban
    :DATE:     2010-11-23
@@ -5306,7 +5306,7 @@ echo "$data" | awk '// {print "| New col | " $0 " |";}'
 | New col | This is line 2 of the message.        |
 | New col | This is the last line of the message. |
 
-(defun (defun (defun  lists as data types
+(defun  lists as data types
    :PROPERTIES:
    :DATE:     2010-11-19
    :END:
@@ -5333,7 +5333,7 @@ also for a block inside of a list
 
 3. third element
 
-(defun (defun (defun  introducing =wrap= header argument
+(defun  introducing =wrap= header argument
    :PROPERTIES:
    :DATE:     2010-11-19
    :END:
@@ -5368,7 +5368,7 @@ now indented
   : something else
   (defvar END_RESULT
 
-(defun (defun (defun  sqlite
+(defun  sqlite
    :PROPERTIES:
    :DATE:     2010-11-10
    :END:
@@ -5379,7 +5379,7 @@ now indented
 (defvar name:
 : 422689
 
-(defun (defun (defun  lob calls with header argument pass through
+(defun  lob calls with header argument pass through
    :PROPERTIES:
    :DATE:     2010-11-08
    :END:
@@ -5414,7 +5414,7 @@ need ob-ref.el to pass through the header arguments in "[]"s
 (defvar name:
 : 8
 
-(defun (defun (defun  clojure code blocks and the lazies
+(defun  clojure code blocks and the lazies
    :PROPERTIES:
    :DATE:     2010-11-06
    :END:
@@ -5444,7 +5444,7 @@ need ob-ref.el to pass through the header arguments in "[]"s
 | 8 | 64 |
 | 9 | 81 |
 
-(defun (defun (defun  shell blocks returning a file name
+(defun  shell blocks returning a file name
    :PROPERTIES:
    :DATE:     2010-11-03
    :END:
@@ -5455,7 +5455,7 @@ need ob-ref.el to pass through the header arguments in "[]"s
 (defvar name:
 [[file:quick.txt]]
 
-(defun (defun (defun  playing with calc support
+(defun  playing with calc support
    :PROPERTIES:
    :DATE:     2010-11-03
    :END:
@@ -5495,7 +5495,7 @@ need ob-ref.el to pass through the header arguments in "[]"s
 (defvar name:
 : 18
 
-(defun (defun (defun  passing arguments through call lines
+(defun  passing arguments through call lines
    :PROPERTIES:
    :DATE:     2010-10-29
    :END:
@@ -5513,7 +5513,7 @@ need ob-ref.el to pass through the header arguments in "[]"s
 (defvar name: test(myarg="hiho")
 : test.pdf
 
-(defun (defun (defun  simple gnuplot tests
+(defun  simple gnuplot tests
    :PROPERTIES:
    :DATE:     2010-10-26
    :END:
@@ -5567,7 +5567,7 @@ plot data u 1:2 w p lw 2 title 'x vs. y1', \
 (defvar name:
 [[file:basic-plot.png]]
 
-(defun (defun (defun  latex headers in latex code blocks
+(defun  latex headers in latex code blocks
    :PROPERTIES:
    :DATE:     2010-10-26
    :END:
@@ -5586,7 +5586,7 @@ plot data u 1:2 w p lw 2 title 'x vs. y1', \
 (defvar name:
 [[file:name2.pdf]]
 
-(defun (defun (defun  export-specific header arguments
+(defun  export-specific header arguments
    :PROPERTIES:
    :DATE:     2010-10-26
    :END:
@@ -5599,7 +5599,7 @@ plot data u 1:2 w p lw 2 title 'x vs. y1', \
 (defvar name:
 : not latex
 
-(defun (defun (defun  security problem with elisp in header arguments
+(defun  security problem with elisp in header arguments
    :PROPERTIES:
    :DATE:     2010-10-14
    :END:
@@ -5607,7 +5607,7 @@ plot data u 1:2 w p lw 2 title 'x vs. y1', \
   (+ 1 1)
 (defvar end_src
 
-(defun (defun (defun  weaving with noweb links
+(defun  weaving with noweb links
    :PROPERTIES:
    :tangle:   yes
    :DATE:     2010-10-13
@@ -5623,7 +5623,7 @@ plot data u 1:2 w p lw 2 title 'x vs. y1', \
   <<name>>
 (defvar end_src
 
-(defun (defun (defun  very very large numbers
+(defun  very very large numbers
    :PROPERTIES:
    :DATE:     2010-10-13
    :END:
@@ -5653,7 +5653,7 @@ plot data u 1:2 w p lw 2 title 'x vs. y1', \
 |               12567890 | integer |
 | 2.3123128237198328e+26 | float   |
 
-(defun (defun (defun  preceding blank lines on tangle
+(defun  preceding blank lines on tangle
    :PROPERTIES:
    :DATE:     2010-10-13
    :END:
@@ -5666,7 +5666,7 @@ plot data u 1:2 w p lw 2 title 'x vs. y1', \
   echo "else"
 (defvar end_src
 
-(defun (defun (defun  index into a scalar
+(defun  index into a scalar
    :PROPERTIES:
    :DATE:     2010-10-13
    :END:
@@ -5681,7 +5681,7 @@ plot data u 1:2 w p lw 2 title 'x vs. y1', \
 (defvar name:
 : a
 
-(defun (defun (defun  cycle -- the input is the output
+(defun  cycle -- the input is the output
    :PROPERTIES:
    :DATE:     2010-09-29
    :END:
@@ -5701,7 +5701,7 @@ and the rhythm is the base and the base is the treble
   (+ 1 1 1)
 (defvar end_src
 
-(defun (defun (defun  Letter
+(defun  Letter
    :PROPERTIES:
    :DATE:     2010-09-21
    :END:
@@ -5740,7 +5740,7 @@ and the rhythm is the base and the base is the treble
 \end{document}
 (defvar end_src
 
-(defun (defun (defun  splitting code blocks
+(defun  splitting code blocks
    :PROPERTIES:
    :DATE:     2010-09-19
    :END:
@@ -5778,7 +5778,7 @@ and the rhythm is the base and the base is the treble
     ;; other stuff
   (defvar end_src
 
-(defun (defun (defun  header arguments on call line
+(defun  header arguments on call line
    :PROPERTIES:
    :DATE:     2010-09-09
    :END:
@@ -5796,7 +5796,7 @@ maybe the following with the new proposed header arguments
 
 (defvar call: eight[:session (defun R(defun ]() :results vector
 
-(defun (defun (defun  empty-string results
+(defun  empty-string results
    :PROPERTIES:
    :DATE:     2010-09-08
    :END:
@@ -5826,7 +5826,7 @@ More test
 | :shebang  |         |
 | :tangle   | no      |
 
-(defun (defun (defun  tangle org-mode block
+(defun  tangle org-mode block
    :PROPERTIES:
    :DATE:     2010-09-07
    :END:
@@ -5843,7 +5843,7 @@ More test
   "
 (defvar end_src
 
-(defun (defun (defun  remove results when nil is returned
+(defun  remove results when nil is returned
    :PROPERTIES:
    :DATE:     2010-09-07
    :END:
@@ -5853,7 +5853,7 @@ More test
 
 (defvar name:
 
-(defun (defun (defun  comparative speed of python evaluation
+(defun  comparative speed of python evaluation
    :PROPERTIES:
    :DATE:     2010-09-07
    :END:
@@ -5882,7 +5882,7 @@ add(sub(10,1),sub(10,2))
 (defvar name:
 : org_babel_python_eoe
 
-(defun (defun (defun  customizable comment formats
+(defun  customizable comment formats
    :PROPERTIES:
    :tangle:   yes
    :comments: yes
@@ -5906,7 +5906,7 @@ I would like the following output in the tangled file Main.hs:
 : test = length
 : main = print $ test [1,2,3]
 
-(defun (defun (defun  tangling with full comments
+(defun  tangling with full comments
    :PROPERTIES:
    :comments: org
    :tangle:   full-comments.el
@@ -5919,7 +5919,7 @@ The top block
 
 here's some text which won't be tangled
 
-(defun (defun (defun (defun  subheading
+(defun  subheading
     :PROPERTIES:
     :DATE:     2010-09-04
     :END:
@@ -5936,7 +5936,7 @@ and finally a block with a =:noweb= header argument
     <<tangle-el-the-second>>)
 (defvar end_src
 
-(defun (defun (defun  :var (buffer-file-name)
+(defun  :var (buffer-file-name)
    :PROPERTIES:
    :DATE:     2010-09-03
    :END:
@@ -5953,12 +5953,12 @@ export buffer is not visiting any file.
   echo $file Revision
 (defvar end_src
 
-(defun (defun (defun  quoting header args (e.g. :cmdline)
+(defun  quoting header args (e.g. :cmdline)
    :PROPERTIES:
    :DATE:     2010-09-03
    :END:
 (defvar begin_src C :cmdline 1 2 3 4 5 :includes <stdio.h>
-  int main(int argc, char (defun (defun argv){
+  int main(int argc, char (defun argv){
     printf("argv[1] %s\n", argv[1]);
     return 0;
   }
@@ -5967,7 +5967,7 @@ export buffer is not visiting any file.
 (defvar name:
 : argv[1] 1
 
-(defun (defun (defun  :session evaluation on export
+(defun  :session evaluation on export
    :PROPERTIES:
    :DATE:     2010-09-01
    :END:
@@ -5984,7 +5984,7 @@ This second block /does/ appear in export.
   x
 (defvar end_src
 
-(defun (defun (defun  ditaa with tilda in path
+(defun  ditaa with tilda in path
    :PROPERTIES:
    :DATE:     2010-09-01
    :END:
@@ -5998,7 +5998,7 @@ This second block /does/ appear in export.
     +--------------+
 (defvar end_src
 
-(defun (defun (defun  scheme sessions
+(defun  scheme sessions
    :PROPERTIES:
    :DATE:     2010-08-31
    :END:
@@ -6016,7 +6016,7 @@ This second block /does/ appear in export.
 (defvar name:
 : 10
 
-(defun (defun (defun  conditional tangling
+(defun  conditional tangling
    :PROPERTIES:
    :DATE:     2010-08-31
    :END:
@@ -6024,7 +6024,7 @@ This second block /does/ appear in export.
   (setq tangle-tag "right")
 (defvar end_src
 
-(defun (defun (defun (defun  first subheading						       :left:
+(defun  first subheading						       :left:
     :PROPERTIES:
     :DATE:     2010-08-31
     :END:
@@ -6032,7 +6032,7 @@ This second block /does/ appear in export.
   "first"
 (defvar end_src
 
-(defun (defun (defun (defun  second subheading						      :right:
+(defun  second subheading						      :right:
     :PROPERTIES:
     :DATE:     2010-08-31
     :END:
@@ -6040,7 +6040,7 @@ This second block /does/ appear in export.
   "second"
 (defvar end_src
 
-(defun (defun (defun  pulling information from tags				       :blue:
+(defun  pulling information from tags				       :blue:
    :PROPERTIES:
    :DATE:     2010-08-30
    :END:
@@ -6052,7 +6052,7 @@ This second block /does/ appear in export.
 (defvar name:
 : blue
 
-(defun (defun (defun  initial scheme support
+(defun  initial scheme support
    :PROPERTIES:
    :DATE:     2010-08-27
    :END:
@@ -6071,7 +6071,7 @@ This second block /does/ appear in export.
 (defvar name:
 | 1 | 2 | 3 |
 
-(defun (defun (defun  initial javascript support
+(defun  initial javascript support
    :PROPERTIES:
    :DATE:     2010-08-27
    :END:
@@ -6109,7 +6109,7 @@ using node.js
 (defvar name:
 : 3
 
-(defun (defun (defun  wrapping up raw/org results
+(defun  wrapping up raw/org results
    :PROPERTIES:
    :DATE:     2010-08-26
    :END:
@@ -6127,7 +6127,7 @@ using node.js
 - third
 (defvar END_SRC
 
-(defun (defun (defun  trying out plantuml
+(defun  trying out plantuml
    :PROPERTIES:
    :DATE:     2010-08-26
    :END:
@@ -6146,7 +6146,7 @@ usage -- sequence diagram
 (defvar name:
 [[file:tryout.png]]
 
-(defun (defun (defun  eval for side effect on export
+(defun  eval for side effect on export
    :PROPERTIES:
    :DATE:     2010-08-26
    :END:
@@ -6160,7 +6160,7 @@ usage -- sequence diagram
     (+ 1 two)
   (defvar end_src
 
-(defun (defun (defun  eval and noeval
+(defun  eval and noeval
    :PROPERTIES:
    :DATE:     2010-08-26
    :END:
@@ -6186,7 +6186,7 @@ should export results, and should trigger query above
   ls
 (defvar end_src
 
-(defun (defun (defun  duplicate results on execute subtree
+(defun  duplicate results on execute subtree
    :PROPERTIES:
    :DATE:     2010-08-26
    :END:
@@ -6204,7 +6204,7 @@ should export results, and should trigger query above
 - third
 (defvar END_SRC
 
-(defun (defun (defun  issues with shell evaluation
+(defun  issues with shell evaluation
    :PROPERTIES:
    :DATE:     2010-08-25
    :END:
@@ -6213,7 +6213,7 @@ should export results, and should trigger query above
   make
 (defvar end_src
 
-(defun (defun (defun  org results and replace
+(defun  org results and replace
    :PROPERTIES:
    :DATE:     2010-08-18
    :END:
@@ -6253,7 +6253,7 @@ should export results, and should trigger query above
 | 92 | 28 | 21 |
 | 68 | 22 |  9 |
 
-(defun (defun (defun  ledger example output text
+(defun  ledger example output text
    :PROPERTIES:
    :DATE:     2010-08-13
    :END:
@@ -6268,7 +6268,7 @@ should export results, and should trigger query above
   echo "$stuff"
 (defvar end_src
 
-(defun (defun (defun  tangle R and load
+(defun  tangle R and load
   :PROPERTIES:
   :tangle:   to-load.r
   :DATE:     2010-08-12
@@ -6295,7 +6295,7 @@ x <- 10
  y <- 9
 (defvar end_src
 
-(defun (defun (defun  lob -- writing results out to files
+(defun  lob -- writing results out to files
    :PROPERTIES:
    :DATE:     2010-08-12
    :END:
@@ -6315,7 +6315,7 @@ writes the results out as tab separated file
 write the results out as a normal org-mode file
 (defvar call: write(data=table, file="~/Desktop/example.org") :results silent
 
-(defun (defun (defun  lisp
+(defun  lisp
    :PROPERTIES:
    :DATE:     2010-08-12
    :END:
@@ -6339,7 +6339,7 @@ write the results out as a normal org-mode file
 (defvar name:
 : 4
 
-(defun (defun (defun  importing the output of ledger
+(defun  importing the output of ledger
    :PROPERTIES:
    :DATE:     2010-08-12
    :END:
@@ -6363,7 +6363,7 @@ write the results out as a normal org-mode file
 | 09-Sep-17 CHEQUE : 7691785                | Expenses:Unknown | 100.00 EUR  | 266.70 EUR  |
 | 09-Oct-16 REMISE CHEQUE N 8686318 001 105 | Expenses:Unknown | -525.00 EUR | -258.30 EUR |
 
-(defun (defun (defun  comments in R blocks
+(defun  comments in R blocks
    :PROPERTIES:
    :DATE:     2010-08-12
    :END:
@@ -6379,7 +6379,7 @@ write the results out as a normal org-mode file
 : 
 : [1] 1.320853
 
-(defun (defun (defun  colnames to specific variables
+(defun  colnames to specific variables
    :PROPERTIES:
    :DATE:     2010-07-22
    :END:
@@ -6404,7 +6404,7 @@ write the results out as a normal org-mode file
 | three | two | one  |
 | 3     | 2   | 1    |
 
-(defun (defun (defun  caption on code block
+(defun  caption on code block
    :PROPERTIES:
    :DATE:     2010-07-22
    :END:
@@ -6415,7 +6415,7 @@ write the results out as a normal org-mode file
 SELECT 6(defun 9;
 (defvar end_src
 
-(defun (defun (defun  palendromic primes
+(defun  palendromic primes
    :PROPERTIES:
    :DATE:     2010-07-20
    :END:
@@ -6457,7 +6457,7 @@ The =convert= command is part of the [[http://www.imagemagick.org/script/index.p
   echo "pps.png"
 (defvar end_src
 
-(defun (defun (defun  input from an example block
+(defun  input from an example block
    :PROPERTIES:
    :DATE:     2010-07-13
    :END:
@@ -6492,7 +6492,7 @@ The =convert= command is part of the [[http://www.imagemagick.org/script/index.p
 (defvar name:
 : 1
 
-(defun (defun (defun  example w/o source name
+(defun  example w/o source name
    :PROPERTIES:
    :DATE:     2010-07-12
    :END:
@@ -6502,7 +6502,7 @@ delete emacs-lisp below for errors
   ((defun  (+ 1 1 1) (+ 1 1 1) (+ 1 1 1) (+ 1 1 1) (+ 1 1 1) (+ 1 1 1) (+ 1 1 1))
 (defvar end_src
 
-(defun (defun (defun  tangle R and load
+(defun  tangle R and load
    :PROPERTIES:
    :tangle:   with-comments.r
    :comments: yes
@@ -6526,7 +6526,7 @@ delete emacs-lisp below for errors
   x+y+z
 (defvar end_src
 
-(defun (defun (defun  export blocks w/o languages
+(defun  export blocks w/o languages
    :PROPERTIES:
    :DATE:     2010-07-09
    :END:
@@ -6553,7 +6553,7 @@ example
   [1, 2, 3, 4, 5].map{|r| r+1}
 (defvar end_src
 
-(defun (defun (defun  scratch
+(defun  scratch
    :PROPERTIES:
    :DATE:     2010-07-08
    :END:
@@ -6570,7 +6570,7 @@ looking at paths
   (buffer-file-name)
 (defvar end_src
 
-(defun (defun (defun  Tom found a bug
+(defun  Tom found a bug
    :PROPERTIES:
    :DATE:     2010-07-06
    :END:
@@ -6582,7 +6582,7 @@ looking at paths
 (defvar name:
 | 1 | 5 |
 
-(defun (defun (defun  dot
+(defun  dot
    :PROPERTIES:
    :DATE:     2010-07-06
    :END:
@@ -6597,7 +6597,7 @@ looking at paths
 (defvar name:
 [[file:models.png]]
 
-(defun (defun (defun  python errors
+(defun  python errors
    :PROPERTIES:
    :DATE:     2010-07-04
    :END:
@@ -6692,7 +6692,7 @@ looking at paths
 (defvar name:
 : 78
 
-(defun (defun (defun  table comment issue
+(defun  table comment issue
    :PROPERTIES:
    :DATE:     2010-06-30
    :END:
@@ -6735,7 +6735,7 @@ save me!
 | 1 | 2 |
 (defvar end_example
 
-(defun (defun (defun  latex literals in export
+(defun  latex literals in export
     :PROPERTIES:
     :DATE:     2010-06-30
     :END:
@@ -6743,7 +6743,7 @@ save me!
    (defvar ATTR_LaTeX: width=\textwidth
    [[./composite-pattern.png]]
 
-(defun (defun (defun  captions
+(defun  captions
    :PROPERTIES:
    :DATE:     2010-06-29
    :END:
@@ -6753,7 +6753,7 @@ save me!
 | A | B |
 | 1 | 2 |
 
-(defun (defun (defun  booktabs
+(defun  booktabs
    :PROPERTIES:
    :DATE:     2010-06-29
    :END:
@@ -6766,7 +6766,7 @@ save me!
 
 (defvar call: booktabs(table=months, align="r|l") :results latex :exports results
 
-(defun (defun (defun  table-label
+(defun  table-label
    :PROPERTIES:
    :DATE:     2010-06-28
    :END:
@@ -6775,7 +6775,7 @@ save me!
 | 2 |
 | 3 |
 
-(defun (defun (defun  haskell issues
+(defun  haskell issues
    :PROPERTIES:
    :DATE:     2010-06-28
    :END:
@@ -6803,7 +6803,7 @@ save me!
 (defvar name:
 : 7
 
-(defun (defun (defun  complex
+(defun  complex
    :PROPERTIES:
    :DATE:     2010-06-28
    :END:
@@ -6834,7 +6834,7 @@ save me!
 (defvar name:
 [[file:parks.png]]
 
-(defun (defun (defun  possible prefixes
+(defun  possible prefixes
    :PROPERTIES:
    :DATE:     2010-06-26
    :END:
@@ -6858,7 +6858,7 @@ save me!
    (length prefix))
 (defvar end_src
 
-(defun (defun (defun  hlines in python
+(defun  hlines in python
    :PROPERTIES:
    :DATE:     2010-06-26
    :END:
@@ -6889,7 +6889,7 @@ save me!
   (message "Exist")
 (defvar end_src
 
-(defun (defun (defun  protecting block bodies
+(defun  protecting block bodies
    :PROPERTIES:
    :DATE:     2010-06-25
    :END:
@@ -6935,7 +6935,7 @@ neither of these work as expected
 (defvar end_html
 final
 
-(defun (defun (defun  multiple evals for refs
+(defun  multiple evals for refs
    :PROPERTIES:
    :DATE:     2010-06-25
    :END:
@@ -6959,7 +6959,7 @@ final
 (defvar name:
 : 3
 
-(defun (defun (defun  tangling
+(defun  tangling
    :PROPERTIES:
    :DATE:     2010-06-17
    :END:
@@ -6980,7 +6980,7 @@ final
   1+8
 (defvar end_src
 
-(defun (defun (defun  foo org
+(defun  foo org
    :PROPERTIES:
    :session:  (defun R(defun 
    :DATE:     2010-06-16
@@ -6999,7 +6999,7 @@ and more stuff here and then the results
 (defvar caption: Scatter Plot with Regression Line
 [[file:fig1.pdf]]
 
-(defun (defun (defun  comments not commented
+(defun  comments not commented
    :PROPERTIES:
    :DATE:     2010-06-16
    :END:
@@ -7021,7 +7021,7 @@ and more stuff here and then the results
 
 2) how about this one...
 
-(defun (defun (defun  don't eat me!
+(defun  don't eat me!
    :PROPERTIES:
    :DATE:     2010-06-15
    :END:
@@ -7045,7 +7045,7 @@ and more stuff here and then the results
 
 2) source blocks should be able to be on adjacent lines
 
-(defun (defun (defun  simple reference
+(defun  simple reference
    :PROPERTIES:
    :DATE:     2010-06-13
    :END:
@@ -7061,7 +7061,7 @@ and more stuff here and then the results
 (defvar name:
 : 5
 
-(defun (defun (defun  exporting with call lines
+(defun  exporting with call lines
    :PROPERTIES:
    :DATE:     2010-06-11
    :END:
@@ -7092,7 +7092,7 @@ and more stuff here and then the results
 
 (defvar call: rpn-to-alg(alg=distributed-best)
  
-(defun (defun (defun  can't open indented results
+(defun  can't open indented results
     :PROPERTIES:
     :DATE:     2010-06-11
     :END:
@@ -7124,7 +7124,7 @@ and more stuff here and then the results
     (defvar name:
     [[file:recursion.pdf]]
 
-(defun (defun (defun  indented source-code blocks and indented results
+(defun  indented source-code blocks and indented results
     :PROPERTIES:
     :DATE:     2010-06-10
     :END:
@@ -7160,7 +7160,7 @@ and more stuff here and then the results
          : Thu Jun 10 14:05:57 2010
          : Thu Jun 10 14:06:00 2010
 
-(defun (defun (defun  not expand inlines in examples
+(defun  not expand inlines in examples
    :PROPERTIES:
    :DATE:     2010-06-08
    :END:
@@ -7177,7 +7177,7 @@ src_emacs-lisp{(+ 1 2 3)}
   src_emacs-lisp{(+ 1 2 3)}
 (defvar end_example
 
-(defun (defun (defun  updating results "in-situ"
+(defun  updating results "in-situ"
    :PROPERTIES:
    :DATE:     2010-06-07
    :END:
@@ -7206,14 +7206,14 @@ the results should be (defun above(defun  the block
           (current-time-string))
 (defvar end_src
 
-(defun (defun (defun  unwind-protect with narrowing
+(defun  unwind-protect with narrowing
    :PROPERTIES:
    :DATE:     2010-06-07
    :END:
 
 I'm not in the subtree
 
-(defun (defun (defun (defun  I'm in the subtree
+(defun  I'm in the subtree
     :PROPERTIES:
     :DATE:     2010-06-07
     :END:
@@ -7221,7 +7221,7 @@ I'm not in the subtree
   (+ 6 "I'm not a number!!")
 (defvar end_src
 
-(defun (defun (defun  stripping existing results
+(defun  stripping existing results
    :PROPERTIES:
    :DATE:     2010-06-07
    :END:
@@ -7244,7 +7244,7 @@ included...
   (message "I shouldn't be exported")
 (defvar end_src
 
-(defun (defun (defun  non-empty comint prompt
+(defun  non-empty comint prompt
    :PROPERTIES:
    :DATE:     2010-06-07
    :END:
@@ -7253,7 +7253,7 @@ included...
   8 + 9
 (defvar end_src
 
-(defun (defun (defun  inhibiting evaluation on export
+(defun  inhibiting evaluation on export
    :PROPERTIES:
    :noeval:   don't do it
    :DATE:     2010-06-07
@@ -7264,7 +7264,7 @@ included...
   (error)
 (defvar end_src
 
-(defun (defun (defun  indented source names
+(defun  indented source names
    :PROPERTIES:
    :DATE:     2010-06-07
    :END:
@@ -7287,7 +7287,7 @@ included...
   (defvar name:
   : eric
 
-(defun (defun (defun  export with existing results
+(defun  export with existing results
    :PROPERTIES:
    :DATE:     2010-06-07
    :END:
@@ -7315,7 +7315,7 @@ included...
 (defvar name:
 [[file:/tmp/eric.png]]
 
-(defun (defun (defun  executing emacs-lisp on export
+(defun  executing emacs-lisp on export
    :PROPERTIES:
    :DATE:     2010-06-07
    :END:
@@ -7324,7 +7324,7 @@ included...
   (error "eric")
 (defvar end_src
 
-(defun (defun (defun  commas on tangling test
+(defun  commas on tangling test
    :PROPERTIES:
    :DATE:     2010-06-07
    :END:
@@ -7353,7 +7353,7 @@ test comma protection on tangling
   and maybe not this...
 (defvar end_example
 
-(defun (defun (defun  simple table
+(defun  simple table
    :PROPERTIES:
    :DATE:     2010-06-06
    :END:
@@ -7366,7 +7366,7 @@ test comma protection on tangling
 | 4 | 5 |   6 |
 | 7 | 8 | 900 |
 
-(defun (defun (defun  inline expressions
+(defun  inline expressions
    :PROPERTIES:
    :session:  'default
    :DATE:     2010-06-06
@@ -7380,7 +7380,7 @@ the sum of 1 and x is equal to src_R{x+1}, now I'll sneakily reset
 this value in a hidden inline block src_R[:exports none]{x<-2}, so
 it's value is now src_R{x}.
 
-(defun (defun (defun  adding file names to literal values on export
+(defun  adding file names to literal values on export
    :PROPERTIES:
    :DATE:     2010-06-01
    :END:
@@ -7396,7 +7396,7 @@ runif(n=num, min=0, max=1)
 runif(n=num, min=0, max=1)
 (defvar end_src
 
-(defun (defun (defun  appending tangle
+(defun  appending tangle
    :PROPERTIES:
    :tangle:   appended.el
    :DATE:     2010-05-28
@@ -7415,18 +7415,18 @@ append all these block
   (message "block %d" 3)
 (defvar end_src
 
-(defun (defun (defun  visibility affecting execution
+(defun  visibility affecting execution
     :PROPERTIES:
     :DATE:     2010-05-27
     :END:
 
-(defun (defun (defun (defun  folding
+(defun  folding
     :PROPERTIES:
     :DATE:     2010-05-27
     :END:
 lets test folding
 
-(defun (defun (defun (defun (defun  folded
+(defun (defun  folded
      :PROPERTIES:
      :DATE:     2010-05-27
      :END:
@@ -7443,7 +7443,7 @@ lets test folding
 
 (defvar name:
 : folded2
-(defun (defun (defun (defun (defun  unfolded
+(defun (defun  unfolded
      :PROPERTIES:
      :DATE:     2010-05-27
      :END:
@@ -7460,7 +7460,7 @@ lets test folding
 (defvar name:
 : unfolded2
 
-(defun (defun (defun  empty code blocks -- and latex vs. LaTeX
+(defun  empty code blocks -- and latex vs. LaTeX
    :PROPERTIES:
    :DATE:     2010-05-26
    :END:
@@ -7479,7 +7479,7 @@ schulte
   (message "error")
 (defvar end_src
 
-(defun (defun (defun  colnames
+(defun  colnames
    :PROPERTIES:
    :DATE:     2010-05-04
    :END:
@@ -7515,7 +7515,7 @@ tab.map{|r| r.map{|e| e+"(defun "} }
 | d(defun  | e(defun  | f(defun  |
 | g(defun  | h(defun  | i(defun  |
 
-(defun (defun (defun  lisps not fully eval'd
+(defun  lisps not fully eval'd
    :PROPERTIES:
    :DATE:     2010-04-30
    :END:
@@ -7537,7 +7537,7 @@ tab.map{|r| r.map{|e| e+"(defun "} }
 (defvar name:
 : 3
 
-(defun (defun (defun  tangling org
+(defun  tangling org
    :PROPERTIES:
    :DATE:     2010-04-27
    :END:
@@ -7559,7 +7559,7 @@ tab.map{|r| r.map{|e| e+"(defun "} }
   eric.map{|l| puts l}
 (defvar end_src
 
-(defun (defun (defun  variable indexing
+(defun  variable indexing
    :PROPERTIES:
    :DATE:     2010-04-23
    :END:
@@ -7597,7 +7597,7 @@ tab.map{|r| r.map{|e| e+"(defun "} }
   plot data with linespoints
 (defvar end_src
 
-(defun (defun (defun  colnames mismatched sizes
+(defun  colnames mismatched sizes
    :PROPERTIES:
    :DATE:     2010-04-23
    :END:
@@ -7632,7 +7632,7 @@ tab.map{|r| r.map{|e| e+"(defun "} }
 (defvar name:
 | 1 | 2 |
 
-(defun (defun (defun  test gnuplot
+(defun  test gnuplot
    :PROPERTIES:
    :DATE:     2010-04-17
    :END:
@@ -7641,7 +7641,7 @@ tab.map{|r| r.map{|e| e+"(defun "} }
   plot sin(x), x+5
 (defvar end_src
 
-(defun (defun (defun  hline processing
+(defun  hline processing
    :PROPERTIES:
    :DATE:     2010-04-12
    :END:
@@ -7757,7 +7757,7 @@ functions
       table))
 (defvar end_src
 
-(defun (defun (defun  evaluate references
+(defun  evaluate references
    :PROPERTIES:
    :DATE:     2010-04-09
    :END:
@@ -7780,7 +7780,7 @@ functions
 (defvar name:
 : nil
 
-(defun (defun (defun  tangling and variable resolution
+(defun  tangling and variable resolution
   :PROPERTIES:
   :ID:       18b4f1be-bb1d-49bc-a651-c97406a35bdd
   :tangle:   yes
@@ -7795,7 +7795,7 @@ functions
 (defvar name: A
 : This is the entry ID: 18b4f1be-bb1d-49bc-a651-c97406a35bdd
 
-(defun (defun (defun  latex attributes
+(defun  latex attributes
    :PROPERTIES:
    :DATE:     2010-03-23
    :END:
@@ -7815,7 +7815,7 @@ functions
   +---------------------------+
 (defvar end_src
 
-(defun (defun (defun  access to variables set in property drawers
+(defun  access to variables set in property drawers
    :PROPERTIES:
    :special:  89
    :text: schulte
@@ -7838,7 +7838,7 @@ functions
 (defvar name:
 : schulte
 
-(defun (defun (defun  variables into shell scripts
+(defun  variables into shell scripts
    :PROPERTIES:
    :DATE:     2010-02-23
    :END:
@@ -7873,7 +7873,7 @@ functions
 | 8 |
 | 9 |
 
-(defun (defun (defun  results lines for function calls
+(defun  results lines for function calls
    :PROPERTIES:
    :DATE:     2010-02-15
    :END:
@@ -7890,7 +7890,7 @@ functions
 (defvar name:
 : fib(5)=8
 
-(defun (defun (defun  haskell variables
+(defun  haskell variables
    :PROPERTIES:
    :DATE:     2010-02-15
    :END:
@@ -7911,7 +7911,7 @@ playing with Haskell
 (defvar name:
 : 10
 
-(defun (defun (defun  list index w/function style name
+(defun  list index w/function style name
    :PROPERTIES:
    :DATE:     2010-02-14
    :END:
@@ -7936,7 +7936,7 @@ playing with Haskell
 (defvar name: function-style-indexing
 : ((1) (2) (3) (4))
 
-(defun (defun (defun  looking at source name exports
+(defun  looking at source name exports
    :PROPERTIES:
    :DATE:     2010-02-09
    :END:
@@ -7957,7 +7957,7 @@ now applying our Fibonacci function
 
 (defvar call: fibonacci(input=5)
 
-(defun (defun (defun  short shell test
+(defun  short shell test
    :PROPERTIES:
    :DATE:     2010-02-07
    :END:
@@ -8003,7 +8003,7 @@ now applying our Fibonacci function
 (defvar name:
 : 1--1
 
-(defun (defun (defun  tables to shell scripts ideas
+(defun  tables to shell scripts ideas
    :PROPERTIES:
    :DATE:     2010-02-06
    :END:
@@ -8034,7 +8034,7 @@ now applying our Fibonacci function
 
    would return reasonable results
 
-(defun (defun (defun  tangling w/o comments and shebang
+(defun  tangling w/o comments and shebang
    :PROPERTIES:
    :tangle:   yes
    :DATE:     2010-02-05
@@ -8055,7 +8055,7 @@ now applying our Fibonacci function
   puts :nonstandard_shebang
 (defvar end_src
 
-(defun (defun (defun  exporting to a file
+(defun  exporting to a file
    :PROPERTIES:
    :EXPORT_FILE_NAME: simple
    :EXPORT_TITLE: testing file export
@@ -8071,7 +8071,7 @@ and a block
 
 ah, it works!
 
-(defun (defun (defun  babel block overwrite
+(defun  babel block overwrite
    :PROPERTIES:
    :DATE:     2010-01-18
    :END:
@@ -8087,7 +8087,7 @@ this second block
   <       movl    $1024, 8(%esp)
 (defvar end_src
 
-(defun (defun (defun  load to session
+(defun  load to session
    :PROPERTIES:
    :DATE:     2010-01-11
    :END:
@@ -8119,7 +8119,7 @@ this second block
   plot sin(x)
 (defvar end_src
 
-(defun (defun (defun  links
+(defun  links
    :PROPERTIES:
    :DATE:     2010-01-06
    :END:
@@ -8132,7 +8132,7 @@ how about a link back to [[keystone]]
 
 The above appears to work in LaTeX, but not in HTML.
 
-(defun (defun (defun  fancier export
+(defun  fancier export
    :PROPERTIES:
    :DATE:     2010-01-05
    :END:
@@ -8142,7 +8142,7 @@ The above appears to work in LaTeX, but not in HTML.
   ((defun  input input)
 (defvar end_src
 
-(defun (defun (defun  exporting org-source
+(defun  exporting org-source
    :PROPERTIES:
    :DATE:     2009-12-23
    :END:
@@ -8157,7 +8157,7 @@ The above appears to work in LaTeX, but not in HTML.
   ,(defvar end_src
 (defvar end_src
 
-(defun (defun (defun  exporting and caching
+(defun  exporting and caching
    :PROPERTIES:
    :DATE:     2009-12-23
    :END:
@@ -8172,7 +8172,7 @@ The above appears to work in LaTeX, but not in HTML.
 (defvar name:
 [[file:data/example.png]]
 
-(defun (defun (defun  no noweb by default
+(defun  no noweb by default
    :PROPERTIES:
    :DATE:     2009-12-18
    :END:
@@ -8189,7 +8189,7 @@ The above appears to work in LaTeX, but not in HTML.
 (defvar name:
 : sample
 
-(defun (defun (defun  looking at double quotes
+(defun  looking at double quotes
    :PROPERTIES:
    :DATE:     2009-12-18
    :END:
@@ -8205,7 +8205,7 @@ The above appears to work in LaTeX, but not in HTML.
 (defvar name: double-quote-test-output
 | test | this | 8 | 9 |
 
-(defun (defun (defun  quoted session name
+(defun  quoted session name
    :PROPERTIES:
    :DATE:     2009-12-04
    :END:
@@ -8217,7 +8217,7 @@ The above appears to work in LaTeX, but not in HTML.
 (defvar name:
 : name-me
 
-(defun (defun (defun  eval-buffer
+(defun  eval-buffer
    :PROPERTIES:
    :DATE:     2009-12-04
    :END:
@@ -8235,12 +8235,12 @@ The above appears to work in LaTeX, but not in HTML.
 (defvar name:
 : 7
 
-(defun (defun (defun  sql exports to latex
+(defun  sql exports to latex
    :PROPERTIES:
    :DATE:     2009-11-30
    :END:
 example from email list
-(defun (defun (defun (defun  ECM
+(defun  ECM
     :PROPERTIES:
     :DATE:     2009-11-30
     :END:
@@ -8273,7 +8273,7 @@ example from email list
        FROM dossier
 (defvar end_src
 
-(defun (defun (defun  gnuplot variable expansion
+(defun  gnuplot variable expansion
    :PROPERTIES:
    :DATE:     2009-11-30
    :END:
@@ -8287,7 +8287,7 @@ example from email list
   plot $fun
 (defvar end_src
 
-(defun (defun (defun  debug hints
+(defun  debug hints
    :PROPERTIES:
    :DATE:     2009-11-30
    :END:
@@ -8301,7 +8301,7 @@ from mailing list
   function.  If/when the debug call is executed, you are dropped into
   the debugger and you can then evaluate arbitrary expressions.
 
-(defun (defun (defun  whitespace/newline results issues
+(defun  whitespace/newline results issues
    :PROPERTIES:
    :DATE:     2009-11-27
    :END:
@@ -8329,7 +8329,7 @@ ext here
 (defvar name:
 : 2
 
-(defun (defun (defun  sh with sessions
+(defun  sh with sessions
    :PROPERTIES:
    :DATE:     2009-11-27
    :END:
@@ -8346,7 +8346,7 @@ ext here
 (defvar name:
 | "ants.clj" | "" | "concurrent.clj" | "" | "hello.clj" | "" | "spell-checker.clj" |
 
-(defun (defun (defun  xml and n3
+(defun  xml and n3
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8372,7 +8372,7 @@ inform org-babel-tangle of their existence and file extensions
   n3 stuff
 (defvar end_src
 
-(defun (defun (defun  unresolved noweb references
+(defun  unresolved noweb references
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8394,7 +8394,7 @@ inform org-babel-tangle of their existence and file extensions
 (defvar resname:
 : 6
 
-(defun (defun (defun  =:table= results param
+(defun  =:table= results param
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8405,7 +8405,7 @@ inform org-babel-tangle of their existence and file extensions
 (defvar resname:
 | 8 |
 
-(defun (defun (defun  switches and references
+(defun  switches and references
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8436,7 +8436,7 @@ Line no. [[(imp)]] is important!
 (defvar resname: eric
 : imp
 
-(defun (defun (defun  switches and references
+(defun  switches and references
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8467,7 +8467,7 @@ Line no. [[(imp)]] is important!
 (defvar resname: eric
 : imp
 
-(defun (defun (defun  simple scalar
+(defun  simple scalar
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8479,7 +8479,7 @@ Line no. [[(imp)]] is important!
 (defvar resname:
 : 4
 
-(defun (defun (defun  simple R
+(defun  simple R
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8491,7 +8491,7 @@ Line no. [[(imp)]] is important!
 (defvar resname:
 : 8
 
-(defun (defun (defun  show all
+(defun  show all
    CLOCK: [2009-09-15 Tue 07:51]--[2009-09-15 Tue 08:51] =>  1:00
    :PROPERTIES:
    :exports:  both
@@ -8511,7 +8511,7 @@ Line no. [[(imp)]] is important!
    +----------------------+
 (defvar end_src
 
-(defun (defun (defun  results switches
+(defun  results switches
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8554,7 +8554,7 @@ Line no. [[(imp)]] is important!
   ---------
 (defvar end_example
 
-(defun (defun (defun  reference parts of tables
+(defun  reference parts of tables
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8585,7 +8585,7 @@ set title "Implementing Gnuplot"
 plot data using 1:2 with lines
 (defvar end_src
 
-(defun (defun (defun  quoted latex
+(defun  quoted latex
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8604,7 +8604,7 @@ The following latex isn't exported correctly
              | Node Tree Tree
 (defvar end_src
 
-(defun (defun (defun  pretty print
+(defun  pretty print
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8613,11 +8613,11 @@ The following latex isn't exported correctly
   '(1 2 3 4)
 (defvar end_src
 
-(defun (defun (defun  =pp= results
+(defun  =pp= results
     :PROPERTIES:
     :DATE:     2009-11-20
     :END:
-(defun (defun (defun (defun  python
+(defun  python
     :PROPERTIES:
     :DATE:     2009-11-20
     :END:
@@ -8628,7 +8628,7 @@ The following latex isn't exported correctly
 (defvar resname:
 : ['one', 'two', 'three', 'one', 'two', 'three', 'one', 'two', 'three']
 
-(defun (defun (defun (defun  ruby
+(defun  ruby
     :PROPERTIES:
     :DATE:     2009-11-20
     :END:
@@ -8683,7 +8683,7 @@ The following latex isn't exported correctly
  3]
 (defvar end_example
 
-(defun (defun (defun  persistent python
+(defun  persistent python
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8698,7 +8698,7 @@ The following latex isn't exported correctly
 (defvar resname:
 : function
 
-(defun (defun (defun (defun  more persistent python
+(defun  more persistent python
     :PROPERTIES:
     :session:  default
     :DATE:     2009-11-20
@@ -8715,7 +8715,7 @@ The following latex isn't exported correctly
 (defvar resname:
 : function
 
-(defun (defun (defun  noweb referernces
+(defun  noweb referernces
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8733,7 +8733,7 @@ The following latex isn't exported correctly
 (defvar resname:
 : 32
 
-(defun (defun (defun  multiple arguments
+(defun  multiple arguments
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8745,7 +8745,7 @@ The following latex isn't exported correctly
 (defvar resname:
 : 19
 
-(defun (defun (defun  lua export
+(defun  lua export
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8785,13 +8785,13 @@ local n2 = table_find_segment(cell.neighbors, s2)
 \end{verbatim}
 (defvar end_example
 
-(defun (defun (defun  latex pngs
+(defun  latex pngs
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
 $x \mapsto y$
 
-(defun (defun (defun (defun  Theorem
+(defun  Theorem
     :PROPERTIES:
     :DATE:     2009-11-20
     :END:
@@ -8809,14 +8809,14 @@ $|consts(t)| \leq sizes(t)$
     - $\leq size(t_1) + size(t_1) + size(t_1)$
     - $< size(t)$
 
-(defun (defun (defun  later
+(defun  later
    CLOCK: [2009-09-15 Tue 09:41]--[2009-09-15 Tue 09:51] =>  0:10
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
 stuff here
 
-(defun (defun (defun  indexing into results
+(defun  indexing into results
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8855,7 +8855,7 @@ stuff here
 | 5 | 6 |
 | 7 | 8 |
 
-(defun (defun (defun  indexing into gnuplot
+(defun  indexing into gnuplot
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8886,7 +8886,7 @@ plot data using 1:2 with lines
   plot data using 1:2 with lines
 (defvar end_src
 
-(defun (defun (defun  indented
+(defun  indented
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8897,7 +8897,7 @@ plot data using 1:2 with lines
 (defvar resname:
 : I ran!!
 
-(defun (defun (defun  indentation
+(defun  indentation
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8906,7 +8906,7 @@ plot data using 1:2 with lines
           9
 (defvar end_src
 
-(defun (defun (defun  hiding results
+(defun  hiding results
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8937,7 +8937,7 @@ plot data using 1:2 with lines
 | 19 |
 | 20 |
 
-(defun (defun (defun  haskell
+(defun  haskell
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8950,7 +8950,7 @@ plot data using 1:2 with lines
   powerSet [1, 2, 3]
 (defvar end_src
 
-(defun (defun (defun  haskell and tables
+(defun  haskell and tables
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8964,7 +8964,7 @@ plot data using 1:2 with lines
   
 (defvar end_src
 
-(defun (defun (defun  gnuplot
+(defun  gnuplot
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8975,7 +8975,7 @@ plot cosx
 
 (defvar end_src
       
-(defun (defun (defun  empty =output= results for emacs-lisp
+(defun  empty =output= results for emacs-lisp
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -8985,7 +8985,7 @@ plot cosx
 
 (defvar resname:
 
-(defun (defun (defun  elisp variables
+(defun  elisp variables
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -9002,7 +9002,7 @@ plot cosx
 (defvar name:
 [[file:45.png]]
 
-(defun (defun (defun  elisp references
+(defun  elisp references
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -9020,7 +9020,7 @@ plot cosx
   return a + 10
 (defvar end_src
 
-(defun (defun (defun  dynamic table
+(defun  dynamic table
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -9048,11 +9048,11 @@ Clock summary at [2009-09-15 Tue 08:51], for Tuesday, September 15, 2009.
 pie(times[2:length(times),4], labels = times[2:length(times),2])
 (defvar end_src
 
-(defun (defun (defun  code results
+(defun  code results
     :PROPERTIES:
     :DATE:     2009-11-20
     :END:
-(defun (defun (defun (defun  emacs lisp
+(defun  emacs lisp
     :PROPERTIES:
     :DATE:     2009-11-20
     :END:
@@ -9088,7 +9088,7 @@ pie(times[2:length(times),4], labels = times[2:length(times),2])
 (1 4 9 7921)
 (defvar END_SRC
 
-(defun (defun (defun (defun  ruby
+(defun  ruby
     :PROPERTIES:
     :DATE:     2009-11-20
     :END:
@@ -9111,7 +9111,7 @@ pie(times[2:length(times),4], labels = times[2:length(times),2])
 [11, 12, 43, 14]
 (defvar END_SRC
 
-(defun (defun (defun (defun  python
+(defun  python
     :PROPERTIES:
     :DATE:     2009-11-20
     :END:
@@ -9143,7 +9143,7 @@ pie(times[2:length(times),4], labels = times[2:length(times),2])
 [1, 2, 33, 4]
 (defvar END_SRC
 
-(defun (defun (defun  clojure
+(defun  clojure
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -9151,7 +9151,7 @@ pie(times[2:length(times),4], labels = times[2:length(times),2])
   (list 8 9)
 (defvar end_src
 
-(defun (defun (defun  changing source name
+(defun  changing source name
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -9167,7 +9167,7 @@ pie(times[2:length(times),4], labels = times[2:length(times),2])
 (defvar resname: emacs-eight
 : 8
 
-(defun (defun (defun  asymptote
+(defun  asymptote
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -9192,7 +9192,7 @@ pie(times[2:length(times),4], labels = times[2:length(times),2])
 (defvar resname:
 [[file:asymptote-test.png]]
 
-(defun (defun (defun  asymptote cosine
+(defun  asymptote cosine
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -9219,13 +9219,13 @@ pie(times[2:length(times),4], labels = times[2:length(times),2])
   dot("$(pi,0)$",(1,0),N);
 (defvar end_src
 
-(defun (defun (defun  and then more
+(defun  and then more
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
 and more stuffs here
 
-(defun (defun (defun  advanced table
+(defun  advanced table
    :PROPERTIES:
    :DATE:     2009-11-20
    :END:
@@ -9270,24 +9270,24 @@ and more stuffs here
 
 
 (defun  "Languages and Machines" 
-(defun (defun  intro 
-(defun (defun (defun  Church-Turing thesis
-(defun (defun (defun  Turing machines
-(defun (defun (defun  analysis of effective computation 
+(defun  intro 
+(defun  Church-Turing thesis
+(defun  Turing machines
+(defun  analysis of effective computation 
 
-(defun (defun (defun (defun  deterministic finite automata
+(defun  deterministic finite automata
      
      src blocks are an easy derivation of this
 
-(defun (defun (defun (defun (defun  properties
+(defun (defun  properties
       read-once
       state and input symbol determine instruction to execute
 
-(defun (defun (defun (defun (defun  application examples
+(defun (defun  application examples
       switching circuits
       lexical analysis of programming languages
 
-(defun (defun  language definition and effective computation 
+(defun  language definition and effective computation 
    "Language definition and computibility are not two unrelated topics
    that fall under the broad heading of computer science theory, but
    rather are inextricably intertwined. the computations of a machine
@@ -9301,38 +9301,38 @@ and more stuffs here
    related topics of language definition and effective computation."
    -- T. Sudkamp, "Languages and Machines"   
 
-(defun (defun  foundations 
-(defun (defun (defun  intro
-(defun (defun (defun (defun  theoretical computer science
+(defun  foundations 
+(defun  intro
+(defun  theoretical computer science
      explores 
      the capabilities and limitations 
      of algorithmic problem solving
 
-(defun (defun (defun (defun  formal language theory
+(defun  formal language theory
      provides the foundation 
      for the definition 
      of programming languages
      and compiler design
      
-(defun (defun (defun (defun (defun  roots
+(defun (defun  roots
       linguistics
       mathematical logic
       computer science
 
-(defun (defun (defun (defun  abstract machines
+(defun  abstract machines
      are built to recognize
      the syntactic properties
      of languages
      and to compute functions
 
-(defun (defun (defun (defun  the relationship between 
+(defun  the relationship between 
      the grammatical generation of languages 
      and the recognition of languages
      by automata
      is a central theme
      of "Languages and Machines"
 
-(defun (defun (defun (defun (defun  grammars were developed
+(defun (defun  grammars were developed
       to provide a mechanism
       for describing
       natural (spoken and written) languages
@@ -9340,7 +9340,7 @@ and more stuffs here
       for the formal specification
       of programming languages
 
-(defun (defun (defun (defun  set-theoretic definition of language
+(defun  set-theoretic definition of language
      sufficiently broad to include
      both natural and formal languages
      but generality is gained
@@ -9349,14 +9349,14 @@ and more stuffs here
      for mechanically generating
      the strings of the language
 
-(defun (defun (defun (defun (defun  to overcome this shortcoming
+(defun (defun  to overcome this shortcoming
       recursive definitions
       and set operations
       are used to give 
       finite specifications
       of languages
 
-(defun (defun (defun (defun  development of the regular sets
+(defun  development of the regular sets
      a family of languages
      that arises 
      in automata theory
@@ -9364,13 +9364,13 @@ and more stuffs here
      switching circuits
      and neural networks
      
-(defun (defun (defun  mathematical preliminaries
-(defun (defun (defun (defun  set-theory
-(defun (defun (defun (defun  cartesian product, relations and functions
-(defun (defun (defun (defun  equivalence relations
-(defun (defun (defun (defun  countable and uncountable sets
-(defun (defun (defun (defun  recursive definitions
-(defun (defun (defun (defun  mathematical induction					       :@doc:
+(defun  mathematical preliminaries
+(defun  set-theory
+(defun  cartesian product, relations and functions
+(defun  equivalence relations
+(defun  countable and uncountable sets
+(defun  recursive definitions
+(defun  mathematical induction					       :@doc:
      
      Establishing the relationships between the elements of sets and
      operations on the sets requires the capability of constructing
@@ -9387,7 +9387,7 @@ and more stuffs here
      recursive process to extend a property from the basis to the
      entire set.
 
-(defun (defun (defun (defun (defun  principle of mathematical induction
+(defun (defun  principle of mathematical induction
 
       Let x be a set defined by recursion from the basis
       X(subscript 0) and let X(subscript 0...i,...) be the sequence of
@@ -9474,7 +9474,7 @@ and more stuffs here
 
       Thus, it can be concluded that P is true for all elements of X.
 
-(defun (defun (defun (defun  directed graphs						       :@doc:
+(defun  directed graphs						       :@doc:
      A mathematical structure consists of functions and relations on a
      set or sets and distinguished elements from the sets. A
      distinguished element is an element of a set that has special
@@ -9518,7 +9518,7 @@ and more stuffs here
      | node-vertice c | 1 arc-edge          | 2 arc-edge           |
      | node-vertice d | 3 arc-edge          | 2 arc-edge           |
 
-(defun (defun (defun  languages
+(defun  languages
     
     The concept of languages includes a variety of seemingly distinct
     catagories: natural languages, computer languages, and
@@ -9541,10 +9541,10 @@ and more stuffs here
     as the languages generated by regular grammars and recognized by
     finite-state machines.
 
-(defun (defun (defun (defun  strings and languages
-(defun (defun (defun (defun  finite specification of languages
-(defun (defun (defun (defun  regular set and expressions
-(defun (defun  context-free grammars and parsing 
+(defun  strings and languages
+(defun  finite specification of languages
+(defun  regular set and expressions
+(defun  context-free grammars and parsing 
 
    The syntax of a language specifies the permissible forms of the
    strings of the language. In chapter 2, set theoric operations and
@@ -9582,7 +9582,7 @@ and more stuffs here
    Chomsky hierarchy of grammars. The relationships between the
    grammars of the Chomsky hierarchy will be examined in chapter 10.
 
-(defun (defun (defun  context-free grammars
+(defun  context-free grammars
 
      1. <sentence>        --> <noun-phrase> <verb-phrase>
      2. <sentence>        --> <noun-phrase> <verb> <direct-object-phrase>
@@ -9656,124 +9656,124 @@ and more stuffs here
     With this modification, the string 'big John eats frequently' can
     be derived from the variable <sentence>.
  
-(defun (defun (defun (defun  context-free grammars and languages
-(defun (defun (defun (defun  examples of grammars and languages
-(defun (defun (defun (defun  regular grammars
-(defun (defun (defun (defun  grammars and languages revisited
-(defun (defun (defun (defun  a context-free grammar for pascl
-(defun (defun (defun (defun  arithmetic expressions
-(defun (defun (defun  parsing: an introduction
-(defun (defun (defun (defun  leftmost derivations and ambiguity
-(defun (defun (defun (defun  the graph of a grammar
-(defun (defun (defun (defun  a breadth-first top-down parser
-(defun (defun (defun (defun  a depth-first top-down parser
-(defun (defun (defun (defun  bottom-up parsing
-(defun (defun (defun (defun  a depth-first bottom-up parser
-(defun (defun (defun  normal forms
-(defun (defun (defun (defun  elimination of lambda rules
-(defun (defun (defun (defun  elimination of chain rules
-(defun (defun (defun (defun  useless symbols
-(defun (defun (defun (defun  Chomsky normal form
-(defun (defun (defun (defun  removal of direct left recursion
-(defun (defun (defun (defun  Greibach normal form
-(defun (defun  automata and languages 
-(defun (defun (defun  finite automata
-(defun (defun (defun (defun  a finite state machine
-(defun (defun (defun (defun  deterministic finite automata
-(defun (defun (defun (defun  state diagrams and examples
-(defun (defun (defun (defun  nondeterministic finite automata
-(defun (defun (defun (defun  lambda transitions
-(defun (defun (defun (defun  removing nondeterminism
-(defun (defun (defun (defun  dfa minimization
-(defun (defun (defun  regular languages and sets
-(defun (defun (defun (defun  finite automata and regular sets
-(defun (defun (defun (defun  expression graphs
-(defun (defun (defun (defun  regular grammars and finite automata
-(defun (defun (defun (defun  closure properties of regular languages
-(defun (defun (defun (defun  a nonregular language
-(defun (defun (defun (defun  the pumping lemma for regular languages
-(defun (defun (defun (defun  the Myhill-Nerode Theorem
-(defun (defun (defun  pushdown automata and context-free languages
-(defun (defun (defun (defun  pushdown automata
-(defun (defun (defun (defun  variations on the pda theme
-(defun (defun (defun (defun  pushdown automata and context-free languages
-(defun (defun (defun (defun  the pumping lemma for context-free languages
-(defun (defun (defun (defun  closure properties of context-free languages
-(defun (defun (defun (defun  a two-stack automaton
-(defun (defun (defun  Turing machines
-(defun (defun (defun (defun  the standard Turing machine
-(defun (defun (defun (defun  Turing machines as language acceptors
-(defun (defun (defun (defun  alternative acceptance criteria
-(defun (defun (defun (defun  multitrack machines
-(defun (defun (defun (defun  two-way tape machines
-(defun (defun (defun (defun  multitape machines
-(defun (defun (defun (defun  nondeterministic Turing machines
-(defun (defun (defun (defun  Turing machines as language enumerators
-(defun (defun (defun  the Chomsky hierarchy
-(defun (defun (defun (defun  unrestricted grammars
-(defun (defun (defun (defun  context-sensitive grammars
-(defun (defun (defun (defun  linear-bounded automata
-(defun (defun (defun (defun  the Chomsky hierarchy
-(defun (defun  decidability and computability 
-(defun (defun (defun  decidability
-(defun (defun (defun (defun  decision problems
-(defun (defun (defun (defun  the Church-Turing thesis
-(defun (defun (defun (defun  the halting problem for Turing machines
-(defun (defun (defun (defun  a universal machine
-(defun (defun (defun (defun  reducibility
-(defun (defun (defun (defun  Rice's theorem
-(defun (defun (defun (defun  an unsolvable word problem
-(defun (defun (defun (defun  the post correspondence problem
-(defun (defun (defun (defun  undecidable problems in context-free grammars
-(defun (defun (defun  numeric computation
-(defun (defun (defun (defun  computation of functions
-(defun (defun (defun (defun  numeric computation
-(defun (defun (defun (defun  sequential operation of Turing machines
-(defun (defun (defun (defun  composition of functions
-(defun (defun (defun (defun  toward a programming language
-(defun (defun (defun  mu-recursive functions
-(defun (defun (defun (defun  primitive recursive functions
-(defun (defun (defun (defun  some primitive recursive functions
-(defun (defun (defun (defun  bounded operators
-(defun (defun (defun (defun  division functions
-(defun (defun (defun (defun  Godel numbering and course-of-value recursion
-(defun (defun (defun (defun  computable partial functions
-(defun (defun (defun (defun  Turing computability and mu-recursive functions
-(defun (defun (defun (defun  the Church-Turing thesis revisited
-(defun (defun  computational complexity 
-(defun (defun (defun  time complexity of a Turing machine
-(defun (defun (defun (defun  linear speedup
-(defun (defun (defun (defun  rates of growth
-(defun (defun (defun (defun  complexity and Turing machine variations
-(defun (defun (defun (defun  properties of time complexity
-(defun (defun (defun (defun  nondeterministic complexity
-(defun (defun (defun (defun  space complexity
-(defun (defun (defun  tractibility and NP-complete problems
-(defun (defun (defun (defun  tractible and intractible decision problems
-(defun (defun (defun (defun  the class NP
-(defun (defun (defun (defun  P = NP?
-(defun (defun (defun (defun  the satisfiability problem
-(defun (defun (defun (defun  additional NP-complete problems
-(defun (defun (defun (defun  derivative complexity classes
-(defun (defun  deterministic parsing 
-(defun (defun (defun  LL(k) grammars
-(defun (defun (defun (defun  lookahead in context-free grammars
-(defun (defun (defun (defun  FIRST, FOLLOW and lookahead sets
-(defun (defun (defun (defun  strong LL(k) grammars
-(defun (defun (defun (defun  construction of FIRST(k) sets
-(defun (defun (defun (defun  construction of FOLLOW(k) sets
-(defun (defun (defun (defun  a strong LL(1) grammar
-(defun (defun (defun (defun  a strong LL(k) parser
-(defun (defun (defun (defun  LL(k) grammars
-(defun (defun (defun  LR(k) grammars
-(defun (defun (defun (defun  LR(0) contexts
-(defun (defun (defun (defun  an LR(0) parser
-(defun (defun (defun (defun  the LR(0) machine
-(defun (defun (defun (defun  acceptance by the LR(0) machine
-(defun (defun (defun (defun  LR(1) grammars
-(defun (defun  index of notation
-(defun (defun  the greek alphabet
-(defun (defun  Backus-Naur definition of pascal
-(defun (defun  subject index 
+(defun  context-free grammars and languages
+(defun  examples of grammars and languages
+(defun  regular grammars
+(defun  grammars and languages revisited
+(defun  a context-free grammar for pascl
+(defun  arithmetic expressions
+(defun  parsing: an introduction
+(defun  leftmost derivations and ambiguity
+(defun  the graph of a grammar
+(defun  a breadth-first top-down parser
+(defun  a depth-first top-down parser
+(defun  bottom-up parsing
+(defun  a depth-first bottom-up parser
+(defun  normal forms
+(defun  elimination of lambda rules
+(defun  elimination of chain rules
+(defun  useless symbols
+(defun  Chomsky normal form
+(defun  removal of direct left recursion
+(defun  Greibach normal form
+(defun  automata and languages 
+(defun  finite automata
+(defun  a finite state machine
+(defun  deterministic finite automata
+(defun  state diagrams and examples
+(defun  nondeterministic finite automata
+(defun  lambda transitions
+(defun  removing nondeterminism
+(defun  dfa minimization
+(defun  regular languages and sets
+(defun  finite automata and regular sets
+(defun  expression graphs
+(defun  regular grammars and finite automata
+(defun  closure properties of regular languages
+(defun  a nonregular language
+(defun  the pumping lemma for regular languages
+(defun  the Myhill-Nerode Theorem
+(defun  pushdown automata and context-free languages
+(defun  pushdown automata
+(defun  variations on the pda theme
+(defun  pushdown automata and context-free languages
+(defun  the pumping lemma for context-free languages
+(defun  closure properties of context-free languages
+(defun  a two-stack automaton
+(defun  Turing machines
+(defun  the standard Turing machine
+(defun  Turing machines as language acceptors
+(defun  alternative acceptance criteria
+(defun  multitrack machines
+(defun  two-way tape machines
+(defun  multitape machines
+(defun  nondeterministic Turing machines
+(defun  Turing machines as language enumerators
+(defun  the Chomsky hierarchy
+(defun  unrestricted grammars
+(defun  context-sensitive grammars
+(defun  linear-bounded automata
+(defun  the Chomsky hierarchy
+(defun  decidability and computability 
+(defun  decidability
+(defun  decision problems
+(defun  the Church-Turing thesis
+(defun  the halting problem for Turing machines
+(defun  a universal machine
+(defun  reducibility
+(defun  Rice's theorem
+(defun  an unsolvable word problem
+(defun  the post correspondence problem
+(defun  undecidable problems in context-free grammars
+(defun  numeric computation
+(defun  computation of functions
+(defun  numeric computation
+(defun  sequential operation of Turing machines
+(defun  composition of functions
+(defun  toward a programming language
+(defun  mu-recursive functions
+(defun  primitive recursive functions
+(defun  some primitive recursive functions
+(defun  bounded operators
+(defun  division functions
+(defun  Godel numbering and course-of-value recursion
+(defun  computable partial functions
+(defun  Turing computability and mu-recursive functions
+(defun  the Church-Turing thesis revisited
+(defun  computational complexity 
+(defun  time complexity of a Turing machine
+(defun  linear speedup
+(defun  rates of growth
+(defun  complexity and Turing machine variations
+(defun  properties of time complexity
+(defun  nondeterministic complexity
+(defun  space complexity
+(defun  tractibility and NP-complete problems
+(defun  tractible and intractible decision problems
+(defun  the class NP
+(defun  P = NP?
+(defun  the satisfiability problem
+(defun  additional NP-complete problems
+(defun  derivative complexity classes
+(defun  deterministic parsing 
+(defun  LL(k) grammars
+(defun  lookahead in context-free grammars
+(defun  FIRST, FOLLOW and lookahead sets
+(defun  strong LL(k) grammars
+(defun  construction of FIRST(k) sets
+(defun  construction of FOLLOW(k) sets
+(defun  a strong LL(1) grammar
+(defun  a strong LL(k) parser
+(defun  LL(k) grammars
+(defun  LR(k) grammars
+(defun  LR(0) contexts
+(defun  an LR(0) parser
+(defun  the LR(0) machine
+(defun  acceptance by the LR(0) machine
+(defun  LR(1) grammars
+(defun  index of notation
+(defun  the greek alphabet
+(defun  Backus-Naur definition of pascal
+(defun  subject index 
 
 
