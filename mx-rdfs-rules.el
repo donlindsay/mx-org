@@ -4,58 +4,67 @@
 ;; gpl2 boiler
 ;; hammertime:
 
-(setq org-properties-postprocess-alist
-      '(("\"MX-RDF\"" . ignore)))
+; (require 'mx-owl2)
 
+(setq org-properties-postprocess-alist '(("MX-RDF"
+      . (mx/rdf-1-and-4)) ) )
 
-(defun mx/rdf1and4 (?x ?p ?y)
-  -> (?p rdf:type rdf:Property), (?x rdf:type rdfs:Resource), (?y rdf:type rdfs:Resource))
+(defun mx/rdf-1-and-4 (mx-subject mx-predicate mx-subject)
+  (setq mx-rdf-1-and-4
+	'((mx-predicate . nil)
+	  (mx-rdf-type . mx-rdf-Property)
+	  (mx-subject . (mx-rdf-type . mx-rdfs-resource))
+	  (mx-subject . (mx-rdf-type . mx-rdfs-resource)) ) ) )
+	
 
-(defun mx/rdfs2  (?x ?p ?y), (?p rdfs:domain ?c)
-       -> (?x rdf:type ?c)) 
+(defun mx/rdfs-2  (mx-subject mx-predicate mx-subject)
+  (setq mx-predicate '(mx-rdfs-domain . mx-rest))
+  (setq mx-rdfs-2 '((mx-subject . '(mx-rdf-type . mx-rest) ) )))
 
-(defun mx/rdfs3  (?x ?p ?y), (?p rdfs:range ?c)
-       -> (?y rdf:type ?c)) 
+(defun mx/rdfs-3  (mx-subject mx-predicate mx-subject)
+  (mx-predicate mx-rdfs-range mx-rest)
+  (setq mx-rdfs-3 '(mx-subject . '(mx-rdf-type . mx-rest)) ) )
 
-(defun mx/rdfs5a
-    (?a rdfs:subPropertyOf ?b),
-  (?b rdfs:subPropertyOf ?c)
-  ->
-  (?a rdfs:subPropertyOf ?c)) 
+(defun mx/rdfs-5a
+    (mx-first mx-rdfs-subPropertyOf mx-rdf-resource),
+  (mx-rdf-resource mx-rdfs-subPropertyOf mx-rest)
+  (setq mx-rdfs-5a
+  (mx-first mx-rdfs-subPropertyOf mx-rest) ))
 
-(defun mx/rdfs5b
-    (?a rdf:type rdf:Property)
-  ->
-  (?a rdfs:subPropertyOf ?a)) 
+(defun mx/rdfs-5b
+    (mx-first mx-rdf-type mx-rdfProperty)
+  (setq mx-rdfs-5b
+  (mx-first mx-rdfs-subPropertyOf mx-first) ))
 
-(defun mx/rdfs6
-    (?a ?p ?b),
-  (?p rdfs:subPropertyOf ?q)
-  ->
-  (?a ?q ?b)) 
+(defun mx/rdfs-6
+    (mx-first mx-predicate mx-rdf-resource),
+  (mx-predicate mx-rdfs-subPropertyOf ?q)
+  (setq mx-rdfs-6
+  (mx-first ?q mx-rdf-resource) )
 
-(defun mx/rdfs7
-    (?a rdf:type rdfs:Class)
-  ->
-  (?a rdfs:subClassOf ?a))
+(defun mx/rdfs-7
+    (mx-first mx-rdf-type mx-rdfs-Class)
+  (setq mx-rdfs-7
+  (mx-first mx-rdfs-subClassOf mx-first) ))
 
-(defun mx/rdfs7b
-    (?a rdf:type rdfs:Class)
-  ->
-  (?a rdfs:subClassOf rdfs:Resource)) 
+(defun mx/rdfs-7b
+    (mx-first mx-rdf-type mx-rdfs-Class)
+  (setq mx-rdfs-7b
+  (mx-first mx-rdfs-subClassOf mx-rdfs-resource) ))
 
-(defun mx/rdfs8
-    (?a rdfs:subClassOf ?b),
-  (?b rdfs:subClassOf ?c)
-  ->
-  (?a rdfs:subClassOf ?c)) 
+(defun mx/rdfs-8
+    (mx-first mx-rdfs-subClassOf mx-rdf-resource),
+  (mx-rdf-resource mx-rdfs-subClassOf mx-rest)
+  (setq mx-rdfs-8
+  (mx-first mx-rdfs-subClassOf mx-rest) )
 
-(defun mx/rdfs9
-    (?x rdfs:subClassOf ?y),
-  (?a rdf:type ?x)
-  -> (?a rdf:type ?y)) 
+(defun mx/rdfs-9
+    (mx-subject mx-rdfs-subClassOf mx-subject),
+  (mx-first mx-rdf-type mx-subject)
+  (setq mx-rdfs-9
+  (mx-first mx-rdf-type mx-subject) ))
 
-(defun mx/rdfs10
-    (?x rdf:type rdfs:ContainerMembershipProperty)
-  ->
-  (?x rdfs:subPropertyOf rdfs:member)) 
+(defun mx/rdfs-10
+    (mx-subject mx-rdf-type mx-rdfs-ContainerMembershipProperty)
+  (setq mx-rdfs-10
+  (mx-subject mx-rdfs-subPropertyOf mx-rdfs-member) ))
