@@ -5,14 +5,16 @@
    (overview)
     (hideblocks)))
 
-(defun  mx-drawers ())
+(defun mx-drawer ()
+  (org-insert-property-drawer))
 
 (defvar mx-rdf-drawer (drawer)
-  '((mx-org-hidden . nil)
-  (mx-org-state . nil)
-  (mx-org-properties . nil)
-  (mx-rdfs-owl2 . nil)
-  (mx-n3 . nil)))
+  '((org-insert-drawer . '((mx-org-hidden       . nil)
+			   (mx-org-state        . nil)
+			   (mx-org-properties   . nil)
+			   (mx-rdfs-owl2        . nil)
+			   (mx-n3               . nil))
+		       )))
 
 (defun mx-dev-tags ()
   (setq org-tag-alist '((:startgroup . nil)
