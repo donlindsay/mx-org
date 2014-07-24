@@ -6696,8 +6696,13 @@ looking at paths
 (defvar name:
 : 15
 
-(defvar begin_src clojure :session (defun clj(defun 
-  (println "eric")
+(defvar begin_src clojure :session)
+
+(defun mx/clj-tags
+
+    (defun 
+
+		(println "eric")
 (defvar end_src
 
 (defvar name:

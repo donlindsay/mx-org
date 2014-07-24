@@ -9,6 +9,8 @@
 (setq org-properties-postprocess-alist '(("MX-RDF"
       . (mx/rdf-1-and-4)) ) )
 
+
+
 (defun mx/rdf-1-and-4 (mx-subject mx-predicate mx-subject)
   (setq mx-rdf-1-and-4
 	'((mx-predicate . nil)
