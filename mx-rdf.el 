@@ -1,11 +1,14 @@
-(defun mx/rdf-startup ()) 
+(defun mx/rdf-startup ()
+  "Activate the MX-RDF subsystem."
+  (interactive)
+  (message "MX-RDF: ONLINE"))
 
 (defvar mx-rdf-startup
   (cond
    (overview)
     (hideblocks)))
 
-(defun mx-drawer ()
+(defun mx/insert-drawer ()
   (org-insert-property-drawer))
 
 (defvar mx-rdf-drawer (drawer)
@@ -80,26 +83,23 @@ only tags."
 				(mx-predicate   . nil)
 				(mx-object . nil)) ) ) ) )
 	
-   
+(defvar BEGIN_EXAMPLE (mx-rdf mx-rdf-property drawer)
+  '((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
+                   (mx-rdf-type  . drawer))
+	       )
+    )
+  )
 
-   this may be where drawers will be appropriate as they are easily
-   handled, are custom definable, and have good code support.
+(defvar END_EXAMPLE (mx-rdf mx-rdf-property drawer)
+  '((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
+                   (mx-rdf-type . drawer)) ) ) )
 
-   also, the syntax of drawers is similar to n3 syntax, making the
-   production of n3 strings easier, if, for instance, i want to do
-   string replacement and filtering functions, or want to do things
-   with agenda and column views
-
-(defvar BEGIN_EXAMPLE owl2-rdfs property drawer
-  :owl2-rdfs:
-  :doc-string "owl2 and rdfs markup element drawer"
-  :type drawer
-  :end:
-(defvar END_EXAMPLE
-
-(defvar property: mx-rdf_all          mx-rdfs-type
-(defvar property: mx-rdf+             mx-n3-predicate
-(defvar property: mx-rdf+             rdfs-type
+(defvar mx-rdf-properties
+  '((mx-rdf_all . mx-rdfs-type)
+    (mx-rdf+    . mx-n3-predicate)
+    (mx-rdf+    . mx-rdf-type)
+    )
+  )
 
 (defun  or elisp via org-file-properties
    
