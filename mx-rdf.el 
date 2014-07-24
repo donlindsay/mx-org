@@ -176,13 +176,14 @@ org-entry-put-multivalued-property pom property &rest values
    :import      buffer-buttons.el
    :end:
 
-   Buffer buttons placed at the bottom or top of this file. So that
-   they can be used in a two window frame, when the buttons are ready,
-   code the frame window geometry setup. See buffer-buttons.el for more.
+  "Buffer buttons placed at the bottom or top of this file. So
+   that they can be used in a two window frame, when the buttons
+   are ready, code the frame window geometry setup. See
+   buffer-buttons.el for more.
 
    Another feature is inline buttons for source blocks. Buttons
    provide quick access to executions and editing functions. Source
-   blocks, like repls, with buttons.
+   blocks, like repls, with buttons."
 
 (defun  mx-rdf-button-definitions
 (defvar name: mx-rdf-button-definitions
@@ -348,1115 +349,1115 @@ documents to be accessed using fn:doc.
 
 (defun  (defun  owl2 in turtle
 
-(defun owl:AllDifferent rdf:type rdfs:Class .
+(defun '(mx-rdf-owl2-AllDifferent '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:AllDifferent rdfs:subClassOf rdfs:Resource .
+'(mx-rdf-owl2-AllDifferent rdfs:subClassOf mx-rdfs-resource .
 
-owl:AllDisjointClasses rdf:type rdfs:Class .
+'(mx-rdf-owl2-AllDisjointClasses '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:AllDisjointClasses rdfs:subClassOf rdfs:Resource .
+'(mx-rdf-owl2-AllDisjointClasses mx-rdfs-subClassOf mx-rdfs-resource .
 
-owl:AllDisjointProperties rdf:type rdfs:Class .
+'(mx-rdf-owl2-AllDisjointProperties '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:AllDisjointProperties rdfs:subClassOf rdfs:Resource .
+'(mx-rdf-owl2-AllDisjointProperties mx-rdfs-subClassOf mx-rdfs-resource .
 
-owl:Annotation rdf:type rdfs:Class .
+'(mx-rdf-owl2-Annotation '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:Annotation rdfs:subClassOf rdfs:Resource .
+'(mx-rdf-owl2-Annotation mx-rdfs-subClassOf mx-rdfs-resource .
 
-owl:AnnotationProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-AnnotationProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:AnnotationProperty rdfs:subClassOf rdf:Property .
+'(mx-rdf-owl2-AnnotationProperty mx-rdfs-subClassOf rdf:Property .
 
-owl:AsymmetricProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-AsymmetricProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:AsymmetricProperty rdfs:subClassOf owl:ObjectProperty .
+'(mx-rdf-owl2-AsymmetricProperty mx-rdfs-subClassOf '(mx-rdf-owl2-ObjectProperty .
 
-owl:Axiom rdf:type rdfs:Class .
+'(mx-rdf-owl2-Axiom '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:Axiom rdfs:subClassOf rdfs:Resource .
+'(mx-rdf-owl2-Axiom mx-rdfs-subClassOf mx-rdfs-resource .
 
-owl:Class rdf:type rdfs:Class .
+'(mx-rdf-owl2-Class '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:Class rdfs:subClassOf rdfs:Class .
+'(mx-rdf-owl2-Class mx-rdfs-subClassOf 'mx-rdfs-class) .
 
-owl:DataRange rdf:type rdfs:Class .
+'(mx-rdf-owl2-DataRange '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:DataRange rdfs:subClassOf rdfs:Datatype .
+'(mx-rdf-owl2-DataRange mx-rdfs-subClassOf mx-rdf-Datatype .
 
-owl:DatatypeProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-DatatypeProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:DatatypeProperty rdfs:subClassOf rdf:Property .
+'(mx-rdf-owl2-DatatypeProperty mx-rdfs-subClassOf rdf:Property .
 
-owl:DeprecatedClass rdf:type rdfs:Class .
+'(mx-rdf-owl2-DeprecatedClass '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:DeprecatedClass rdfs:subClassOf rdfs:Class .
+'(mx-rdf-owl2-DeprecatedClass mx-rdfs-subClassOf 'mx-rdfs-class) .
 
-owl:DeprecatedProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-DeprecatedProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:DeprecatedProperty rdfs:subClassOf rdf:Property .
+'(mx-rdf-owl2-DeprecatedProperty mx-rdfs-subClassOf rdf:Property .
 
-owl:FunctionalProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-FunctionalProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:FunctionalProperty rdfs:subClassOf rdf:Property .
+'(mx-rdf-owl2-FunctionalProperty mx-rdfs-subClassOf rdf:Property .
 
-owl:InverseFunctionalProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-InverseFunctionalProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:InverseFunctionalProperty rdfs:subClassOf owl:ObjectProperty .
+'(mx-rdf-owl2-InverseFunctionalProperty mx-rdfs-subClassOf '(mx-rdf-owl2-ObjectProperty .
 
-owl:IrreflexiveProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-IrreflexiveProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:IrreflexiveProperty rdfs:subClassOf owl:ObjectProperty .
+'(mx-rdf-owl2-IrreflexiveProperty mx-rdfs-subClassOf '(mx-rdf-owl2-ObjectProperty .
 
-owl:NamedIndividual rdf:type rdfs:Class .
+'(mx-rdf-owl2-NamedIndividual '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:NamedIndividual rdfs:subClassOf owl:Thing .
+'(mx-rdf-owl2-NamedIndividual mx-rdfs-subClassOf '(mx-rdf-owl2-Thing .
 
-owl:NegativePropertyAssertion rdf:type rdfs:Class .
+'(mx-rdf-owl2-NegativePropertyAssertion '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:NegativePropertyAssertion rdfs:subClassOf rdfs:Resource .
+'(mx-rdf-owl2-NegativePropertyAssertion mx-rdfs-subClassOf mx-rdfs-resource .
 
-owl:Nothing rdf:type owl:Class .
+'(mx-rdf-owl2-Nothing '((mx-rdf-type . '(mx-rdf-owl2-Class .
 
-owl:Nothing rdfs:subClassOf owl:Thing .
+'(mx-rdf-owl2-Nothing mx-rdfs-subClassOf '(mx-rdf-owl2-Thing .
 
-owl:ObjectProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-ObjectProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:ObjectProperty rdfs:subClassOf rdf:Property .
+'(mx-rdf-owl2-ObjectProperty mx-rdfs-subClassOf rdf:Property .
 
-owl:Ontology rdf:type rdfs:Class .
+'(mx-rdf-owl2-Ontology '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:Ontology rdfs:subClassOf rdfs:Resource .
+'(mx-rdf-owl2-Ontology mx-rdfs-subClassOf mx-rdfs-resource .
 
-owl:OntologyProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-OntologyProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:OntologyProperty rdfs:subClassOf rdf:Property .
+'(mx-rdf-owl2-OntologyProperty mx-rdfs-subClassOf rdf:Property .
 
-owl:ReflexiveProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-ReflexiveProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:ReflexiveProperty rdfs:subClassOf owl:ObjectProperty .
+'(mx-rdf-owl2-ReflexiveProperty mx-rdfs-subClassOf '(mx-rdf-owl2-ObjectProperty .
 
-owl:Restriction rdf:type rdfs:Class .
+'(mx-rdf-owl2-Restriction '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:Restriction rdfs:subClassOf owl:Class .
+'(mx-rdf-owl2-Restriction mx-rdfs-subClassOf '(mx-rdf-owl2-Class .
 
-owl:SymmetricProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-SymmetricProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:SymmetricProperty rdfs:subClassOf owl:ObjectProperty .
+'(mx-rdf-owl2-SymmetricProperty mx-rdfs-subClassOf '(mx-rdf-owl2-ObjectProperty .
 
-owl:Thing rdf:type owl:Class .
+'(mx-rdf-owl2-Thing '((mx-rdf-type . '(mx-rdf-owl2-Class .
 
-owl:TransitiveProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-TransitiveProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-owl:TransitiveProperty rdfs:subClassOf owl:ObjectProperty .
+'(mx-rdf-owl2-TransitiveProperty mx-rdfs-subClassOf '(mx-rdf-owl2-ObjectProperty .
 
 (defun (defun  Axiomatic Triples for the Properties
 
-owl:allValuesFrom rdf:type rdf:Property .
+'(mx-rdf-owl2-allValuesFrom '((mx-rdf-type . rdf:Property .
 
-owl:allValuesFrom rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-allValuesFrom mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:allValuesFrom rdfs:range rdfs:Class .
+'(mx-rdf-owl2-allValuesFrom mx-rdf-range 'mx-rdfs-class) .
 
-owl:annotatedProperty rdf:type rdf:Property .
+'(mx-rdf-owl2-annotatedProperty '((mx-rdf-type . rdf:Property .
 
-owl:annotatedProperty rdfs:domain rdfs:Resource .
+'(mx-rdf-owl2-annotatedProperty mx-rdf-domain mx-rdfs-resource .
 
-owl:annotatedProperty rdfs:range rdfs:Resource .
+'(mx-rdf-owl2-annotatedProperty mx-rdf-range mx-rdfs-resource .
 
-owl:annotatedSource rdf:type rdf:Property .
+'(mx-rdf-owl2-annotatedSource '((mx-rdf-type . rdf:Property .
 
-owl:annotatedSource rdfs:domain rdfs:Resource .
+'(mx-rdf-owl2-annotatedSource mx-rdf-domain mx-rdfs-resource .
 
-owl:annotatedSource rdfs:range rdfs:Resource .
+'(mx-rdf-owl2-annotatedSource mx-rdf-range mx-rdfs-resource .
 
-owl:annotatedTarget rdf:type rdf:Property .
+'(mx-rdf-owl2-annotatedTarget '((mx-rdf-type . rdf:Property .
 
-owl:annotatedTarget rdfs:domain rdfs:Resource .
+'(mx-rdf-owl2-annotatedTarget mx-rdf-domain mx-rdfs-resource .
 
-owl:annotatedTarget rdfs:range rdfs:Resource .
+'(mx-rdf-owl2-annotatedTarget mx-rdf-range mx-rdfs-resource .
 
-owl:assertionProperty rdf:type rdf:Property .
+'(mx-rdf-owl2-assertionProperty '((mx-rdf-type . rdf:Property .
 
-owl:assertionProperty rdfs:domain owl:NegativePropertyAssertion .
+'(mx-rdf-owl2-assertionProperty mx-rdf-domain '(mx-rdf-owl2-NegativePropertyAssertion .
 
-owl:assertionProperty rdfs:range rdf:Property .
+'(mx-rdf-owl2-assertionProperty mx-rdf-range rdf:Property .
 
-owl:backwardCompatibleWith rdf:type owl:AnnotationProperty .
+'(mx-rdf-owl2-backwardCompatibleWith '((mx-rdf-type . '(mx-rdf-owl2-AnnotationProperty .
 
-owl:backwardCompatibleWith rdf:type owl:OntologyProperty .
+'(mx-rdf-owl2-backwardCompatibleWith '((mx-rdf-type . '(mx-rdf-owl2-OntologyProperty .
 
-owl:backwardCompatibleWith rdfs:domain owl:Ontology .
+'(mx-rdf-owl2-backwardCompatibleWith mx-rdf-domain '(mx-rdf-owl2-Ontology .
 
-owl:backwardCompatibleWith rdfs:range owl:Ontology .
+'(mx-rdf-owl2-backwardCompatibleWith mx-rdf-range '(mx-rdf-owl2-Ontology .
 
-owl:bottomDataProperty rdf:type owl:DatatypeProperty .
+'(mx-rdf-owl2-bottomDataProperty '((mx-rdf-type . '(mx-rdf-owl2-DatatypeProperty .
 
-owl:bottomDataProperty rdfs:domain owl:Thing .
+'(mx-rdf-owl2-bottomDataProperty mx-rdf-domain '(mx-rdf-owl2-Thing .
 
-owl:bottomDataProperty rdfs:range rdfs:Literal .
+'(mx-rdf-owl2-bottomDataProperty mx-rdf-range mx-rdf-Literal .
 
-owl:bottomObjectProperty rdf:type owl:ObjectProperty .
+'(mx-rdf-owl2-bottomObjectProperty '((mx-rdf-type . '(mx-rdf-owl2-ObjectProperty .
 
-owl:bottomObjectProperty rdfs:domain owl:Thing .
+'(mx-rdf-owl2-bottomObjectProperty mx-rdf-domain '(mx-rdf-owl2-Thing .
 
-owl:bottomObjectProperty rdfs:range owl:Thing .
+'(mx-rdf-owl2-bottomObjectProperty mx-rdf-range '(mx-rdf-owl2-Thing .
 
-owl:cardinality rdf:type rdf:Property .
+'(mx-rdf-owl2-cardinality '((mx-rdf-type . rdf:Property .
 
-owl:cardinality rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-cardinality mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:cardinality rdfs:range xsd:nonNegativeInteger .
+'(mx-rdf-owl2-cardinality mx-rdf-range xsd:nonNegativeInteger .
 
-owl:complementOf rdf:type rdf:Property .
+'(mx-rdf-owl2-complementOf '((mx-rdf-type . rdf:Property .
 
-owl:complementOf rdfs:domain owl:Class .
+'(mx-rdf-owl2-complementOf mx-rdf-domain '(mx-rdf-owl2-Class .
 
-owl:complementOf rdfs:range owl:Class .
+'(mx-rdf-owl2-complementOf mx-rdf-range '(mx-rdf-owl2-Class .
 
-owl:datatypeComplementOf rdf:type rdf:Property .
+'(mx-rdf-owl2-datatypeComplementOf '((mx-rdf-type . rdf:Property .
 
-owl:datatypeComplementOf rdfs:domain rdfs:Datatype .
+'(mx-rdf-owl2-datatypeComplementOf mx-rdf-domain mx-rdf-Datatype .
 
-owl:datatypeComplementOf rdfs:range rdfs:Datatype .
+'(mx-rdf-owl2-datatypeComplementOf mx-rdf-range mx-rdf-Datatype .
 
-owl:deprecated rdf:type owl:AnnotationProperty .
+'(mx-rdf-owl2-deprecated '((mx-rdf-type . '(mx-rdf-owl2-AnnotationProperty .
 
-owl:deprecated rdfs:domain rdfs:Resource .
+'(mx-rdf-owl2-deprecated mx-rdf-domain mx-rdfs-resource .
 
-owl:deprecated rdfs:range rdfs:Resource .
+'(mx-rdf-owl2-deprecated mx-rdf-range mx-rdfs-resource .
 
-owl:differentFrom rdf:type rdf:Property .
+'(mx-rdf-owl2-differentFrom '((mx-rdf-type . rdf:Property .
 
-owl:differentFrom rdfs:domain owl:Thing .
+'(mx-rdf-owl2-differentFrom mx-rdf-domain '(mx-rdf-owl2-Thing .
 
-owl:differentFrom rdfs:range owl:Thing .
+'(mx-rdf-owl2-differentFrom mx-rdf-range '(mx-rdf-owl2-Thing .
 
-owl:disjointUnionOf rdf:type rdf:Property .
+'(mx-rdf-owl2-disjointUnionOf '((mx-rdf-type . rdf:Property .
 
-owl:disjointUnionOf rdfs:domain owl:Class .
+'(mx-rdf-owl2-disjointUnionOf mx-rdf-domain '(mx-rdf-owl2-Class .
 
-owl:disjointUnionOf rdfs:range rdf:List .
+'(mx-rdf-owl2-disjointUnionOf mx-rdf-range rdf:List .
 
-owl:disjointWith rdf:type rdf:Property .
+'(mx-rdf-owl2-disjointWith '((mx-rdf-type . rdf:Property .
 
-owl:disjointWith rdfs:domain owl:Class .
+'(mx-rdf-owl2-disjointWith mx-rdf-domain '(mx-rdf-owl2-Class .
 
-owl:disjointWith rdfs:range owl:Class .
+'(mx-rdf-owl2-disjointWith mx-rdf-range '(mx-rdf-owl2-Class .
 
-owl:distinctMembers rdf:type rdf:Property .
+'(mx-rdf-owl2-distinctMembers '((mx-rdf-type . rdf:Property .
 
-owl:distinctMembers rdfs:domain owl:AllDifferent .
+'(mx-rdf-owl2-distinctMembers mx-rdf-domain '(mx-rdf-owl2-AllDifferent .
 
-owl:distinctMembers rdfs:range rdf:List .
+'(mx-rdf-owl2-distinctMembers mx-rdf-range rdf:List .
 
-owl:equivalentClass rdf:type rdf:Property .
+'(mx-rdf-owl2-equivalentClass '((mx-rdf-type . rdf:Property .
 
-owl:equivalentClass rdfs:domain rdfs:Class .
+'(mx-rdf-owl2-equivalentClass mx-rdf-domain 'mx-rdfs-class) .
 
-owl:equivalentClass rdfs:range rdfs:Class .
+'(mx-rdf-owl2-equivalentClass mx-rdf-range 'mx-rdfs-class) .
 
-owl:equivalentProperty rdf:type rdf:Property .
+'(mx-rdf-owl2-equivalentProperty '((mx-rdf-type . rdf:Property .
 
-owl:equivalentProperty rdfs:domain rdf:Property .
+'(mx-rdf-owl2-equivalentProperty mx-rdf-domain rdf:Property .
 
-owl:equivalentProperty rdfs:range rdf:Property .
+'(mx-rdf-owl2-equivalentProperty mx-rdf-range rdf:Property .
 
-owl:hasKey rdf:type rdf:Property .
+'(mx-rdf-owl2-hasKey '((mx-rdf-type . rdf:Property .
 
-owl:hasKey rdfs:domain owl:Class .
+'(mx-rdf-owl2-hasKey mx-rdf-domain '(mx-rdf-owl2-Class .
 
-owl:hasKey rdfs:range rdf:List .
+'(mx-rdf-owl2-hasKey mx-rdf-range rdf:List .
 
-owl:hasSelf rdf:type rdf:Property .
+'(mx-rdf-owl2-hasSelf '((mx-rdf-type . rdf:Property .
 
-owl:hasSelf rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-hasSelf mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:hasSelf rdfs:range rdfs:Resource .
+'(mx-rdf-owl2-hasSelf mx-rdf-range mx-rdfs-resource .
 
-owl:hasValue rdf:type rdf:Property .
+'(mx-rdf-owl2-hasValue '((mx-rdf-type . rdf:Property .
 
-owl:hasValue rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-hasValue mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:hasValue rdfs:range rdfs:Resource .
+'(mx-rdf-owl2-hasValue mx-rdf-range mx-rdfs-resource .
 
-owl:imports rdf:type owl:OntologyProperty .
+'(mx-rdf-owl2-imports '((mx-rdf-type . '(mx-rdf-owl2-OntologyProperty .
 
-owl:imports rdfs:domain owl:Ontology .
+'(mx-rdf-owl2-imports mx-rdf-domain '(mx-rdf-owl2-Ontology .
 
-owl:imports rdfs:range owl:Ontology .
+'(mx-rdf-owl2-imports mx-rdf-range '(mx-rdf-owl2-Ontology .
 
-owl:incompatibleWith rdf:type owl:AnnotationProperty .
+'(mx-rdf-owl2-incompatibleWith '((mx-rdf-type . '(mx-rdf-owl2-AnnotationProperty .
 
-owl:incompatibleWith rdf:type owl:OntologyProperty .
+'(mx-rdf-owl2-incompatibleWith '((mx-rdf-type . '(mx-rdf-owl2-OntologyProperty .
 
-owl:incompatibleWith rdfs:domain owl:Ontology .
+'(mx-rdf-owl2-incompatibleWith mx-rdf-domain '(mx-rdf-owl2-Ontology .
 
-owl:incompatibleWith rdfs:range owl:Ontology .
+'(mx-rdf-owl2-incompatibleWith mx-rdf-range '(mx-rdf-owl2-Ontology .
 
-owl:intersectionOf rdf:type rdf:Property .
+'(mx-rdf-owl2-intersectionOf '((mx-rdf-type . rdf:Property .
 
-owl:intersectionOf rdfs:domain rdfs:Class .
+'(mx-rdf-owl2-intersectionOf mx-rdf-domain 'mx-rdfs-class) .
 
-owl:intersectionOf rdfs:range rdf:List .
+'(mx-rdf-owl2-intersectionOf mx-rdf-range rdf:List .
 
-owl:inverseOf rdf:type rdf:Property .
+'(mx-rdf-owl2-inverseOf '((mx-rdf-type . rdf:Property .
 
-owl:inverseOf rdfs:domain owl:ObjectProperty .
+'(mx-rdf-owl2-inverseOf mx-rdf-domain '(mx-rdf-owl2-ObjectProperty .
 
-owl:inverseOf rdfs:range owl:ObjectProperty .
+'(mx-rdf-owl2-inverseOf mx-rdf-range '(mx-rdf-owl2-ObjectProperty .
 
-owl:maxCardinality rdf:type rdf:Property .
+'(mx-rdf-owl2-maxCardinality '((mx-rdf-type . rdf:Property .
 
-owl:maxCardinality rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-maxCardinality mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:maxCardinality rdfs:range xsd:nonNegativeInteger .
+'(mx-rdf-owl2-maxCardinality mx-rdf-range xsd:nonNegativeInteger .
 
-owl:maxQualifiedCardinality rdf:type rdf:Property .
+'(mx-rdf-owl2-maxQualifiedCardinality '((mx-rdf-type . rdf:Property .
 
-owl:maxQualifiedCardinality rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-maxQualifiedCardinality mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:maxQualifiedCardinality rdfs:range xsd:nonNegativeInteger .
+'(mx-rdf-owl2-maxQualifiedCardinality mx-rdf-range xsd:nonNegativeInteger .
 
-owl:members rdf:type rdf:Property .
+'(mx-rdf-owl2-members '((mx-rdf-type . rdf:Property .
 
-owl:members rdfs:domain rdfs:Resource .
+'(mx-rdf-owl2-members mx-rdf-domain mx-rdfs-resource .
 
-owl:members rdfs:range rdf:List .
+'(mx-rdf-owl2-members mx-rdf-range rdf:List .
 
-owl:minCardinality rdf:type rdf:Property .
+'(mx-rdf-owl2-minCardinality '((mx-rdf-type . rdf:Property .
 
-owl:minCardinality rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-minCardinality mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:minCardinality rdfs:range xsd:nonNegativeInteger .
+'(mx-rdf-owl2-minCardinality mx-rdf-range xsd:nonNegativeInteger .
 
-owl:minQualifiedCardinality rdf:type rdf:Property .
+'(mx-rdf-owl2-minQualifiedCardinality '((mx-rdf-type . rdf:Property .
 
-owl:minQualifiedCardinality rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-minQualifiedCardinality mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:minQualifiedCardinality rdfs:range xsd:nonNegativeInteger .
+'(mx-rdf-owl2-minQualifiedCardinality mx-rdf-range xsd:nonNegativeInteger .
 
-owl:onClass rdf:type rdf:Property .
+'(mx-rdf-owl2-onClass '((mx-rdf-type . rdf:Property .
 
-owl:onClass rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-onClass mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:onClass rdfs:range owl:Class .
+'(mx-rdf-owl2-onClass mx-rdf-range '(mx-rdf-owl2-Class .
 
-owl:onDataRange rdf:type rdf:Property .
+'(mx-rdf-owl2-onDataRange '((mx-rdf-type . rdf:Property .
 
-owl:onDataRange rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-onDataRange mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:onDataRange rdfs:range rdfs:Datatype .
+'(mx-rdf-owl2-onDataRange mx-rdf-range mx-rdf-Datatype .
 
-owl:onDatatype rdf:type rdf:Property .
+'(mx-rdf-owl2-onDatatype '((mx-rdf-type . rdf:Property .
 
-owl:onDatatype rdfs:domain rdfs:Datatype .
+'(mx-rdf-owl2-onDatatype mx-rdf-domain mx-rdf-Datatype .
 
-owl:onDatatype rdfs:range rdfs:Datatype .
+'(mx-rdf-owl2-onDatatype mx-rdf-range mx-rdf-Datatype .
 
-owl:oneOf rdf:type rdf:Property .
+'(mx-rdf-owl2-oneOf '((mx-rdf-type . rdf:Property .
 
-owl:oneOf rdfs:domain rdfs:Class .
+'(mx-rdf-owl2-oneOf mx-rdf-domain 'mx-rdfs-class) .
 
-owl:oneOf rdfs:range rdf:List .
+'(mx-rdf-owl2-oneOf mx-rdf-range rdf:List .
 
-owl:onProperty rdf:type rdf:Property .
+'(mx-rdf-owl2-onProperty '((mx-rdf-type . rdf:Property .
 
-owl:onProperty rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-onProperty mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:onProperty rdfs:range rdf:Property .
+'(mx-rdf-owl2-onProperty mx-rdf-range rdf:Property .
 
-owl:onProperties rdf:type rdf:Property .
+'(mx-rdf-owl2-onProperties '((mx-rdf-type . rdf:Property .
 
-owl:onProperties rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-onProperties mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:onProperties rdfs:range rdf:List .
+'(mx-rdf-owl2-onProperties mx-rdf-range rdf:List .
 
-owl:priorVersion rdf:type owl:AnnotationProperty .
+'(mx-rdf-owl2-priorVersion '((mx-rdf-type . '(mx-rdf-owl2-AnnotationProperty .
 
-owl:priorVersion rdf:type owl:OntologyProperty .
+'(mx-rdf-owl2-priorVersion '((mx-rdf-type . '(mx-rdf-owl2-OntologyProperty .
 
-owl:priorVersion rdfs:domain owl:Ontology .
+'(mx-rdf-owl2-priorVersion mx-rdf-domain '(mx-rdf-owl2-Ontology .
 
-owl:priorVersion rdfs:range owl:Ontology .
+'(mx-rdf-owl2-priorVersion mx-rdf-range '(mx-rdf-owl2-Ontology .
 
-owl:propertyChainAxiom rdf:type rdf:Property .
+'(mx-rdf-owl2-propertyChainAxiom '((mx-rdf-type . rdf:Property .
 
-owl:propertyChainAxiom rdfs:domain owl:ObjectProperty .
+'(mx-rdf-owl2-propertyChainAxiom mx-rdf-domain '(mx-rdf-owl2-ObjectProperty .
 
-owl:propertyChainAxiom rdfs:range rdf:List .
+'(mx-rdf-owl2-propertyChainAxiom mx-rdf-range rdf:List .
 
-owl:propertyDisjointWith rdf:type rdf:Property .
+'(mx-rdf-owl2-propertyDisjointWith '((mx-rdf-type . rdf:Property .
 
-owl:propertyDisjointWith rdfs:domain rdf:Property .
+'(mx-rdf-owl2-propertyDisjointWith mx-rdf-domain rdf:Property .
 
-owl:propertyDisjointWith rdfs:range rdf:Property .
+'(mx-rdf-owl2-propertyDisjointWith mx-rdf-range rdf:Property .
 
-owl:qualifiedCardinality rdf:type rdf:Property .
+'(mx-rdf-owl2-qualifiedCardinality '((mx-rdf-type . rdf:Property .
 
-owl:qualifiedCardinality rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-qualifiedCardinality mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:qualifiedCardinality rdfs:range xsd:nonNegativeInteger .
+'(mx-rdf-owl2-qualifiedCardinality mx-rdf-range xsd:nonNegativeInteger .
 
-owl:sameAs rdf:type rdf:Property .
+'(mx-rdf-owl2-sameAs '((mx-rdf-type . rdf:Property .
 
-owl:sameAs rdfs:domain owl:Thing .
+'(mx-rdf-owl2-sameAs mx-rdf-domain '(mx-rdf-owl2-Thing .
 
-owl:sameAs rdfs:range owl:Thing .
+'(mx-rdf-owl2-sameAs mx-rdf-range '(mx-rdf-owl2-Thing .
 
-owl:someValuesFrom rdf:type rdf:Property .
+'(mx-rdf-owl2-someValuesFrom '((mx-rdf-type . rdf:Property .
 
-owl:someValuesFrom rdfs:domain owl:Restriction .
+'(mx-rdf-owl2-someValuesFrom mx-rdf-domain '(mx-rdf-owl2-Restriction .
 
-owl:someValuesFrom rdfs:range rdfs:Class .
+'(mx-rdf-owl2-someValuesFrom mx-rdf-range 'mx-rdfs-class) .
 
-owl:sourceIndividual rdf:type rdf:Property .
+'(mx-rdf-owl2-sourceIndividual '((mx-rdf-type . rdf:Property .
 
-owl:sourceIndividual rdfs:domain owl:NegativePropertyAssertion .
+'(mx-rdf-owl2-sourceIndividual mx-rdf-domain '(mx-rdf-owl2-NegativePropertyAssertion .
 
-owl:sourceIndividual rdfs:range owl:Thing .
+'(mx-rdf-owl2-sourceIndividual mx-rdf-range '(mx-rdf-owl2-Thing .
 
-owl:targetIndividual rdf:type rdf:Property .
+'(mx-rdf-owl2-targetIndividual '((mx-rdf-type . rdf:Property .
 
-owl:targetIndividual rdfs:domain owl:NegativePropertyAssertion .
+'(mx-rdf-owl2-targetIndividual mx-rdf-domain '(mx-rdf-owl2-NegativePropertyAssertion .
 
-owl:targetIndividual rdfs:range owl:Thing .
+'(mx-rdf-owl2-targetIndividual mx-rdf-range '(mx-rdf-owl2-Thing .
 
-owl:targetValue rdf:type rdf:Property .
+'(mx-rdf-owl2-targetValue '((mx-rdf-type . rdf:Property .
 
-owl:targetValue rdfs:domain owl:NegativePropertyAssertion .
+'(mx-rdf-owl2-targetValue mx-rdf-domain '(mx-rdf-owl2-NegativePropertyAssertion .
 
-owl:targetValue rdfs:range rdfs:Literal .
+'(mx-rdf-owl2-targetValue mx-rdf-range mx-rdf-Literal .
 
-owl:topDataProperty rdf:type owl:DatatypeProperty .
+'(mx-rdf-owl2-topDataProperty '((mx-rdf-type . '(mx-rdf-owl2-DatatypeProperty .
 
-owl:topDataProperty rdfs:domain owl:Thing .
+'(mx-rdf-owl2-topDataProperty mx-rdf-domain '(mx-rdf-owl2-Thing .
 
-owl:topDataProperty rdfs:range rdfs:Literal .
+'(mx-rdf-owl2-topDataProperty mx-rdf-range mx-rdf-Literal .
 
-owl:topObjectProperty rdf:type rdf:ObjectProperty .
+'(mx-rdf-owl2-topObjectProperty '((mx-rdf-type . rdf:ObjectProperty .
 
-owl:topObjectProperty rdfs:domain owl:Thing .
+'(mx-rdf-owl2-topObjectProperty mx-rdf-domain '(mx-rdf-owl2-Thing .
 
-owl:topObjectProperty rdfs:range owl:Thing .
+'(mx-rdf-owl2-topObjectProperty mx-rdf-range '(mx-rdf-owl2-Thing .
 
-owl:unionOf rdf:type rdf:Property .
+'(mx-rdf-owl2-unionOf '((mx-rdf-type . rdf:Property .
 
-owl:unionOf rdfs:domain rdfs:Class .
+'(mx-rdf-owl2-unionOf mx-rdf-domain 'mx-rdfs-class) .
 
-owl:unionOf rdfs:range rdf:List .
+'(mx-rdf-owl2-unionOf mx-rdf-range rdf:List .
 
-owl:versionInfo rdf:type owl:AnnotationProperty .
+'(mx-rdf-owl2-versionInfo '((mx-rdf-type . '(mx-rdf-owl2-AnnotationProperty .
 
-owl:versionInfo rdfs:domain rdfs:Resource .
+'(mx-rdf-owl2-versionInfo mx-rdf-domain mx-rdfs-resource .
 
-owl:versionInfo rdfs:range rdfs:Resource .
+'(mx-rdf-owl2-versionInfo mx-rdf-range mx-rdfs-resource .
 
-owl:versionIRI rdf:type owl:OntologyProperty .
+'(mx-rdf-owl2-versionIRI '((mx-rdf-type . '(mx-rdf-owl2-OntologyProperty .
 
-owl:versionIRI rdfs:domain owl:Ontology .
+'(mx-rdf-owl2-versionIRI mx-rdf-domain '(mx-rdf-owl2-Ontology .
 
-owl:versionIRI rdfs:range owl:Ontology .
+'(mx-rdf-owl2-versionIRI mx-rdf-range '(mx-rdf-owl2-Ontology .
 
-owl:withRestrictions rdf:type rdf:Property .
+'(mx-rdf-owl2-withRestrictions '((mx-rdf-type . rdf:Property .
 
-owl:withRestrictions rdfs:domain rdfs:Datatype .
+'(mx-rdf-owl2-withRestrictions mx-rdf-domain mx-rdf-Datatype .
 
-owl:withRestrictions rdfs:range rdf:List .
+'(mx-rdf-owl2-withRestrictions mx-rdf-range rdf:List .
 	
 (defun (defun  Axiomatic Triples for the Datatypes
 
-xsd:anyURI rdf:type rdfs:Datatype .
+mx-xsd-anyURI '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:anyURI rdfs:subClassOf rdfs:Literal .
+mx-xsd-anyURI mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:base64Binary rdf:type rdfs:Datatype .
+mx-xsd-base64Binary '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:base64Binary rdfs:subClassOf rdfs:Literal .
+mx-xsd-base64Binary mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:boolean rdf:type rdfs:Datatype .
+mx-xsd-boolean '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:boolean rdfs:subClassOf rdfs:Literal .
+mx-xsd-boolean mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:byte rdf:type rdfs:Datatype .
+mx-xsd-byte '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:byte rdfs:subClassOf rdfs:Literal .
+mx-xsd-byte mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:dateTime rdf:type rdfs:Datatype .
+mx-xsd-dateTime '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:dateTime rdfs:subClassOf rdfs:Literal .
+mx-xsd-dateTime mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:dateTimeStamp rdf:type rdfs:Datatype .
+mx-xsd-dateTimeStamp '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:dateTimeStamp rdfs:subClassOf rdfs:Literal .
+mx-xsd-dateTimeStamp mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:decimal rdf:type rdfs:Datatype .
+mx-xsd-decimal '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:decimal rdfs:subClassOf rdfs:Literal .
+mx-xsd-decimal mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:double rdf:type rdfs:Datatype .
+mx-xsd-double '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:double rdfs:subClassOf rdfs:Literal .
+mx-xsd-double mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:float rdf:type rdfs:Datatype .
+mx-xsd-float '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:float rdfs:subClassOf rdfs:Literal .
+mx-xsd-float mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:hexBinary rdf:type rdfs:Datatype .
+mx-xsd-hexBinary '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:hexBinary rdfs:subClassOf rdfs:Literal .
+mx-xsd-hexBinary mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:int rdf:type rdfs:Datatype .
+mx-xsd-int '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:int rdfs:subClassOf rdfs:Literal .
+mx-xsd-int mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:integer rdf:type rdfs:Datatype .
+mx-xsd-integer '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:integer rdfs:subClassOf rdfs:Literal .
+mx-xsd-integer mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:language rdf:type rdfs:Datatype .
+mx-xsd-language '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:language rdfs:subClassOf rdfs:Literal .
+mx-xsd-language mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:long rdf:type rdfs:Datatype .
+mx-xsd-long '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:long rdfs:subClassOf rdfs:Literal .
+mx-xsd-long mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:Name rdf:type rdfs:Datatype .
+mx-xsd-Name '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:Name rdfs:subClassOf rdfs:Literal .
+mx-xsd-Name mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:NCName rdf:type rdfs:Datatype .
+mx-xsd-NCName '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:NCName rdfs:subClassOf rdfs:Literal .
+mx-xsd-NCName mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:negativeInteger rdf:type rdfs:Datatype .
+mx-xsd-negativeInteger '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:negativeInteger rdfs:subClassOf rdfs:Literal .
+mx-xsd-negativeInteger mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:NMTOKEN rdf:type rdfs:Datatype .
+mx-xsd-NMTOKEN '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:NMTOKEN rdfs:subClassOf rdfs:Literal .
+mx-xsd-NMTOKEN mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:nonNegativeInteger rdf:type rdfs:Datatype .
+mx-xsd-nonNegativeInteger '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:nonNegativeInteger rdfs:subClassOf rdfs:Literal .
+mx-xsd-nonNegativeInteger mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:nonPositiveInteger rdf:type rdfs:Datatype .
+mx-xsd-nonPositiveInteger '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:nonPositiveInteger rdfs:subClassOf rdfs:Literal .
+mx-xsd-nonPositiveInteger mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:normalizedString rdf:type rdfs:Datatype .
+mx-xsd-normalizedString '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:normalizedString rdfs:subClassOf rdfs:Literal .
+mx-xsd-normalizedString mx-rdfs-subClassOf mx-rdf-Literal .
 
-rdf:PlainLiteral rdf:type rdfs:Datatype .
+rdf:PlainLiteral '((mx-rdf-type . mx-rdf-Datatype .
 
-rdf:PlainLiteral rdfs:subClassOf rdfs:Literal .
+rdf:PlainLiteral mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:positiveInteger rdf:type rdfs:Datatype .
+mx-xsd-positiveInteger '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:positiveInteger rdfs:subClassOf rdfs:Literal .
+mx-xsd-positiveInteger mx-rdfs-subClassOf mx-rdf-Literal .
 
-owl:rational rdf:type rdfs:Datatype .
+'(mx-rdf-owl2-rational '((mx-rdf-type . mx-rdf-Datatype .
 
-owl:rational rdfs:subClassOf rdfs:Literal .
+'(mx-rdf-owl2-rational mx-rdfs-subClassOf mx-rdf-Literal .
 
-owl:real rdf:type rdfs:Datatype .
+'(mx-rdf-owl2-real '((mx-rdf-type . mx-rdf-Datatype .
 
-owl:real rdfs:subClassOf rdfs:Literal .
+'(mx-rdf-owl2-real mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:short rdf:type rdfs:Datatype .
+mx-xsd-short '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:short rdfs:subClassOf rdfs:Literal .
+mx-xsd-short mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:string rdf:type rdfs:Datatype .
+mx-xsd-string '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:string rdfs:subClassOf rdfs:Literal .
+mx-xsd-string mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:token rdf:type rdfs:Datatype .
+mx-xsd-token '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:token rdfs:subClassOf rdfs:Literal .
+mx-xsd-token mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:unsignedByte rdf:type rdfs:Datatype .
+mx-xsd-unsignedByte '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:unsignedByte rdfs:subClassOf rdfs:Literal .
+mx-xsd-unsignedByte mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:unsignedInt rdf:type rdfs:Datatype .
+mx-xsd-unsignedInt '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:unsignedInt rdfs:subClassOf rdfs:Literal .
+mx-xsd-unsignedInt mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:unsignedLong rdf:type rdfs:Datatype .
+mx-xsd-unsignedLong '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:unsignedLong rdfs:subClassOf rdfs:Literal .
+mx-xsd-unsignedLong mx-rdfs-subClassOf mx-rdf-Literal .
 
-xsd:unsignedShort rdf:type rdfs:Datatype .
+mx-xsd-unsignedShort '((mx-rdf-type . mx-rdf-Datatype .
 
-xsd:unsignedShort rdfs:subClassOf rdfs:Literal .
+mx-xsd-unsignedShort mx-rdfs-subClassOf mx-rdf-Literal .
 
-rdf:XMLLiteral rdf:type rdfs:Datatype .
+rdf:XMLLiteral '((mx-rdf-type . mx-rdf-Datatype .
 
-rdf:XMLLiteral rdfs:subClassOf rdfs:Literal .
+rdf:XMLLiteral mx-rdfs-subClassOf mx-rdf-Literal .
 	
 (defun (defun  Axiomatic Triples for the Facets
 
-<rdf:langRange> <rdf:type> <owl:DatatypeProperty> .
+<rdf:langRange> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
 
-<rdf:langRange> <rdfs:domain> <rdfs:Resource> .
+<rdf:langRange> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<rdf:langRange> <rdfs:range> <rdfs:Literal> .
+<rdf:langRange> <mx-rdf-range> <mx-rdf-Literal> .
 
-<xsd:length> <rdf:type> <owl:DatatypeProperty> .
+<mx-xsd-length> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
 
-<xsd:length> <rdfs:domain> <rdfs:Resource> .
+<mx-xsd-length> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<xsd:length> <rdfs:range> <rdfs:Literal> .
+<mx-xsd-length> <mx-rdf-range> <mx-rdf-Literal> .
 
-<xsd:maxExclusive> <rdf:type> <owl:DatatypeProperty> .
+<mx-xsd-maxExclusive> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
 
-<xsd:maxExclusive> <rdfs:domain> <rdfs:Resource> .
+<mx-xsd-maxExclusive> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<xsd:maxExclusive> <rdfs:range> <rdfs:Literal> .
+<mx-xsd-maxExclusive> <mx-rdf-range> <mx-rdf-Literal> .
 
-<xsd:maxInclusive> <rdf:type> <owl:DatatypeProperty> .
+<mx-xsd-maxInclusive> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
 
-<xsd:maxInclusive> <rdfs:domain> <rdfs:Resource> .
+<mx-xsd-maxInclusive> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<xsd:maxInclusive> <rdfs:range> <rdfs:Literal> .
+<mx-xsd-maxInclusive> <mx-rdf-range> <mx-rdf-Literal> .
 
-<xsd:maxLength> <rdf:type> <owl:DatatypeProperty> .
+<mx-xsd-maxLength> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
 
-<xsd:maxLength> <rdfs:domain> <rdfs:Resource> .
+<mx-xsd-maxLength> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<xsd:maxLength> <rdfs:range> <rdfs:Literal> .
+<mx-xsd-maxLength> <mx-rdf-range> <mx-rdf-Literal> .
 
-<xsd:minExclusive> <rdf:type> <owl:DatatypeProperty> .
+<mx-xsd-minExclusive> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
 
-<xsd:minExclusive> <rdfs:domain> <rdfs:Resource> .
+<mx-xsd-minExclusive> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<xsd:minExclusive> <rdfs:range> <rdfs:Literal> .
+<mx-xsd-minExclusive> <mx-rdf-range> <mx-rdf-Literal> .
 
-<xsd:minInclusive> <rdf:type> <owl:DatatypeProperty> .
+<mx-xsd-minInclusive> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
 
-<xsd:minInclusive> <rdfs:domain> <rdfs:Resource> .
+<mx-xsd-minInclusive> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<xsd:minInclusive> <rdfs:range> <rdfs:Literal> .
+<mx-xsd-minInclusive> <mx-rdf-range> <mx-rdf-Literal> .
 
-<xsd:minLength> <rdf:type> <owl:DatatypeProperty> .
+<mx-xsd-minLength> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
 
-xsd:minLength rdfs:domain rdfs:Resource .
+mx-xsd-minLength mx-rdf-domain mx-rdfs-resource .
 
-xsd:minLength rdfs:range rdfs:Literal .
+mx-xsd-minLength mx-rdf-range mx-rdf-Literal .
 
-xsd:pattern rdf:type owl:DatatypeProperty .
+mx-xsd-pattern '((mx-rdf-type . '(mx-rdf-owl2-DatatypeProperty .
 
-xsd:pattern rdfs:domain rdfs:Resource .
+mx-xsd-pattern mx-rdf-domain mx-rdfs-resource .
 
-xsd:pattern rdfs:range rdfs:Literal .
+mx-xsd-pattern mx-rdf-range mx-rdf-Literal .
 	
 (defun (defun  Additional Axiomatic Triples for Classes and Properties
 
-<rdfs:Class> <rdfs:subClassOf> <owl:Class> .
+<'mx-rdfs-class)> <mx-rdfs-subClassOf> <'(mx-rdf-owl2-Class> .
 
-<rdfs:comment> <rdf:type> <owl:AnnotationProperty> .
+<mx-rdf-comment> <'((mx-rdf-type .> <'(mx-rdf-owl2-AnnotationProperty> .
 
-<rdfs:comment> <rdfs:domain> <rdfs:Resource> .
+<mx-rdf-comment> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<rdfs:comment> <rdfs:range> <rdfs:Literal> .
+<mx-rdf-comment> <mx-rdf-range> <mx-rdf-Literal> .
 
-<rdfs:Datatype> <rdfs:subClassOf> <owl:DataRange> .
+<mx-rdf-Datatype> <mx-rdfs-subClassOf> <'(mx-rdf-owl2-DataRange> .
 
-<rdfs:isDefinedBy> <rdf:type> <owl:AnnotationProperty> .
+<mx-rdf-isDefinedBy> <'((mx-rdf-type .> <'(mx-rdf-owl2-AnnotationProperty> .
 
-<rdfs:isDefinedBy> <rdfs:domain> <rdfs:Resource> .
+<mx-rdf-isDefinedBy> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<rdfs:isDefinedBy> <rdfs:range> <rdfs:Resource> .
+<mx-rdf-isDefinedBy> <mx-rdf-range> <mx-rdfs-resource> .
 
-<rdfs:label> <rdf:type> <owl:AnnotationProperty> .
+<mx-rdf-label> <'((mx-rdf-type .> <'(mx-rdf-owl2-AnnotationProperty> .
 
-<rdfs:label> <rdfs:domain> <rdfs:Resource> .
+<mx-rdf-label> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<rdfs:label> <rdfs:range> <rdfs:Literal> .
+<mx-rdf-label> <mx-rdf-range> <mx-rdf-Literal> .
 
-<rdfs:Literal> <rdf:type> <rdfs:Datatype> .
+<mx-rdf-Literal> <'((mx-rdf-type .> <mx-rdf-Datatype> .
 
-<rdf:Property> <rdfs:subClassOf> <owl:ObjectProperty> .
+<rdf:Property> <mx-rdfs-subClassOf> <'(mx-rdf-owl2-ObjectProperty> .
 
-<rdfs:Resource> <rdfs:subClassOf> <owl:Thing> .
+<mx-rdfs-resource> <mx-rdfs-subClassOf> <'(mx-rdf-owl2-Thing> .
 
-<rdfs:seeAlso> <rdf:type> <owl:AnnotationProperty> .
+<mx-rdf-seeAlso> <'((mx-rdf-type .> <'(mx-rdf-owl2-AnnotationProperty> .
 
-<rdfs:seeAlso> <rdfs:domain> <rdfs:Resource> .
+<mx-rdf-seeAlso> <mx-rdf-domain> <mx-rdfs-resource> .
 
-<rdfs:seeAlso> <rdfs:range> <rdfs:Resource> .
+<mx-rdf-seeAlso> <mx-rdf-range> <mx-rdfs-resource> .
 (defun (defun  misc owl2								:rdf:
       ICEXT(I(ex:c1)) ⊆ ICEXT(I(ex:c2)) ∪ ICEXT(I(ex:c3)) . 
 (defun (defun  owl2 basic gloss
 
-      owl:AllDifferent 
+      '(mx-rdf-owl2-AllDifferent 
 
-      owl:AllDisjointClasses 
+      '(mx-rdf-owl2-AllDisjointClasses 
 
-      owl:AllDisjointProperties 
+      '(mx-rdf-owl2-AllDisjointProperties 
 
-      owl:allValuesFrom 
+      '(mx-rdf-owl2-allValuesFrom 
 
-      owl:annotatedProperty 
+      '(mx-rdf-owl2-annotatedProperty 
 
-      owl:annotatedSource 
+      '(mx-rdf-owl2-annotatedSource 
 
-      owl:annotatedTarget 
+      '(mx-rdf-owl2-annotatedTarget 
 
-      owl:Annotation 
+      '(mx-rdf-owl2-Annotation 
 
-      owl:AnnotationProperty 
+      '(mx-rdf-owl2-AnnotationProperty 
 
-      owl:assertionProperty 
+      '(mx-rdf-owl2-assertionProperty 
 
-      owl:AsymmetricProperty 
+      '(mx-rdf-owl2-AsymmetricProperty 
 
-      owl:Axiom 
+      '(mx-rdf-owl2-Axiom 
 
-      owl:backwardCompatibleWith 
+      '(mx-rdf-owl2-backwardCompatibleWith 
 
-      owl:bottomDataProperty 
+      '(mx-rdf-owl2-bottomDataProperty 
 
-      owl:bottomObjectProperty 
+      '(mx-rdf-owl2-bottomObjectProperty 
 
-      owl:cardinality 
+      '(mx-rdf-owl2-cardinality 
 
-      owl:Class 
+      '(mx-rdf-owl2-Class 
 
-      owl:complementOf 
+      '(mx-rdf-owl2-complementOf 
 
-      owl:DataRange 
+      '(mx-rdf-owl2-DataRange 
 
-      owl:datatypeComplementOf 
+      '(mx-rdf-owl2-datatypeComplementOf 
 
-      owl:DatatypeProperty 
+      '(mx-rdf-owl2-DatatypeProperty 
 
-      owl:deprecated 
+      '(mx-rdf-owl2-deprecated 
 
-      owl:DeprecatedClass 
+      '(mx-rdf-owl2-DeprecatedClass 
 
-      owl:DeprecatedProperty 
+      '(mx-rdf-owl2-DeprecatedProperty 
 
-      owl:differentFrom 
+      '(mx-rdf-owl2-differentFrom 
 
-      owl:disjointUnionOf 
+      '(mx-rdf-owl2-disjointUnionOf 
 
-      owl:disjointWith 
+      '(mx-rdf-owl2-disjointWith 
 
-      owl:distinctMembers 
+      '(mx-rdf-owl2-distinctMembers 
 
-      owl:equivalentClass 
+      '(mx-rdf-owl2-equivalentClass 
 
-      owl:equivalentProperty 
+      '(mx-rdf-owl2-equivalentProperty 
 
-      owl:FunctionalProperty 
+      '(mx-rdf-owl2-FunctionalProperty 
 
-      owl:hasKey 
+      '(mx-rdf-owl2-hasKey 
 
-      owl:hasSelf 
+      '(mx-rdf-owl2-hasSelf 
 
-      owl:hasValue 
+      '(mx-rdf-owl2-hasValue 
 
-      owl:imports 
+      '(mx-rdf-owl2-imports 
 
-      owl:incompatibleWith 
+      '(mx-rdf-owl2-incompatibleWith 
 
-      owl:intersectionOf 
+      '(mx-rdf-owl2-intersectionOf 
 
-      owl:InverseFunctionalProperty 
+      '(mx-rdf-owl2-InverseFunctionalProperty 
 
-      owl:inverseOf 
+      '(mx-rdf-owl2-inverseOf 
 
-      owl:IrreflexiveProperty 
+      '(mx-rdf-owl2-IrreflexiveProperty 
 
-      owl:maxCardinality 
+      '(mx-rdf-owl2-maxCardinality 
 
-      owl:maxQualifiedCardinality 
+      '(mx-rdf-owl2-maxQualifiedCardinality 
 
-      owl:members 
+      '(mx-rdf-owl2-members 
 
-      owl:minCardinality 
+      '(mx-rdf-owl2-minCardinality 
 
-      owl:minQualifiedCardinality 
+      '(mx-rdf-owl2-minQualifiedCardinality 
 
-      owl:NamedIndividual 
+      '(mx-rdf-owl2-NamedIndividual 
 
-      owl:NegativePropertyAssertion 
+      '(mx-rdf-owl2-NegativePropertyAssertion 
 
-      owl:Nothing 
+      '(mx-rdf-owl2-Nothing 
 
-      owl:ObjectProperty 
+      '(mx-rdf-owl2-ObjectProperty 
 
-      owl:onClass 
+      '(mx-rdf-owl2-onClass 
 
-      owl:onDataRange 
+      '(mx-rdf-owl2-onDataRange 
 
-      owl:onDatatype 
+      '(mx-rdf-owl2-onDatatype 
 
-      owl:oneOf 
+      '(mx-rdf-owl2-oneOf 
 
-      owl:onProperty 
+      '(mx-rdf-owl2-onProperty 
 
-      owl:onProperties 
+      '(mx-rdf-owl2-onProperties 
 
-      owl:Ontology 
+      '(mx-rdf-owl2-Ontology 
 
-      owl:OntologyProperty 
+      '(mx-rdf-owl2-OntologyProperty 
 
-      owl:priorVersion 
+      '(mx-rdf-owl2-priorVersion 
 
-      owl:propertyChainAxiom 
+      '(mx-rdf-owl2-propertyChainAxiom 
 
-      owl:propertyDisjointWith 
+      '(mx-rdf-owl2-propertyDisjointWith 
 
-      owl:qualifiedCardinality 
+      '(mx-rdf-owl2-qualifiedCardinality 
 
-      owl:ReflexiveProperty 
+      '(mx-rdf-owl2-ReflexiveProperty 
 
-      owl:Restriction 
+      '(mx-rdf-owl2-Restriction 
 
-      owl:sameAs 
+      '(mx-rdf-owl2-sameAs 
 
-      owl:someValuesFrom 
+      '(mx-rdf-owl2-someValuesFrom 
 
-      owl:sourceIndividual 
+      '(mx-rdf-owl2-sourceIndividual 
 
-      owl:SymmetricProperty 
+      '(mx-rdf-owl2-SymmetricProperty 
 
-      owl:targetIndividual 
+      '(mx-rdf-owl2-targetIndividual 
 
-      owl:targetValue 
+      '(mx-rdf-owl2-targetValue 
 
-      owl:Thing 
+      '(mx-rdf-owl2-Thing 
 
-      owl:topDataProperty 
+      '(mx-rdf-owl2-topDataProperty 
 
-      owl:topObjectProperty 
+      '(mx-rdf-owl2-topObjectProperty 
 
-      owl:TransitiveProperty 
+      '(mx-rdf-owl2-TransitiveProperty 
 
-      owl:unionOf 
+      '(mx-rdf-owl2-unionOf 
 
-      owl:versionInfo 
+      '(mx-rdf-owl2-versionInfo 
 
-      owl:versionIRI 
+      '(mx-rdf-owl2-versionIRI 
 
-      owl:withRestrictions 
+      '(mx-rdf-owl2-withRestrictions 
 
 (defun (defun  About owl2 and axiomatic triples
 
-_:x rdf:type owl:Class.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.
 
-_:x owl:intersectionOf ( C1 … Cn ). 
+lambda '(mx-rdf-owl2-intersectionOf ( C1 … Cn ). 
 
-_:x rdf:type owl:Class.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.
 
-_:x owl:unionOf ( C1 … Cn ). 
+lambda '(mx-rdf-owl2-unionOf ( C1 … Cn ). 
 
-_:x rdf:type owl:Class.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.
 
-_:x owl:complementOf C. 
+lambda '(mx-rdf-owl2-complementOf C. 
 
-_:x rdf:type owl:Class.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.
 
-_:x owl:oneOf ( a1 … an ). 
+lambda '(mx-rdf-owl2-oneOf ( a1 … an ). 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:allValuesFrom C .
+lambda '(mx-rdf-owl2-allValuesFrom C .
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:someValuesFrom C .
+lambda '(mx-rdf-owl2-someValuesFrom C .
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:hasValue a. 
+lambda '(mx-rdf-owl2-hasValue a. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:hasSelf "true"^^xsd:boolean. 
+lambda '(mx-rdf-owl2-hasSelf "true"^^mx-xsd-boolean. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:cardinality n. 
+lambda '(mx-rdf-owl2-cardinality n. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:qualifiedCardinality n.
+lambda '(mx-rdf-owl2-qualifiedCardinality n.
 
-_:x owl:onClass C. 
+lambda '(mx-rdf-owl2-onClass C. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:maxCardinality n. 
+lambda '(mx-rdf-owl2-maxCardinality n. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:maxQualifiedCardinality n.
+lambda '(mx-rdf-owl2-maxQualifiedCardinality n.
 
-_:x owl:onClass C. 
+lambda '(mx-rdf-owl2-onClass C. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:minCardinality n. 
+lambda '(mx-rdf-owl2-minCardinality n. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty P.
+lambda '(mx-rdf-owl2-onProperty P.
 
-_:x owl:minQualifiedCardinality n.
+lambda '(mx-rdf-owl2-minQualifiedCardinality n.
 
-_:x owl:onClass C. 
+lambda '(mx-rdf-owl2-onClass C. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty R.
+lambda '(mx-rdf-owl2-onProperty R.
 
-_:x owl:allValuesFrom D. 
+lambda '(mx-rdf-owl2-allValuesFrom D. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty R.
+lambda '(mx-rdf-owl2-onProperty R.
 
-_:x owl:someValuesFrom D. 
+lambda '(mx-rdf-owl2-someValuesFrom D. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty R.
+lambda '(mx-rdf-owl2-onProperty R.
 
-_:x owl:hasValue v. 
+lambda '(mx-rdf-owl2-hasValue v. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty R.
+lambda '(mx-rdf-owl2-onProperty R.
 
-_:x owl:cardinality n. 
+lambda '(mx-rdf-owl2-cardinality n. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty R.
+lambda '(mx-rdf-owl2-onProperty R.
 
-_:x owl:qualifiedCardinality n.
+lambda '(mx-rdf-owl2-qualifiedCardinality n.
 
-_:x owl:onDataRange D. 
+lambda '(mx-rdf-owl2-onDataRange D. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty R.
+lambda '(mx-rdf-owl2-onProperty R.
 
-_:x owl:maxCardinality n. 
+lambda '(mx-rdf-owl2-maxCardinality n. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty R.
+lambda '(mx-rdf-owl2-onProperty R.
 
-_:x owl:maxQualifiedCardinality n.
+lambda '(mx-rdf-owl2-maxQualifiedCardinality n.
 
-_:x owl:onDataRange D. 
+lambda '(mx-rdf-owl2-onDataRange D. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty R.
+lambda '(mx-rdf-owl2-onProperty R.
 
-_:x owl:minCardinality n. 
+lambda '(mx-rdf-owl2-minCardinality n. 
 
-_:x rdf:type owl:Restriction.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
 
-_:x owl:onProperty R.
+lambda '(mx-rdf-owl2-onProperty R.
 
-_:x owl:minQualifiedCardinality n.
+lambda '(mx-rdf-owl2-minQualifiedCardinality n.
 
-_:x owl:onDataRange D. 
+lambda '(mx-rdf-owl2-onDataRange D. 
 
-_:x rdf:type rdfs:Datatype.
+lambda '((mx-rdf-type . mx-rdf-Datatype.
 
-_:x owl:datatypeComplementOf D. 
+lambda '(mx-rdf-owl2-datatypeComplementOf D. 
 
-_:x rdf:type rdfs:Datatype.
+lambda '((mx-rdf-type . mx-rdf-Datatype.
 
-_:x owl:intersectionOf (D1…Dn). 
+lambda '(mx-rdf-owl2-intersectionOf (D1…Dn). 
 
-_:x rdf:type rdfs:Datatype.
+lambda '((mx-rdf-type . mx-rdf-Datatype.
 
-_:x owl:unionOf (D1…Dn). 
+lambda '(mx-rdf-owl2-unionOf (D1…Dn). 
 
-_:x rdf:type rdfs:Datatype.
+lambda '((mx-rdf-type . mx-rdf-Datatype.
 
-_:x owl:oneOf ( v1 … vn ). 
+lambda '(mx-rdf-owl2-oneOf ( v1 … vn ). 
 
-_:x rdf:type rdfs:Datatype.
+lambda '((mx-rdf-type . mx-rdf-Datatype.
 
-_:x owl:onDatatype DN.
+lambda '(mx-rdf-owl2-onDatatype DN.
 
-_:x owl:withRestrictions (_:x1 ... _:xn).
+lambda '(mx-rdf-owl2-withRestrictions (lambda1 ... lambdan).
 
-_:xj fj vj.      j=1…n 
+lambdaj fj vj.      j=1…n 
 
-C1 rdfs:subClassOf C2. 
+C1 mx-rdfs-subClassOf C2. 
 
-Cj owl:equivalentClass Cj+1. j=1…n-1 
+Cj '(mx-rdf-owl2-equivalentClass Cj+1. j=1…n-1 
 
-C1 owl:disjointWith C2. 
+C1 '(mx-rdf-owl2-disjointWith C2. 
 
-_:x rdf:type owl:AllDisjointClasses.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-AllDisjointClasses.
 
-_:x owl:members ( C1 … Cn ). 
+lambda '(mx-rdf-owl2-members ( C1 … Cn ). 
 
-P1 rdfs:subPropertyOf P2. 
+P1 mx-rdf-subPropertyOf P2. 
 
-P owl:propertyChainAxiom (P1 … Pn). 
+P '(mx-rdf-owl2-propertyChainAxiom (P1 … Pn). 
 
-P rdfs:domain C. 
+P mx-rdf-domain C. 
 
-P rdfs:range C. 
+P mx-rdf-range C. 
 
-Pj owl:equivalentProperty Pj+1. j=1…n-1 
+Pj '(mx-rdf-owl2-equivalentProperty Pj+1. j=1…n-1 
 
-P1 owl:propertyDisjointWith P2. 
+P1 '(mx-rdf-owl2-propertyDisjointWith P2. 
 
-_:x rdf:type owl:AllDisjointProperties.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-AllDisjointProperties.
 
-_:x owl:members ( P1 … Pn ). 
+lambda '(mx-rdf-owl2-members ( P1 … Pn ). 
 
-CN owl:disjointUnionOf ( C1 … Cn ).
+CN '(mx-rdf-owl2-disjointUnionOf ( C1 … Cn ).
 
-P1 owl:inverseOf P2. 
+P1 '(mx-rdf-owl2-inverseOf P2. 
 
-P rdf:type owl:FunctionalProperty. 
+P '((mx-rdf-type . '(mx-rdf-owl2-FunctionalProperty. 
 
-P rdf:type owl:InverseFunctionalProperty. 
+P '((mx-rdf-type . '(mx-rdf-owl2-InverseFunctionalProperty. 
 
-P rdf:type owl:ReflexiveProperty. 
+P '((mx-rdf-type . '(mx-rdf-owl2-ReflexiveProperty. 
 
-P rdf:type owl:IrreflexiveProperty. 
+P '((mx-rdf-type . '(mx-rdf-owl2-IrreflexiveProperty. 
 
-P rdf:type owl:SymmetricProperty. 
+P '((mx-rdf-type . '(mx-rdf-owl2-SymmetricProperty. 
 
-P rdf:type owl:AsymmetricProperty. 
+P '((mx-rdf-type . '(mx-rdf-owl2-AsymmetricProperty. 
 
-P rdf:type owl:TransitiveProperty. 
+P '((mx-rdf-type . '(mx-rdf-owl2-TransitiveProperty. 
 
-DN owl:equivalentClass D. 
+DN '(mx-rdf-owl2-equivalentClass D. 
 
-aj owl:sameAs aj+1. j=1…n-1 
+aj '(mx-rdf-owl2-sameAs aj+1. j=1…n-1 
 
-a1 owl:differentFrom a2. 
+a1 '(mx-rdf-owl2-differentFrom a2. 
 
-_:x rdf:type owl:AllDifferent.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-AllDifferent.
 
-_:x owl:members (a1 … an). 
+lambda '(mx-rdf-owl2-members (a1 … an). 
 
-a rdf:type C. 
+a '((mx-rdf-type . C. 
 
 a1 PN a2. 
 
 a R v. 
 
-_:x rdf:type owl:NegativePropertyAssertion.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-NegativePropertyAssertion.
 
-_:x owl:sourceIndividual a1.
+lambda '(mx-rdf-owl2-sourceIndividual a1.
 
-_:x owl:assertionProperty P.
+lambda '(mx-rdf-owl2-assertionProperty P.
 
-_:x owl:targetIndividual a2. 
+lambda '(mx-rdf-owl2-targetIndividual a2. 
 
-_:x rdf:type owl:NegativePropertyAssertion.
+lambda '((mx-rdf-type . '(mx-rdf-owl2-NegativePropertyAssertion.
 
-_:x owl:sourceIndividual a.
+lambda '(mx-rdf-owl2-sourceIndividual a.
 
-_:x owl:assertionProperty R.
+lambda '(mx-rdf-owl2-assertionProperty R.
 
-_:x owl:targetValue v. 
+lambda '(mx-rdf-owl2-targetValue v. 
 
-C owl:hasKey (P1 … Pm R1 … Rn).
+C '(mx-rdf-owl2-hasKey (P1 … Pm R1 … Rn).
 
 m+n>0 
 
-CN rdf:type owl:Class. 
+CN '((mx-rdf-type . '(mx-rdf-owl2-Class. 
 
-DN rdf:type rdfs:Datatype. 
+DN '((mx-rdf-type . mx-rdf-Datatype. 
 
-PN rdf:type owl:ObjectProperty. 
+PN '((mx-rdf-type . '(mx-rdf-owl2-ObjectProperty. 
 
-R rdf:type owl:DatatypeProperty. 
+R '((mx-rdf-type . '(mx-rdf-owl2-DatatypeProperty. 
 
-A rdf:type owl:AnnotationProperty. 
+A '((mx-rdf-type . '(mx-rdf-owl2-AnnotationProperty. 
 
-aN rdf:type owl:NamedIndividual. 
+aN '((mx-rdf-type . '(mx-rdf-owl2-NamedIndividual. 
 
 @prefix p U. 
 
-rdf:type rdf:type rdf:Property .
+'((mx-rdf-type . '((mx-rdf-type . rdf:Property .
 
-rdf:type rdfs:domain rdfs:Resource .
+'((mx-rdf-type . mx-rdf-domain mx-rdfs-resource .
 
-rdf:type rdfs:range rdfs:Class .
+'((mx-rdf-type . mx-rdf-range 'mx-rdfs-class) .
 
-rdfs:Datatype rdfs:subClassOf rdfs:Class .
+mx-rdf-Datatype mx-rdfs-subClassOf 'mx-rdfs-class) .
 
-rdfs:isDefinedBy rdfs:subPropertyOf rdfs:seeAlso .
+mx-rdf-isDefinedBy mx-rdf-subPropertyOf mx-rdf-seeAlso .
 
-I(rdf:type) ∈ ICEXT(I(rdf:Property)) ,
+I('((mx-rdf-type .) ∈ ICEXT(I(rdf:Property)) ,
 
-IEXT(I(rdf:type)) ⊆ ICEXT(I(rdfs:Resource)) × ICEXT(I(rdfs:Class)) ,
+IEXT(I('((mx-rdf-type .)) ⊆ ICEXT(I(mx-rdfs-resource)) × ICEXT(I('mx-rdfs-class))) ,
 
-ICEXT(I(rdfs:Datatype)) ⊆ ICEXT(I(rdfs:Class)) ,
+ICEXT(I(mx-rdf-Datatype)) ⊆ ICEXT(I('mx-rdfs-class))) ,
 
-IEXT(I(rdfs:isDefinedBy)) ⊆ IEXT(I(rdfs:seeAlso)) . 
+IEXT(I(mx-rdf-isDefinedBy)) ⊆ IEXT(I(mx-rdf-seeAlso)) . 
 
-I(owl:FunctionalProperty) ∈ IC 
+I('(mx-rdf-owl2-FunctionalProperty) ∈ IC 
 
-owl:FunctionalProperty rdf:type rdfs:Class .
+'(mx-rdf-owl2-FunctionalProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
-ICEXT(I(owl:FunctionalProperty)) ⊆ IP 
+ICEXT(I('(mx-rdf-owl2-FunctionalProperty)) ⊆ IP 
 
-owl:FunctionalProperty rdfs:subClassOf rdf:Property .
+'(mx-rdf-owl2-FunctionalProperty mx-rdfs-subClassOf rdf:Property .
 
-E rdf:type rdfs:Datatype .
+E '((mx-rdf-type . mx-rdf-Datatype .
 
-E rdfs:subClassOf rdfs:Literal .
+E mx-rdfs-subClassOf mx-rdf-Literal .
 
-I(owl:disjointWith) ∈ IP 
+I('(mx-rdf-owl2-disjointWith) ∈ IP 
 
-owl:disjointWith rdf:type rdf:Property .
+'(mx-rdf-owl2-disjointWith '((mx-rdf-type . rdf:Property .
 
-IEXT(I(owl:disjointWith)) ⊆ IC × IC 
+IEXT(I('(mx-rdf-owl2-disjointWith)) ⊆ IC × IC 
 
-owl:disjointWith rdfs:domain owl:Class .
+'(mx-rdf-owl2-disjointWith mx-rdf-domain '(mx-rdf-owl2-Class .
 
-owl:disjointWith rdfs:range owl:Class .
+'(mx-rdf-owl2-disjointWith mx-rdf-range '(mx-rdf-owl2-Class .
 
-E rdf:type owl:DatatypeProperty .
+E '((mx-rdf-type . '(mx-rdf-owl2-DatatypeProperty .
 
-E rdfs:domain rdfs:Resource .
+E mx-rdf-domain mx-rdfs-resource .
 
-E rdfs:range rdfs:Literal .
+E mx-rdf-range mx-rdf-Literal .
 (defun  sparql							 :sparql:rdf:
 (defun (defun  DONE tracker-sparql					 :sparql:rdf:
-(defun (defun  DONE tracker-sparql -q "SELECT ?cl WHERE { ?cl a rdfs:Class }"
+(defun (defun  DONE tracker-sparql -q "SELECT ?cl WHERE { ?cl a 'mx-rdfs-class) }"
 Results:
   http://www.w3.org/2001/XMLSchema#string
   http://www.w3.org/2001/XMLSchema#boolean
@@ -1731,9 +1732,9 @@ Results:
 (defvar begin_src sparql
 CONSTRUCT {
     where xk:role ("?chapel" "?leader")
-    owl:Exclusion "?anti-chapel"
-    , owl:Related "?chancel"
-    , owl:Members ("?altar" "?choir")
+    '(mx-rdf-owl2-Exclusion "?anti-chapel"
+    , '(mx-rdf-owl2-Related "?chancel"
+    , '(mx-rdf-owl2-Members ("?altar" "?choir")
     }
 (defvar end_src
 (defun  elisp							      :elisp:
