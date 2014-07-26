@@ -63,17 +63,21 @@
 org-entry-put-multivalued-property pom property &rest values
 
 
-
 (defun  determine the significance of (:how) (:what) and (seq (:how :much))
-(defun  TODO do i want a (defvar property: list of all owl2 and rdfs? 
+;(defun  TODO do i want a (defvar property: list of all owl2 and rdfs? 
 
-(defvar property: mx-rdf_all          mx-rdf-rdfs-type
-(defvar property: mx-rdf+             mx-rdf-predicate
-(defvar property: mx-rdf-predicate    rdfs-type
-
-(defun  drawers
-(defvar drawer:   hidden state
-
+(defun mx:send-org-markup
+  (org-entry-put '(defvar mx-org-property 'mx-rdf_all
+		    '("mx-org-property-value" "mx-n3-triple"))
+		 (org-entry-put-multivalued-property (point) 
+						     '((mx-org-property 'mx-rdf+ '(mx-predx))
+						       )
+						     )
+		 (org-entry-put-multivalued-property (point)
+						     '((mx-org-property
+						     'mx-predx
+						     '(rdfs-type)))
+						     )
 
 
 	
