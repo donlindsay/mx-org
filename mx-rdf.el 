@@ -1,14 +1,17 @@
-(defun mx/rdf-startup ()
+(defun mx:rdf-start (current-buffer)
   "Activate the MX-RDF subsystem."
   (interactive)
-  (message "MX-RDF: ONLINE"))
-
-(defvar mx-rdf-startup
   (cond
-   (overview)
-    (hideblocks)))
+   (defvar mx-rdf-start 
+     (cond
+      (overview t)
+      (hideblocks t)
+      (org-mode t)) t)
+   (message "MX-RDF: ONLINE")
+   (org-entry-put "MX-RS" "ONLINE")
+   ))
 
-(defun mx/insert-drawer ()
+(defun mx:insert-drawer (org-element-entity-interpreter)
   (org-insert-property-drawer))
 
 (defvar mx-rdf-drawer (drawer)
@@ -19,39 +22,7 @@
 			   (mx-n3               . nil))
 		       )))
 
-(defun mx/dev-tags ()
-  (setq org-tag-alist '((:startgroup . nil)
-			("@file" . ?f)
-			("@buffer" . ?b)
-			("@window" . ?w)
-			("@frame" . ?f)
-			(:endgroup . nil)
-			(:startgroup . nil)
-			("@doc" . ?d)
-			("@src" . ?s)
-			("@block" . ?bl)
-			("@import" . ?i)
-			("@export" . ?e)
-			(:endgroup . nil)
-			(:startgroup . nil)
-			("org" . ?o)
-			("elisp" . ?el)
-			("n3" . ?n3)
-			("owl2" . ?owl)
-			("rdfs" . ?r)
-			("shell" . ?s)
-			("axiom" . ?a)
-			("grammar" . ?g)
-			(:endgroup . nil)
-			(:startgroup . nil)
-			("proof" . ?p)
-			("theorem" . ?t)
-			("def" . ?d)
-			("desc" . ?ds)
-			("example" . ?ex)
-			(:endgroup . nil))
-	)
-  )
+
 
 (defun mx/org-header-args ()
   (setq mx-org-src-block-properties
@@ -66,7 +37,13 @@
 (defun mx/org-rdf-properties () 
   (setq mx-org-rdf-properties . '(:see-also
   . org-property-allowed-value-functions)))
-
+org-custom-properties: '("\"MX-RS\"")
+org-global-properties: '(("MX-RDF" . "ONLINE"))
+org-property-allowed-value-functions
+org-properties-postprocess-alist: 
+'(("mx-rules" lambda
+   (value)
+   (mx-rdf-rules)))
 (defun mx/org-global-properties ()
   "'List of property/value pairs that can be inherited by any entry.
 This list will be combined with the constant
@@ -113,6 +90,8 @@ org-entry-put-multivalued-property pom property &rest values
 (defun  calls 
   
    "(defvar call [<inside header arguments>] (<arguments>) <end header arguments>"
+org-tag-persistent-alist: '(("mx-rdf-type" . 0))
+org-tag-faces: '(("mx-rdf-type" . "orange"))
 
 (defvar call: mx-rdf-imenu-add-to-menubar
 (defvar call: mx-rdf-button-panel
