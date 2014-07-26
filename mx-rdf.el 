@@ -6,17 +6,6 @@
   (setq org-global-properties '("MX-RDF" . "ONLINE")) 
   )
 
-(defun mx:insert-drawer (org-element-entity-interpreter)
-  (org-insert-property-drawer))
-
-(defvar mx-rdf-drawer (drawer)
-  '((org-insert-drawer . '((mx-org-hidden       . nil)
-			   (mx-org-state        . nil)
-			   (mx-org-properties   . nil)
-			   (mx-rdfs-owl2        . nil)
-			   (mx-n3               . nil))
-		       )))
-
 (defun mx:org-n3-properties
   (interactive)
   (setq org-custom-properties 
@@ -52,7 +41,27 @@
     (mx-rdf+    . mx-rdf-type)
     )
   )
-
+; schema
+(scm-cls   .'(org-entry-put (point) "SCM"
+(scm-sco   .'(org-entry-put (point) "SCM"
+(scm-eqc1  .'(org-entry-put (point) "SCM"
+(scm-eqc2  .'(org-entry-put (point) "SCM"
+(scm-op    .'(org-entry-put (point) "SCM"
+(scm-dp    .'(org-entry-put (point) "SCM"
+(scm-spo   . '(org-entry-put (point) "SCM"
+(scm-eqp1  . '(org-entry-put (point) "SCM"
+(scm-eqp2  .'(org-entry-put (point) "SCM"
+(scm-dom1  .'(org-entry-put (point) "SCM"
+(scm-dom2  .'(org-entry-put (point) "SCM"
+(scm-rng1  .'(org-entry-put (point) "SCM"
+(scm-rng2  .'(org-entry-put (point) "SCM"
+(scm-hv    .'(org-entry-put (point) "SCM"
+(scm-svf1  . '(org-entry-put (point) "SCM"
+(scm-svf2  .'(org-entry-put (point) "SCM"
+(scm-avf1  .'(org-entry-put (point) "SCM"
+(scm-avf2  .'(org-entry-put (point) "SCM"
+(scm-int   .'(org-entry-put (point) "SCM"
+(scm-uni   .  '(org-entry-put (point) "SCM"
 (defun  or elisp via org-file-properties
    
      "You can set buffer-local values for the same purpose in the variable

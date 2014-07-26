@@ -13,6 +13,30 @@
 					; key bindings
   )
 
+(defun mx:insert-drawer (org-element-entity-interpreter)
+  (org-insert-property-drawer))
+
+(defvar mx-rdf-drawer (drawer)
+  '((org-insert-drawer . '((mx-org-hidden       . nil)
+			   (mx-org-state        . nil)
+			   (mx-org-properties   . nil)
+			   (mx-rdfs-owl2        . nil)
+			   (mx-n3               . nil))
+		       )))
+(defun mx:send-org-markup
+  (org-entry-put '(defvar mx-org-property 'mx-rdf_all
+		    '("mx-org-property-value" "mx-n3-triple"))
+		 (org-entry-put-multivalued-property (point) 
+						     '((mx-org-property 'mx-rdf+ '(mx-predx))
+						       )
+						     )
+		 (org-entry-put-multivalued-property (point)
+						     '((mx-org-property
+						     'mx-predx
+						     '(rdfs-type)))
+						     )
+
+
 (defvar mx-triple '((mx-org-headline . rdf:first) . (e1)))
 
 					; (cond 
@@ -56,30 +80,7 @@
 		      (prp-npa1  .'(org-entry-put (point) "PRP" "npa1"))
 		      (prp-npa2  .'(org-entry-put (point) "PRP" "npa2"))))
 
-; schema
-(scm-cls   .'(org-entry-put (point) "SCM"
-(scm-sco   .'(org-entry-put (point) "SCM"
-(scm-eqc1  .'(org-entry-put (point) "SCM"
-(scm-eqc2  .'(org-entry-put (point) "SCM"
-(scm-op    .'(org-entry-put (point) "SCM"
-(scm-dp    .'(org-entry-put (point) "SCM"
-(scm-spo   . '(org-entry-put (point) "SCM"
-(scm-eqp1  . '(org-entry-put (point) "SCM"
-(scm-eqp2  .'(org-entry-put (point) "SCM"
-(scm-dom1  .'(org-entry-put (point) "SCM"
-(scm-dom2  .'(org-entry-put (point) "SCM"
-(scm-rng1  .'(org-entry-put (point) "SCM"
-(scm-rng2  .'(org-entry-put (point) "SCM"
-(scm-hv    .'(org-entry-put (point) "SCM"
-(scm-svf1  . '(org-entry-put (point) "SCM"
-(scm-svf2  .'(org-entry-put (point) "SCM"
-(scm-avf1  .'(org-entry-put (point) "SCM"
-(scm-avf2  .'(org-entry-put (point) "SCM"
-(scm-int   .'(org-entry-put (point) "SCM"
-(scm-uni   .  '(org-entry-put (point) "SCM"
 
 
-;; ClassAssertion( C a )
-;; ObjectPropertyAssertion( OP a1 a2 )
-;; DataPropertyAssertion( DP a v ) 
-;; SameIndividual( a1 ... an ). 
+
+
