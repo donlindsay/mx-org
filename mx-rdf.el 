@@ -1,15 +1,10 @@
 (defun mx:rdf-start (current-buffer)
-  "Activate the MX-RDF subsystem."
+  "Engage the MX-RDF subsystem."
   (interactive)
-  (cond
-   (defvar mx-rdf-start 
-     (cond
-      (overview t)
-      (hideblocks t)
-      (org-mode t)) t)
-   (message "MX-RDF: ONLINE")
-   (org-entry-put "MX-RS" "ONLINE")
-   ))
+  (message "MX-RDF: ONLINE")
+  (org-entry-put "MX-RS" "ONLINE")
+  (setq org-global-properties '("MX-RDF" . "ONLINE")) 
+  )
 
 (defun mx:insert-drawer (org-element-entity-interpreter)
   (org-insert-property-drawer))
@@ -22,44 +17,24 @@
 			   (mx-n3               . nil))
 		       )))
 
+(defun mx:org-n3-properties
+  (interactive)
+  (setq org-custom-properties 
+	'(("MX-RDF")
+	  ("MX-SUBJX")
+	  ("MX-PREDX")
+	  ("MX-OBJEX")
+	  ("MX-RULEZ")))
+  (setq org-properties-postprocess-alist '("MX-RULEZ"
+					   lambda("N3"))) )
 
-
-(defun mx/org-header-args ()
-  (setq mx-org-src-block-properties
-	'((mx-org-header-arg . '((:export . results)
-				 (:header-args . mx-rdf)
-				 (:session . *mx-rdf*))
-			     )
-	  )
-	)
+(defconst mx-org-n3-triple '((mx-subjx     . (org-entry-get "MX-SUBJX"))
+			     (mx-predx     . (org-entry-get "MX-PREDX"))
+			     (mx-objex     . (org-entry-get "MX-OBJEX"))
+			     (mx-rulez     . (org-entry-get "MX-RULEZ")))
   )
-
-(defun mx/org-rdf-properties () 
-  (setq mx-org-rdf-properties . '(:see-also
-  . org-property-allowed-value-functions)))
-org-custom-properties: '("\"MX-RS\"")
-org-global-properties: '(("MX-RDF" . "ONLINE"))
-org-property-allowed-value-functions
-org-properties-postprocess-alist: 
-'(("mx-rules" lambda
-   (value)
-   (mx-rdf-rules)))
-(defun mx/org-global-properties ()
-  "'List of property/value pairs that can be inherited by any entry.
-This list will be combined with the constant
-`org-global-properties-fixed'.  The entries in this list are cons
-cells where the car is a property name and cdr is a string with
-the value.'  
-
-Note: it might make sense to make a separate file for holding the
-list since it might be somewhat long and can be imported.A
-related question is if you want to define all the owl2 and rdfs
-only tags."
-  (setq org-global-properties
-	'((mx-org-n3-triple . '((mx-subject     . nil)
-				(mx-predicate   . nil)
-				(mx-object . nil)) ) ) ) )
 	
+
 (defvar BEGIN_EXAMPLE (mx-rdf mx-rdf-property drawer)
   '((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
                    (mx-rdf-type  . drawer))
