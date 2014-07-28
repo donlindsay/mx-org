@@ -241,7 +241,9 @@ mx:owl2-headline-2 owl:subClassOf mx:owl2-headline .
 #+end_example
   
   The axiom cax-dw represents the rule 'disjoint with' and means that
-  all subtrees are members of an Owl2 RL Collection.
+  all subtrees are NOT referentially equivalent with the headline, but
+  possibly with each other. Basically the inverse of the previous
+  example.
 
 | cax-dw | T(?c1, owl:disjointWith, ?c2) | false |
 |        | T(?x, rdf:type, ?c1)          |       |
