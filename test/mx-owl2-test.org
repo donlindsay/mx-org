@@ -207,16 +207,18 @@ Some text.
 
   The main N3 triple associated with this headline is thus:
 
-#+name: mx-n3-test
-#+begin_example
+#+name: mx-owl2-test
+#+begin_example language turtle
 mx:owl2-test.org rdfs:typeOf :test-document .
 #+end_example
 
   The axiom property is the OWL2 RL axiom to be applied to this
   headline and subsequent subtrees. This headline is marked :eq-ref
-  which indicates that all subtree in the headline conform to the
+  which indicates that all subtrees in the headline conform to the
   eq-ref owl2 axiom:
 
+#+name: eq-ref
+#+tblname: eq-ref
 | eq-ref | T(?s, ?p, ?o) | T(?s, owl:sameAs, ?s) |
 |        |               | T(?p, owl:sameAs, ?p) |
 |        |               | T(?o, owl:sameAs, ?o) |
@@ -236,7 +238,7 @@ mx:owl2-test.org rdfs:typeOf :test-document .
   above. The N3 triple describing the headline is self-referential and
   describes itself as a subclass.
 
-#+begin_example 
+#+begin_example language turtle 
 mx:owl2-headline-2 owl:subClassOf mx:owl2-headline .
 #+end_example
   
@@ -245,6 +247,8 @@ mx:owl2-headline-2 owl:subClassOf mx:owl2-headline .
   possibly with each other. Basically the inverse of the previous
   example.
 
+#+name: cax-dw
+#+tblname: cax-dw
 | cax-dw | T(?c1, owl:disjointWith, ?c2) | false |
 |        | T(?x, rdf:type, ?c1)          |       |
 |        | T(?x, rdf:type, ?c2)          |       |
