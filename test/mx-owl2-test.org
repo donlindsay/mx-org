@@ -1,0 +1,267 @@
+* mx-owl2-test.org
+
+  This file describes some things about what I think a .org file with
+  mx-owl2 additions might look like, and what it might be capable of
+  doing.
+ 
+  For the purpose of developing upon this file, I want to observe
+  parsimony by not clutting it with a large number of #+ declarations
+  in the header, and instead include only #+tags: and #+property:
+  elements labeling the most common predicates, for convenience and
+  demonstration.
+
+  For the moment, my assumption will be that I am designing what will
+  basically be an .org file that the user can add to his or her agenda
+  file list, e.x. mx-owl2.org, that contains all the calls to other
+  elisp files containing features that might be desired. This is not
+  that file. This file is a workspace for development and testing.
+
+** #+tags: 
+#+tags: subpropertyof
+#+tags: alldifferent 
+#+tags: alldisjointclasses 
+#+tags: alldisjointproperties 
+#+tags: allvaluesfrom 
+#+tags: annotatedproperty 
+#+tags: annotatedsource 
+#+tags: annotatedtarget 
+#+tags: annotation 
+#+tags: annotationproperty 
+#+tags: assertionproperty 
+#+tags: asymmetricproperty 
+#+tags: axiom 
+#+tags: backwardcompatiblewith 
+#+tags: bottomdataproperty 
+#+tags: bottomobjectproperty 
+#+tags: cardinality 
+#+tags: class 
+#+tags: complementof 
+#+tags: datarange 
+#+tags: datatypecomplementof 
+#+tags: datatypeproperty 
+#+tags: deprecated 
+#+tags: deprecatedclass 
+#+tags: deprecatedproperty 
+#+tags: differentfrom 
+#+tags: disjointunionof 
+#+tags: disjointwith 
+#+tags: distinctmembers 
+#+tags: equivalentclass 
+#+tags: equivalentproperty 
+#+tags: functionalproperty 
+#+tags: haskey 
+#+tags: hasself 
+#+tags: hasvalue 
+#+tags: imports 
+#+tags: incompatiblewith 
+#+tags: intersectionof 
+#+tags: inversefunctionalproperty 
+#+tags: inverseof 
+#+tags: irreflexiveproperty 
+#+tags: maxcardinality 
+#+tags: maxqualifiedcardinality 
+#+tags: members 
+#+tags: mincardinality 
+#+tags: minqualifiedcardinality 
+#+tags: namedindividual 
+#+tags: negativepropertyassertion 
+#+tags: nothing 
+#+tags: objectproperty 
+#+tags: onclass 
+#+tags: ondatarange 
+#+tags: ondatatype 
+#+tags: oneof 
+#+tags: onproperty 
+#+tags: onproperties 
+#+tags: ontology 
+#+tags: ontologyproperty 
+#+tags: priorversion 
+#+tags: propertychainaxiom 
+#+tags: propertydisjointwith 
+#+tags: qualifiedcardinality 
+#+tags: reflexiveproperty 
+#+tags: restriction 
+#+tags: sameas 
+#+tags: somevaluesfrom 
+#+tags: sourceindividual 
+#+tags: symmetricproperty 
+#+tags: targetindividual 
+#+tags: targetvalue 
+#+tags: thing 
+#+tags: topdataproperty 
+#+tags: topobjectproperty 
+#+tags: transitiveproperty 
+#+tags: unionof 
+#+tags: versioninfo 
+#+tags: versioniri 
+#+tags: withrestrictions
+** #+property:  
+#+property: subpropertyof
+#+property: alldifferent 
+#+property: alldisjointclasses 
+#+property: alldisjointproperties 
+#+property: allvaluesfrom 
+#+property: annotatedproperty 
+#+property: annotatedsource 
+#+property: annotatedtarget 
+#+property: annotation 
+#+property: annotationproperty 
+#+property: assertionproperty 
+#+property: asymmetricproperty 
+#+property: axiom 
+#+property: backwardcompatiblewith 
+#+property: bottomdataproperty 
+#+property: bottomobjectproperty 
+#+property: cardinality 
+#+property: class 
+#+property: complementof 
+#+property: datarange 
+#+property: datatypecomplementof 
+#+property: datatypeproperty 
+#+property: deprecated 
+#+property: deprecatedclass 
+#+property: deprecatedproperty 
+#+property: differentfrom 
+#+property: disjointunionof 
+#+property: disjointwith 
+#+property: distinctmembers 
+#+property: equivalentclass 
+#+property: equivalentproperty 
+#+property: functionalproperty 
+#+property: haskey 
+#+property: hasself 
+#+property: hasvalue 
+#+property: imports 
+#+property: incompatiblewith 
+#+property: intersectionof 
+#+property: inversefunctionalproperty 
+#+property: inverseof 
+#+property: irreflexiveproperty 
+#+property: maxcardinality 
+#+property: maxqualifiedcardinality 
+#+property: members 
+#+property: mincardinality 
+#+property: minqualifiedcardinality 
+#+property: namedindividual 
+#+property: negativepropertyassertion 
+#+property: nothing 
+#+property: objectproperty 
+#+property: onclass 
+#+property: ondatarange 
+#+property: ondatatype 
+#+property: oneof 
+#+property: onproperty 
+#+property: onproperties 
+#+property: ontology 
+#+property: ontologyproperty 
+#+property: priorversion 
+#+property: propertychainaxiom 
+#+property: propertydisjointwith 
+#+property: qualifiedcardinality 
+#+property: reflexiveproperty 
+#+property: restriction 
+#+property: sameas 
+#+property: somevaluesfrom 
+#+property: sourceindividual 
+#+property: symmetricproperty 
+#+property: targetindividual 
+#+property: targetvalue 
+#+property: thing 
+#+property: topdataproperty 
+#+property: topobjectproperty 
+#+property: transitiveproperty 
+#+property: unionof 
+#+property: versioninfo 
+#+property: versioniri 
+#+property: withrestrictions
+
+* example default headline
+:PROPERTIES:
+:Property A: Still A
+:Property B: Still B
+:Property C: Still C
+:END:
+
+Some text.
+
+** example default subtree A
+** example default subtree B
+** example default subtree C
+
+* mx-owl2 headers
+:PROPERTIES:
+:MX-Prefix: mx      <http://vorlon/mx#>
+:MX-PREFIX: rdf    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+:MX-PREFIX: rdfs   <http://www.w3.org/2000/01/rdf-schema#> 
+:MX-PREFIX: owl    <http://www.w3.org/2002/07/owl#> 
+:MX-PREFIX: xsd    <http://www.w3.org/2001/XMLSchema#>
+:END:
+
+* mx-owl2 headline 1
+:MX-OWL2:
+:Subject:     mx:mx-owl2-test.org   
+:Predicate:   rdfs:typeOf
+:Object:      mx:test-document
+:Axiom:       mx:eq-ref
+:END:
+
+  The main N3 triple associated with this headline is thus:
+
+#+name: mx-n3-test
+#+begin_example
+mx:owl2-test.org rdfs:typeOf :test-document .
+#+end_example
+
+  The axiom property is the OWL2 RL axiom to be applied to this
+  headline and subsequent subtrees. This headline is marked :eq-ref
+  which indicates that all subtree in the headline conform to the
+  eq-ref owl2 axiom:
+
+| eq-ref | T(?s, ?p, ?o) | T(?s, owl:sameAs, ?s) |
+|        |               | T(?p, owl:sameAs, ?p) |
+|        |               | T(?o, owl:sameAs, ?o) |
+
+  Thus, all subtrees of this headline could be considered as
+  referentially equivalent to the root headline.
+
+* mx-owl2-headline-2
+:MX-OWL2:
+:Subject:     mx:owl2-headline-2
+:Predicate:   owl:subClassOf
+:Object:      mx:owl2-headline
+:Axiom:       mx:cax-dw
+:END:
+  
+  This element describes a different sort of entry than that
+  above. The N3 triple describing the headline is self-referential and
+  describes itself as a subclass.
+
+#+begin_example 
+mx:owl2-headline-2 owl:subClassOf mx:owl2-headline .
+#+end_example
+  
+  The axiom cax-dw represents the rule 'disjoint with' and means that
+  all subtrees are members of an Owl2 RL Collection.
+
+| cax-dw | T(?c1, owl:disjointWith, ?c2) | false |
+|        | T(?x, rdf:type, ?c1)          |       |
+|        | T(?x, rdf:type, ?c2)          |       |
+
+  Thus, the axiom says that the subtrees of this headline are
+  /disjoint/ with mx:owl2-headline-2 until a different axiom is
+  applied.
+
+  This example illustrates where the addition of OWL2 elements extends
+  org-mode by giving the user the ability to customize the 'meanings'
+  of the relationships between headlines and headlines, and subtrees
+  and subtrees, in ordered, regular and predictable ways. It also
+  opens the door for the use of elisp code to make inferences about
+  the implications of a particular rule on a headline and add, remove
+  or modify the properties of the subtrees accordingly.
+
+  N3 Turtle code can then be generated for a headline and/or it's
+  subtrees without having to resort to an external process, or maybe
+  very much, as, for example, export rules applied to the :MX-OWL2:
+  property drawer can supply the data for generating N3 Turtle strings
+  without the user having to type things in manually.
+
