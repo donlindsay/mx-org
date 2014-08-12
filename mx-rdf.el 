@@ -10,30 +10,42 @@
   (interactive)
   (setq org-custom-properties 
 	'(("MX-RDF")
-	  ("MX-SUBJX")
-	  ("MX-PREDX")
-	  ("MX-OBJEX")
-	  ("MX-RULEZ")))
-  (setq org-properties-postprocess-alist '("MX-RULEZ"
-					   lambda("N3"))) )
+	  ("MX-SUBX")
+	  ("MX-PRDY")
+	  ("MX-OBJZ")
+	  ("MX-RULE")))
+  (setq org-properties-postprocess-alist '("MX-RULE"
+	  				   lambda("TTL")
+					   )
+	)
+								)
 
-(defconst mx-org-n3-triple '((mx-subjx     . (org-entry-get "MX-SUBJX"))
-			     (mx-predx     . (org-entry-get "MX-PREDX"))
-			     (mx-objex     . (org-entry-get "MX-OBJEX"))
-			     (mx-rulez     . (org-entry-get "MX-RULEZ")))
-  )
-	
-
-(defvar BEGIN_EXAMPLE (mx-rdf mx-rdf-property drawer)
-  '((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
-                   (mx-rdf-type  . drawer))
-	       )
-    )
+(defconst mx-org-n3-triple '((mx-subx     . (org-entry-get "MX-SUBX"))
+			     (mx-prdy     . (org-entry-get "MX-PRDY"))
+			     (mx-objz     . (org-entry-get "MX-OBJZ"))
+			     (mx-rule     . (org-entry-get "MX-RULE"))
+			     )
   )
 
-(defvar END_EXAMPLE (mx-rdf mx-rdf-property drawer)
-  '((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
-                   (mx-rdf-type . drawer)) ) ) )
+
+(setq mx:beg-ex 
+      '((mx-rdf mx-rdf-property drawer)
+	((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
+			(mx-rdf-type  . drawer))
+		    )
+	 )
+	)
+      )
+
+(setq mx:end-ex 
+      '((mx-rdf mx-rdf-property drawer)
+	((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
+			(mx-rdf-type . drawer)
+			)
+		    )
+	 )
+	)
+      )
 
 (defvar mx-rdf-properties
   '((mx-rdf_all . mx-rdfs-type)
@@ -41,41 +53,36 @@
     (mx-rdf+    . mx-rdf-type)
     )
   )
-; schema
-(scm-cls   .'(org-entry-put (point) "SCM"
-(scm-sco   .'(org-entry-put (point) "SCM"
-(scm-eqc1  .'(org-entry-put (point) "SCM"
-(scm-eqc2  .'(org-entry-put (point) "SCM"
-(scm-op    .'(org-entry-put (point) "SCM"
-(scm-dp    .'(org-entry-put (point) "SCM"
-(scm-spo   . '(org-entry-put (point) "SCM"
-(scm-eqp1  . '(org-entry-put (point) "SCM"
-(scm-eqp2  .'(org-entry-put (point) "SCM"
-(scm-dom1  .'(org-entry-put (point) "SCM"
-(scm-dom2  .'(org-entry-put (point) "SCM"
-(scm-rng1  .'(org-entry-put (point) "SCM"
-(scm-rng2  .'(org-entry-put (point) "SCM"
-(scm-hv    .'(org-entry-put (point) "SCM"
-(scm-svf1  . '(org-entry-put (point) "SCM"
-(scm-svf2  .'(org-entry-put (point) "SCM"
-(scm-avf1  .'(org-entry-put (point) "SCM"
-(scm-avf2  .'(org-entry-put (point) "SCM"
-(scm-int   .'(org-entry-put (point) "SCM"
-(scm-uni   .  '(org-entry-put (point) "SCM"
-(defun  or elisp via org-file-properties
-   
-     "You can set buffer-local values for the same purpose in the variable
-     `org-file-properties' this by adding lines like
-   
-     (defvar PROPERTY: NAME VALUE"
 
-org-entry-put-multivalued-property pom property &rest values
+(defvar scm-axioms
+  '((scm-cls   . '(org-entry-put (point) "MX-RULE" "SCM-CLS"))
+    (scm-sco   . '(org-entry-put (point) "MX-RULE" "SCM-SCO"))
+    (scm-eqc1  . '(org-entry-put (point) "MX-RULE" "SCM-EQC1"))
+    (scm-eqc2  . '(org-entry-put (point) "MX-RULE" "SCM-EQC2"))
+    (scm-op    . '(org-entry-put (point) "MX-RULE" "SCM-OP"))
+    (scm-dp    . '(org-entry-put (point) "MX-RULE" "SCM-DP"))
+    (scm-spo   . '(org-entry-put (point) "MX-RULE" "SCM-SPO"))
+    (scm-eqp1  . '(org-entry-put (point) "MX-RULE" "SCM-EQP1"))
+    (scm-eqp2  . '(org-entry-put (point) "MX-RULE" "SCM-EQP2"))
+    (scm-dom1  . '(org-entry-put (point) "MX-RULE" "SCM-DOM1"))
+    (scm-dom2  . '(org-entry-put (point) "MX-RULE" "SCM-DOM2"))
+    (scm-rng1  . '(org-entry-put (point) "MX-RULE" "SCM-RNG1"))
+    (scm-rng2  . '(org-entry-put (point) "MX-RULE" "SCM-RNG2"))
+    (scm-hv    . '(org-entry-put (point) "MX-RULE" "SCM-HV"))
+    (scm-svf1  . '(org-entry-put (point) "MX-RULE" "SCM-SVF1"))
+    (scm-svf2  . '(org-entry-put (point) "MX-RULE" "SCM-SVF2"))
+    (scm-avf1  . '(org-entry-put (point) "MX-RULE" "SCM-AVF1"))
+    (scm-avf2  . '(org-entry-put (point) "MX-RULE" "SCM-AVF2"))
+    (scm-int   . '(org-entry-put (point) "MX-RULE" "SCM-INT"))
+    (scm-uni   . '(org-entry-put (point) "MX-RULE" "SCM-UNI"))
+    )
+  )
 
-
-(defun  determine the significance of (:how) (:what) and (seq (:how :much))
-;(defun  TODO do i want a (defvar property: list of all owl2 and rdfs? 
-
-
+(defun mx:put-multivalue ()
+  "org-entry-put-multivalued-property pom property &rest values"
+  (interactive)
+  (message "Set multivalued property")
+  
 
 
 	
