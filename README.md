@@ -1,4 +1,4 @@
-mx-owl2-rl-functions
+mx-owl2-rl
 ===
 
-Experiments with adding some OWL2 RL rules to GNU Emacs and Org-Mode buffers.
+OWL2 Rule Language features for GNU Emacs and Org-Mode buffers.
