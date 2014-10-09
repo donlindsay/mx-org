@@ -1,4 +1,4 @@
-;; mx-mode.el: A minor mode for Org and OWL2. 
+;; mx-mode.el: A minor mode for GNU Emacs 
 ;; by Don Lindsay 2014
 ;; gpl2 boiler
 ;; gnu emacs boiler
