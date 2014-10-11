@@ -1,37 +1,57 @@
+* startup
+#+name: Theorem 
+Theorem PR1. Let R be the OWL 2 RL/RDF rules as defined above. Furthermore, let O1 and O2 be OWL 2 RL ontologies satisfying the following properties:
+
+    neither O1 nor O2 contains a IRI that is used for more than one type of entity (i.e., no IRIs is used both as, say, a class and an individual);
+    O1 does not contain SubAnnotationPropertyOf, AnnotationPropertyDomain, and AnnotationPropertyRange axioms; and
+    each axiom in O2 is an assertion of the form as specified below, for a, a1, ..., an named individuals:
+        ClassAssertion( C a ) where C is a class,
+        ObjectPropertyAssertion( OP a1 a2 ) where OP is an object property,
+        DataPropertyAssertion( DP a v ) where DP is a data property, or
+        SameIndividual( a1 ... an ). 
+
+
 #+name: Semantics-of-Equality 
-eq-ref 	T(?s, ?p, ?o)
-	T(?s, owl:sameAs, ?s)
-T(?p, owl:sameAs, ?p)
-T(?o, owl:sameAs, ?o)
-eq-sym 	T(?x, owl:sameAs, ?y) 	T(?y, owl:sameAs, ?x)
+eq-ref 	        T(?s, ?p, ?o)
+	        T(?s, owl:sameAs, ?s)
+                T(?p, owl:sameAs, ?p)
+                T(?o, owl:sameAs, ?o)
+eq-sym 	        T(?x, owl:sameAs, ?y) 	T(?y, owl:sameAs, ?x)
+
 eq-trans 	T(?x, owl:sameAs, ?y)
-T(?y, owl:sameAs, ?z) 	T(?x, owl:sameAs, ?z)
+                T(?y, owl:sameAs, ?z) 	T(?x, owl:sameAs, ?z)
+
 eq-rep-s 	T(?s, owl:sameAs, ?s')
-T(?s, ?p, ?o)
-	T(?s', ?p, ?o)
+                T(?s, ?p, ?o)
+	        T(?s', ?p, ?o)
+
 eq-rep-p 	T(?p, owl:sameAs, ?p')
-T(?s, ?p, ?o)
-	T(?s, ?p', ?o)
+                T(?s, ?p, ?o)
+	        T(?s, ?p', ?o)
+
 eq-rep-o 	T(?o, owl:sameAs, ?o')
-T(?s, ?p, ?o)
-	T(?s, ?p, ?o')
+                T(?s, ?p, ?o)
+	        T(?s, ?p, ?o')
+
 eq-diff1 	T(?x, owl:sameAs, ?y)
-T(?x, owl:differentFrom, ?y)
-	false
+                T(?x, owl:differentFrom, ?y)
+	        false
+
 eq-diff2 	T(?x, rdf:type, owl:AllDifferent)
-T(?x, owl:members, ?y)
-LIST[?y, ?z_1 , ..., ?z_n ]
-T(?z_i , owl:sameAs, ?z_j ) 	false 	for each 1 ≤ i < j ≤ n
+                T(?x, owl:members, ?y)
+                LIST[?y, ?z_1 , ..., ?z_n ]
+                T(?z_i , owl:sameAs, ?z_j ) 	false 	for each 1 ≤ i < j ≤ n
+
 eq-diff3 	T(?x, rdf:type, owl:AllDifferent)
-T(?x, owl:distinctMembers, ?y)
-LIST[?y, ?z_1 , ..., ?z_n ]
-T(?z_i , owl:sameAs, ?z_j ) 	false 	for each 1 ≤ i < j ≤ n
+                T(?x, owl:distinctMembers, ?y)
+                LIST[?y, ?z_1 , ..., ?z_n ]
+                T(?z_i , owl:sameAs, ?z_j ) 	false 	for each 1 ≤ i < j ≤ n
 
 
 #+begin_src emacs-lisp
 ; equivalence
-(setq mx-eq-axioms '(
-		     (eq-ref   . '(org-entry-put (point) "EQX" "ref"))
+(setq mx-eq-axioms '((mx-eq . 
+'((eq-ref   . '(org-entry-put (point) "EQ" "ref"))
 		     (eq-sym   . '(org-entry-put (point) "EQ" "sym"))
 		     (eq-trans . '(org-entry-put (point) "EQ" "trans"))
 		     (eq-rep-s . '(org-entry-put (point) "EQ" "rep-s"))
@@ -45,14 +65,31 @@ T(?z_i , owl:sameAs, ?z_j ) 	false 	for each 1 ≤ i < j ≤ n
 
 #+name: Semantics-of-Axioms-about-Properties 
  	If 	then
-prp-ap 		T(ap, rdf:type, owl:AnnotationProperty) 	for each built-in annotation property of OWL 2 RL
+prp-ap 		T(ap, rdf:type, owl:AnnotationProperty) ;	for each built-in annotation property of OWL 2 RL
+
 prp-dom 	T(?p, rdfs:domain, ?c)
-T(?x, ?p, ?y) 	T(?x, rdf:type, ?c)
+                T(?x, ?p, ?y) 	T(?x, rdf:type, ?c)
+
+* property-range
 prp-rng 	T(?p, rdfs:range, ?c)
-T(?x, ?p, ?y) 	T(?y, rdf:type, ?c)
-prp-fp 	T(?p, rdf:type, owl:FunctionalProperty)
-T(?x, ?p, ?y1)
-T(?x, ?p, ?y2) 	T(?y1, owl:sameAs, ?y2)
+                T(?x, ?p, ?y) 	      T(?y, rdf:type, ?c)
+
+* functionalproperty
+#+name: functionalproperty
+#+begin_src elisp
+    (defun prp-fp
+        "Assign the Functional Property axiom to the element."
+      (interactive )
+       (org-entry-get point "axiom") 
+       '((mx-tpl . ("mx-subj" "rdf:type" "owl:FunctionalProperty"))
+         )
+       (while '((mx-tpl . (mx-subj, mx-pred, mx-object1)))
+         '(mx-tpl-cdr . (?x, ?p, ?y2))) ; ?x is an org-entry-put
+       '(mx-tpl-cddr . (?y1, owl:sameAs, ?y2)))))
+  (message "PRP-FP asserted."))
+#+end_src
+
+* rest
 prp-ifp 	T(?p, rdf:type, owl:InverseFunctionalProperty)
 T(?x1, ?p, ?y)
 T(?x2, ?p, ?y) 	T(?x1, owl:sameAs, ?x2)
