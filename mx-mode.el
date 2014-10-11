@@ -8,7 +8,7 @@
 (require 'org)
 
 (define-minor-mode mx-mode "A minor mode for Org and OWL2."
-  (message "MX-OWL2: Online")
+  (message "MX: Online")
 					; syntax highlighting
 					; key bindings
   )
