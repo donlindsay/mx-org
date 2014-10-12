@@ -77,6 +77,7 @@ prp-rng 	T(?p, rdfs:range, ?c)
 * functionalproperty
 #+name: functionalproperty
 #+begin_src elisp
+<<<<<<< HEAD
     (defun prp-fp
         "Assign the Functional Property axiom to the element."
       (interactive )
@@ -87,6 +88,17 @@ prp-rng 	T(?p, rdfs:range, ?c)
          '(mx-tpl-cdr . (?x, ?p, ?y2))) ; ?x is an org-entry-put
        '(mx-tpl-cddr . (?y1, owl:sameAs, ?y2)))))
   (message "PRP-FP asserted."))
+=======
+  (defun prp-fp
+      "Assign the Functional Property axiom to the element."
+    (interactive)
+    (setq (org-entry-get point "axiom") 
+          '((mx-triple . (?p, rdf:type, owl:FunctionalProperty)))
+          (while '((mx-triple . (mx-subj, mx-pred, mx-object1)))
+            (setq '(mx-triple-cdr . (?x, ?p, ?y2)))
+            (setq '(mx-triple-cddr . (?y1, owl:sameAs, ?y2)))))
+          (message "PRP-FP asserted."))
+>>>>>>> 16a4220dc2fcce9019ef8fc28b287a411c340545
 #+end_src
 
 * rest
