@@ -8,24 +8,33 @@
 (require 'org)
 
 (define-minor-mode mx-mode "A minor mode for MX Org RL."
-					; :group 'org
-					; :global t 
-					; :init-value 'mx-axiom
+  :group 'mx:rl
+					; :init-value
   :lighter mx
-					; :keymap  'helm			     
-  :require 'org
+					; :keymap			     
+  :require 'org-mode
   :variable (org-agenda-columns . t)
   (message "MX:RL:Active"))
 
-(add-to-list 'org-drawers "MX-AXIOM")
+(defgroup mx:rl ()
+		 "Customizations for MX:RL.")
 
+
+(defvaralias subj mx-car
+  "The subject of the triple")
 (defvar mx-car ('mx-org-headline . 'rdf:first) . ('e1)))
 
-(defvar mx-cddr ('mx-org-headline . 'rdf:rest) . ('z2)))
+(defvaralias prep mx-cdr
+  "The predicate of the triple.")
+(defvar mx-cdr ('mx-org-headline . 'rdf:rest) . ('z2)))
 
-(defvar mx-quad ('z2 . 'mx-car ('e2)) (('z2) 'mx-cddr . ('z3))))
+(defvaralias objt mx-cddr
+  "The object of the triple.")
+(defvar mx-cddr ('z2 . 'mx-car ('e2)) (('z2) mx-axiom . ('z3))))
 
-(defvar mx-axiom ((('zn) 'mx-car ('en)) '(('zn) 'owl2-rl . nil)))
+(defvar axiom mx-axiom
+  "The axiom to apply to the sparse tree."
+(defvar mx-axiom ((('zn) 'mx-car ('en)) '(('zn) mx:sparse-tree . nil)))
 
 (defun mx:rl-start (current-buffer)
   "Engage the Rule Language subsystem!"
@@ -41,8 +50,9 @@
   (org-insert-drawer)
   )
 
-(defvar mx-drawer 'org-drawer)
-(defcustom mx:rl)
+(defvar mx:drawer 'org-drawer)
+
+
   
 (setq mx:drawer-quad-prop 'org-custom-properties
       ("REASONER" "MX-SUBJ" "MX-PROP" "MX-OBJT" "MX-RULE"))
@@ -51,27 +61,28 @@
   "Make a mx:sparse-tree. Like org-sparse-tree, but with a rule."
   (interactive "P\nmtag:")
   (org-sparse-tree m
-		   ("mx:rl" . "prp-fp")
 		   ("mx:subj" . "subj")
 		   ("mx:pred" . "pred")
-		   ("mx:obj" . "objt"))
-  
-(defconst mx-triple '((subj . (org-entry-get "MX-SUBJ"))
-		      (prop     . (org-entry-get "MX-PROP"))
-		      (objt     . (org-entry-get "MX-OBJT"))
-		      (rule . (org-entry-get "REASONER"))
-		      ) )
+		   ("mx:objt" . "objt")
+		   ("mx:rule" . "prp-fp")
+		   ))
+
+(defvar mx:triple (list subj pred objt quad nil)
+  "A model triple with a default axiom of prp-fp.")
+
+(setq subj     . (org-entry-get "MX-SUBJ"))
+(setq pred     . (org-entry-get "MX-PRED"))
+(setq objt     . (org-entry-get "MX-OBJT"))
+(setq axiom    . (org-entry-get "PRP-FP"))
 
 (defun mx:make-triple 'production
   "Write a triple to a property drawer."
   (interactive)
-  (org-entry-put point-at-bol "mx3" "quad")
+  (org-entry-put point-at-bol "mx3" "prp-fp")
   (org-entry-put point-at-bol "subject" "ready")
   (org-entry-put point-at-bol "predicate" "ready")
   (org-entry-put point-at-bol "object" "ready")
   (message "Writing a triple to the property drawer."))
-
-
 
 (provide 'mx-mode)
 
