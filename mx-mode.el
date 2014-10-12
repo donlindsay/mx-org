@@ -11,10 +11,10 @@
 					;  :group 'org
 					;  :global t 
 					;  :init-value 'mx-axiom
-  :lighter mx-axiom			; mode-line
+  :lighter mx
 					;  :keymap  'helm			     
   :require 'org
-					;  :variable (org-agenda-columns . t)
+  :variable (org-agenda-columns . t)
   (message "MX:RL:Active"))
 
 (add-to-list 'org-drawers "MX-AXIOM")
@@ -25,25 +25,23 @@
   (org-insert-drawer)
   )
 
-(defvar mx-owl2-drawer (org-drawer))
+(defvar mx-drawer (org-drawer))
 
-(defun mx:send-org-markup
-    (org-entry-put point-at-bol "mx3" "quad"
-		   (org-entry-put-multivalued-property (point) 
-						       '((mx-org-property 'mx-rdf+ '(mx-predx))
-							 )
-						       )
-		   (org-entry-put-multivalued-property (point)
-						       '((mx-org-property
-							  'mx-predx
-							  '(rdfs-type)))
-						       )))
-
+(defun mx:make-triple 'production
+  "Write a triple to a property drawer."
+  (interactive)
+  (org-entry-put point-at-bol "mx3" "quad")
+  (org-entry-put point-at-bol "subject" "ready")
+  (org-entry-put point-at-bol "predicate" "ready")
+  (org-entry-put point-at-bol "object" "ready")
+  (message "Writing a triple to the property drawer."))
 
 (defvar mx-triple '((mx-org-headline . rdf:first) . (e1)))
 
 (setq mx-triple1 '(((mx-org-headline . rdf:rest) '(z2))))
+
 (setq mx-triple2 '(((z2) rdf:first (e2)) '((z2) rdf:rest . (z3))))
+
 (setq mx-triple3 '(((zn) rdf:first (en)) '((zn) rdf:rest . rdf:nil))) 
 
 
