@@ -13,7 +13,7 @@
   (interactive)
   (message "REASONER: ONLINE")
   (org-entry-put "REASONER" "ONLINE")
-  (setq org-global-properties '("REASONER" . "ONLINE")) 
+  (setq org-global-properties ("REASONER" . "ONLINE")) 
   )
 #+end_src
 
