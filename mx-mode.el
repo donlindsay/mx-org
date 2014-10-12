@@ -7,40 +7,37 @@
 
 (require 'org)
 
-(define-minor-mode mx-mode "A minor mode for Org and OWL2."
-  (message "MX: Online")
-					; syntax highlighting
-					; key bindings
-  )
+(define-minor-mode mx-mode "A minor mode for MX Org RL."
+					;  :group 'org
+					;  :global t 
+					;  :init-value 'mx-axiom
+  :lighter mx-axiom			; mode-line
+					;  :keymap  'helm			     
+  :require 'org
+					;  :variable (org-agenda-columns . t)
+  (message "MX:RL:Active"))
 
-(add-to-list 'org-drawers "MX-OWL2")
+(add-to-list 'org-drawers "MX-AXIOM")
 
-(defun mx:insert-owl2-drawer ()
-  "Insert an OWL2 property drawer."
+(defun mx:insert-rl-drawer ()
+  "Insert a RL property drawer."
   (interactive)
   (org-insert-drawer)
   )
 
-(defvar mx-owl2-drawer (drawer)
-  '((org-insert-drawer . '((mx-org-hidden       . nil)
-			   (mx-org-state        . nil)
-			   (mx-org-properties   . nil)
-			   (mx-rdfs-owl2        . nil)
-			   (mx-n3               . nil))
-		       )))
+(defvar mx-owl2-drawer (org-drawer))
 
 (defun mx:send-org-markup
-  (org-entry-put '(defvar mx-org-property 'mx-rdf_all
-		    '("mx-org-property-value" "mx-n3-triple"))
-		 (org-entry-put-multivalued-property (point) 
-						     '((mx-org-property 'mx-rdf+ '(mx-predx))
+    (org-entry-put point-at-bol "mx3" "quad"
+		   (org-entry-put-multivalued-property (point) 
+						       '((mx-org-property 'mx-rdf+ '(mx-predx))
+							 )
 						       )
-						     )
-		 (org-entry-put-multivalued-property (point)
-						     '((mx-org-property
-							'mx-predx
-							'(rdfs-type)))
-						     )))
+		   (org-entry-put-multivalued-property (point)
+						       '((mx-org-property
+							  'mx-predx
+							  '(rdfs-type)))
+						       )))
 
 
 (defvar mx-triple '((mx-org-headline . rdf:first) . (e1)))
