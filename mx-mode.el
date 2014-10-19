@@ -52,8 +52,6 @@
 
 (defvar mx:drawer 'org-drawer)
 
-
-  
 (setq mx:drawer-quad-prop 'org-custom-properties
       ("REASONER" "MX-SUBJ" "MX-PROP" "MX-OBJT" "MX-RULE"))
 
