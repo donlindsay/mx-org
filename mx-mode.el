@@ -7,17 +7,17 @@
 
 (require 'org)
 
-(define-minor-mode mx-mode "A minor mode for MX Org RL."
-  :group 'mx:rl
-					; :init-value
-  :lighter mx
-					; :keymap			     
-  :require 'org-mode
-  :variable (org-agenda-columns . t)
-  (message "MX:RL:Active"))
+(define-minor-mode mx-mode "A minor mode for MX Org RL." nil
+  " MX"
+  '(([s-x] . buffer-button-insert))
+  :group MX 
+  (message "MX:ONLINE")
+  )
 
-(defgroup mx:rl ()
-		 "Customizations for MX:RL.")
+(defgroup MX nil 
+  "Customizations for MX:RL."
+  :version 1
+  )
 
 
 (defvaralias subj mx-car
