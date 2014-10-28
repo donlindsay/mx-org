@@ -5,17 +5,22 @@
 ;; code examples
 ;; hammertime:
 
-(require 'org)
+(define-package "mx" "1" "Axioms from OWL2 RL."
+  '((emacs "24")
+					; (mx-rl "1")
+					; (mx-n3 "1")
+    ))
+
 
 (define-minor-mode mx-mode "A minor mode for MX Org RL." nil
-  " MX"
+  " mx-rl"
   '(([s-x] . buffer-button-insert))
-  :group MX 
-  (message "MX:ONLINE")
+  :group mx-rl 
+  (message "mx-rl:online")
   )
 
 (defgroup MX nil 
-  "Customizations for MX:RL."
+  "Customizations for MX-RL."
   :version 1
   )
 
