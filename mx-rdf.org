@@ -2989,9 +2989,6 @@ and verbiage to end the same paragraph.
   }
 #+end_src
 
-#+name:
-: Hello World!
-
 *** including noweb refs w/o last newline
    :PROPERTIES:
    :DATE:     2011-07-19

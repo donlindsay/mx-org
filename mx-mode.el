@@ -11,6 +11,23 @@
 					; (mx-n3 "1")
     ))
 
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((emacs-lisp . t)
+	(lisp . t)
+	(java . t)
+	(clojure . t)
+	(C . t)
+;	(C++ . t)
+	(js . t)
+	(sh . t)
+	(scheme . t)
+	(ditaa . t)
+	(latex . t)
+	(org . t)
+	(python . t)
+	(ruby . t)
+	(perl . t))) 
 
 (define-minor-mode mx-mode "A minor mode for MX Org RL." nil
   " mx-rl"
@@ -24,24 +41,29 @@
   :version 1
   )
 
+(defvar mx-first "mx-first")
 
 (defvaralias subj mx-car
   "The subject of the triple")
-(defvar mx-car ('mx-org-headline . 'rdf:first) . ('e1)))
+
+(defvar mx-car (list (org-find-top-headline) (setq mx-first t) (setq mx-eq t)))
 
 (defvaralias prep mx-cdr
   "The predicate of the triple.")
+
 (defvar mx-cdr ('mx-org-headline . 'rdf:rest) . ('z2)))
 
 (defvaralias objt mx-cddr
   "The object of the triple.")
+
 (defvar mx-cddr ('z2 . 'mx-car ('e2)) (('z2) mx-axiom . ('z3))))
 
 (defvar axiom mx-axiom
   "The axiom to apply to the sparse tree."
-(defvar mx-axiom ((('zn) 'mx-car ('en)) '(('zn) mx:sparse-tree . nil)))
 
-(defun mx:rl-start (current-buffer)
+  (defvar mx-axiom ((('zn) 'mx-car ('en)) '(('zn) mx:sparse-tree . nil)))
+
+(defun mx:start (current-buffer)
   "Engage the Rule Language subsystem!"
   (interactive)
   (message "REASONER: ONLINE")
