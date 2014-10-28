@@ -41,22 +41,34 @@
   :version 1
   )
 
-(defvar mx-first "mx-first")
+(defvar mx-first "CAR")
 
-(defvaralias subj mx-car
+(defvar subj mx-car
   "The subject of the triple")
 
-(defvar mx-car (list (org-find-top-headline) (setq mx-first t) (setq mx-eq t)))
+(defvar mx-car (list (org-find-top-headline)
+		     (setq mx-first t)
+		     (setq mx-rest t))
+  )
 
-(defvaralias prep mx-cdr
-  "The predicate of the triple.")
+(defvar pred "Predicate")
 
-(defvar mx-cdr ('mx-org-headline . 'rdf:rest) . ('z2)))
+(setq-default pred mx-cdr
+  "The predicate of the N3 triple.")
 
-(defvaralias objt mx-cddr
+(defvar mx-cdr (list (org-element-drawer-parser)
+		     (setq-default mx-rest)
+		     (setq-default mx-cddr)
+		     ))
+
+(defvaralias obj mx-cddr
   "The object of the triple.")
 
-(defvar mx-cddr ('z2 . 'mx-car ('e2)) (('z2) mx-axiom . ('z3))))
+(defvar mx-cddr (list (mx-cdr)
+		      (pred)
+		      (setq obj (list (pred)
+				      (axiom)
+				      (org-find-exact-headline-in-buffer)))))
 
 (defvar axiom mx-axiom
   "The axiom to apply to the sparse tree."
