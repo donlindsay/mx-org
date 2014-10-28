@@ -33,6 +33,7 @@
   " mx-rl"
   '(([s-x] . buffer-button-insert))
   :group mx-rl 
+  (load-file "~/src/mx-org-rl/owl2-tags-list.org")
   (message "mx-rl:online")
   )
 
@@ -71,9 +72,14 @@
 				      (org-find-exact-headline-in-buffer)))))
 
 (defvar axiom mx-axiom
-  "The axiom to apply to the sparse tree."
+  "The axiom to apply to the sparse tree.")
 
-  (defvar mx-axiom ((('zn) 'mx-car ('en)) '(('zn) mx:sparse-tree . nil)))
+(defun make-axiom (list (mx-cddr mx-car org-entry-get point-at-bol))
+  "Add an axiom to a stack."
+  (interactive "P/n?")
+  (org-sparse-tree prop "axiom")
+  (org-at-drawer-p)
+  (message "MX can't find your drawer!"))
 
 (defun mx:start (current-buffer)
   "Engage the Rule Language subsystem!"
@@ -91,10 +97,10 @@
 
 (defvar mx:drawer 'org-drawer)
 
-(setq mx:drawer-quad-prop 'org-custom-properties
+(setq mx-quad-prop 'org-custom-properties
       ("REASONER" "MX-SUBJ" "MX-PROP" "MX-OBJT" "MX-RULE"))
 
-(defun mx:sparse-tree tag-exact-match-p
+(defun mx-sparse-tree tag-exact-match-p
   "Make a mx:sparse-tree. Like org-sparse-tree, but with a rule."
   (interactive "P\nmtag:")
   (org-sparse-tree m
@@ -104,15 +110,9 @@
 		   ("mx:rule" . "prp-fp")
 		   ))
 
-(defvar mx:triple (list subj pred objt quad nil)
-  "A model triple with a default axiom of prp-fp.")
 
-(setq subj     . (org-entry-get "MX-SUBJ"))
-(setq pred     . (org-entry-get "MX-PRED"))
-(setq objt     . (org-entry-get "MX-OBJT"))
-(setq axiom    . (org-entry-get "PRP-FP"))
 
-(defun mx:make-triple 'production
+(defun mx-make-triple 'production
   "Write a triple to a property drawer."
   (interactive)
   (org-entry-put point-at-bol "mx3" "prp-fp")
@@ -120,6 +120,16 @@
   (org-entry-put point-at-bol "predicate" "ready")
   (org-entry-put point-at-bol "object" "ready")
   (message "Writing a triple to the property drawer."))
+
+;; Example definition of an N3 type tree for the owl:functionalProperty org tag
+(defun mx-prp-fp (subj pred obj)
+  "A model triple with a default axiom of prp-fp."
+  (setq subj (org-entry-get point-at-bol "s"))
+  (setq pred (org-entry-get point-at-bol "p"))
+  (setq objt (org-entry-get point-at-bol "o"))
+  (setq axiom (org-entry-get point-at-bol "prp-fp"))
+					; (org-custom-properties "subj" "pred" "obj" "axiom")
+  (or nil))
 
 (provide 'mx-mode)
 
