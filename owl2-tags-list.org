@@ -1,4 +1,4 @@
-
+* OWL2 Web Ontology Language tags
 #+tags: subpropertyof
 #+tags: alldifferent 
 #+tags: alldisjointclasses 

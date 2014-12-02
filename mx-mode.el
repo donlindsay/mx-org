@@ -1,3 +1,4 @@
+;;; mx-mode.el --- Axiomatic sparse trees and owl2 tagging
 ;; mx-mode.el: A minor mode for GNU Emacs 
 ;; by Don Lindsay 2014
 ;; gpl2 boiler
@@ -11,12 +12,18 @@
 ;					; (mx-n3 "1")
 ;    ))
 
+
+;;; Commentary:
+;; 
+
+;;; Code:
+
 (define-minor-mode mx-mode "A minor mode for MX Org RL." nil
   " mx-rl"
   '(([s-x] . buffer-button-insert))
   :group mx-rl 
   (load-file "~/src/mx-org-rl/owl2-tags-list.org")
-  (message "mx-rl:online")
+  (message "mx-rl online")
   )
 
 (defgroup MX nil 
@@ -27,7 +34,7 @@
 (defvar mx-first "CAR")
 
 (defvar subj mx-car
-  "The subject of the triple")
+  "The subject of the triple.")
 
 (defvar mx-car (list (org-find-top-headline)
 		     (setq mx-first t)
@@ -58,18 +65,18 @@
   (interactive "P/n?")
   (org-sparse-tree prop "axiom")
   (org-at-drawer-p)
-  (message "MX can't find your drawer!"))
+  (message "mx can't find your drawer!"))
 
 (defun mx-start (current-buffer)
   "Engage the Rule Language subsystem!"
   (interactive)
-  (message "REASONER: ONLINE")
+  (message "mx-online")
   (while (setq mx-mode t)
     (org-entry-put point-at-bol (org-element-drawer-parser) "REASONER" "ONLINE")
 					;  (setq org-global-properties ("REASONER" . "ONLINE")) 
     ))
 
-(defun mx-insert-drawer
+(defun mx-insert-drawer (org-find-top-headline)
   "Insert a RL property drawer."
   (interactive)
   (org-insert-drawer "mx")
@@ -112,3 +119,7 @@
 
 
 
+
+(provide 'mx-mode)
+
+;;; mx-mode.el ends here
