@@ -19,18 +19,20 @@
 	  ("MX-SUBJ")
 	  ("MX-PROP")
 	  ("MX-OBJT")
-	  ("MX-RULE")))
+	  ("MX-RULE"))
+        )
   (setq org-properties-postprocess-alist '("MX-RULE"
 	  				   lambda("TTL")
 					   )
 	)
 								)
 
-(defconst mx-triple '((subj . (org-entry-get "MX-SUBJ"))
-		      (prop     . (org-entry-get "MX-PROP"))
-		      (objt     . (org-entry-get "MX-OBJT"))
-		      (rule . (org-entry-get "REASONER"))
-		      ) )
+(defconst mx-triple '((sub     . (org-entry-get "MX-SUBJ"))
+		      (pro     . (org-entry-get "MX-PROP"))
+		      (obj     . (org-entry-get "MX-OBJT"))
+		      (rul     . (org-entry-get "REASONER"))
+		      )
+  )
 
 
 (setq mx:beg-ex 
@@ -90,210 +92,213 @@
   
 
 
-; equivalence
-(setq mx-eq-axioms '(
-		     (eq-ref   . '(org-entry-put (point) "EQX" "ref"))
-		     (eq-sym   . '(org-entry-put (point) "EQ" "sym"))
-		     (eq-trans . '(org-entry-put (point) "EQ" "trans"))
-		     (eq-rep-s . '(org-entry-put (point) "EQ" "rep-s"))
-		     (eq-rep-p . '(org-entry-put (point) "EQ" "rep-p"))
-		     (eq-rep-o . '(org-entry-put (point) "EQ" "rep-o"))
-		     (eq-diff1 . '(org-entry-put (point) "EQ" "eq-diff1"))
-		     (eq-diff2 . '(org-entry-put (point) "EQ" "eq-diff2"))
-		     (eq-diff3 . '(org-entry-put (point) "EQ" "eq-diff3"))
-		     ))
+                                        ; equivalence
+  (setq mx-eq-axioms '(
+                       (eq-ref   . '(org-entry-put (point) "EQX" "ref"))
+                       (eq-sym   . '(org-entry-put (point) "EQ" "sym"))
+                       (eq-trans . '(org-entry-put (point) "EQ" "trans"))
+                       (eq-rep-s . '(org-entry-put (point) "EQ" "rep-s"))
+                       (eq-rep-p . '(org-entry-put (point) "EQ" "rep-p"))
+                       (eq-rep-o . '(org-entry-put (point) "EQ" "rep-o"))
+                       (eq-diff1 . '(org-entry-put (point) "EQ" "eq-diff1"))
+                       (eq-diff2 . '(org-entry-put (point) "EQ" "eq-diff2"))
+                       (eq-diff3 . '(org-entry-put (point) "EQ" "eq-diff3"))
+                       )
+        )
 
-; property
-(defvar mx-assert-prp-axiom '(
-		      (prp-ap    . '(org-entry-put (point) "PRP" "ap"))
-		      (prp-dom   . '(org-entry-put (point) "PRP" "dom"))
-		      (prp-rng   . '(org-entry-put (point) "PRP" "rng"))
-		      (prp-fp    . '(org-entry-put (point) "PRP" "fp"))
-		      (prp-ifp   . '(org-entry-put (point) "PRP" "ifp"))
-		      (prp-irp   . '(org-entry-put (point) "PRP" "irp"))
-		      (prp-symp  . '(org-entry-put (point) "PRP" "symp"))
-		      (prp-asyp  . '(org-entry-put (point) "PRP" "asymp"))
-		      (prp-trp   . '(org-entry-put (point) "PRP" "trp"))
-		      (prp-spo1  . '(org-entry-put (point) "PRP" "spo1"))
-		      (prp-spo2  . '(org-entry-put (point) "PRP" "spo2"))
-		      (prp-eqp1  . '(org-entry-put (point) "PRP" "eqp1"))
-		      (prp-eqp2  . '(org-entry-put (point) "PRP" "eqp2"))
-		      (prp-pdw   . '(org-entry-put (point) "PRP" "pdw"))
-		      (prp-adp   . '(org-entry-put (point) "PRP" "adp"))
-		      (prp-inv1  . '(org-entry-put (point) "PRP" "inv1"))
-		      (prp-inv2  . '(org-entry-put (point) "PRP" "inv2"))
-		      (prp-key   . '(org-entry-put (point) "PRP" "key"))
-		      (prp-npa1  . '(org-entry-put (point) "PRP" "npa1"))
-		      (prp-npa2  . '(org-entry-put (point) "PRP" "npa2"))))
+                                        ; property
+  (defvar mx-assert-prp-axiom '(
+                                (prp-ap    . '(org-entry-put (point) "PRP" "ap"))
+                                (prp-dom   . '(org-entry-put (point) "PRP" "dom"))
+                                (prp-rng   . '(org-entry-put (point) "PRP" "rng"))
+                                (prp-fp    . '(org-entry-put (point) "PRP" "fp"))
+                                (prp-ifp   . '(org-entry-put (point) "PRP" "ifp"))
+                                (prp-irp   . '(org-entry-put (point) "PRP" "irp"))
+                                (prp-symp  . '(org-entry-put (point) "PRP" "symp"))
+                                (prp-asyp  . '(org-entry-put (point) "PRP" "asymp"))
+                                (prp-trp   . '(org-entry-put (point) "PRP" "trp"))
+                                (prp-spo1  . '(org-entry-put (point) "PRP" "spo1"))
+                                (prp-spo2  . '(org-entry-put (point) "PRP" "spo2"))
+                                (prp-eqp1  . '(org-entry-put (point) "PRP" "eqp1"))
+                                (prp-eqp2  . '(org-entry-put (point) "PRP" "eqp2"))
+                                (prp-pdw   . '(org-entry-put (point) "PRP" "pdw"))
+                                (prp-adp   . '(org-entry-put (point) "PRP" "adp"))
+                                (prp-inv1  . '(org-entry-put (point) "PRP" "inv1"))
+                                (prp-inv2  . '(org-entry-put (point) "PRP" "inv2"))
+                                (prp-key   . '(org-entry-put (point) "PRP" "key"))
+                                (prp-npa1  . '(org-entry-put (point) "PRP" "npa1"))
+                                (prp-npa2  . '(org-entry-put (point) "PRP" "npa2"))
+                                )
+    )
 
 
-(defun (defun  About owl2 and axiomatic triples
+  (defun  About owl2 and axiomatic triples)
+          
+  ((lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.)))))
+                                    
+  (lambda '(mx-rdf-owl2-intersectionOf ( C1 … Cn ) . )) 
+                                                
+  (lambda '((mx-rdf-type . '(mx-rdf-owl2-Class . ))))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.
+  (lambda '(mx-rdf-owl2-unionOf ( C1 … Cn ). ))
 
-lambda '(mx-rdf-owl2-intersectionOf ( C1 … Cn ). 
+  (lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.))))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.
+  (lambda '(mx-rdf-owl2-complementOf C. )))
 
-lambda '(mx-rdf-owl2-unionOf ( C1 … Cn ). 
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.))))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.
+(lambda '(mx-rdf-owl2-oneOf ( a1 … an ). ))
 
-lambda '(mx-rdf-owl2-complementOf C. 
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Class.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-oneOf ( a1 … an ). 
+(lambda '(mx-rdf-owl2-allValuesFrom C .))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-allValuesFrom C .
+(lambda '(mx-rdf-owl2-someValuesFrom C .))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-someValuesFrom C .
+(lambda '(mx-rdf-owl2-hasValue a. ))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-hasValue a. 
+(lambda '(mx-rdf-owl2-hasSelf "true"^^mx-xsd-boolean.)) 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-hasSelf "true"^^mx-xsd-boolean. 
+(lambda '(mx-rdf-owl2-cardinality n. ))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-cardinality n. 
+(lambda '(mx-rdf-owl2-qualifiedCardinality n.))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '(mx-rdf-owl2-onClass C. ))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-qualifiedCardinality n.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-onClass C. 
+(lambda '(mx-rdf-owl2-maxCardinality n.)) 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-maxCardinality n. 
+(lambda '(mx-rdf-owl2-maxQualifiedCardinality n.))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '(mx-rdf-owl2-onClass C. ))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-maxQualifiedCardinality n.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-onClass C. 
+(lambda '(mx-rdf-owl2-minCardinality n.)) 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '(mx-rdf-owl2-onProperty P.))
 
-lambda '(mx-rdf-owl2-minCardinality n. 
+(lambda '(mx-rdf-owl2-minQualifiedCardinality n.))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '(mx-rdf-owl2-onClass C. ))
 
-lambda '(mx-rdf-owl2-onProperty P.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-minQualifiedCardinality n.
+(lambda '(mx-rdf-owl2-onProperty R.))
 
-lambda '(mx-rdf-owl2-onClass C. 
+(lambda '(mx-rdf-owl2-allValuesFrom D.)) 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty R.
+(lambda '(mx-rdf-owl2-onProperty R.))
 
-lambda '(mx-rdf-owl2-allValuesFrom D. 
+(lambda '(mx-rdf-owl2-someValuesFrom D.)) 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty R.
+(lambda '(mx-rdf-owl2-onProperty R.))
 
-lambda '(mx-rdf-owl2-someValuesFrom D. 
+(lambda '(mx-rdf-owl2-hasValue v. ))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty R.
+(lambda '(mx-rdf-owl2-onProperty R.))
 
-lambda '(mx-rdf-owl2-hasValue v. 
+(lambda '(mx-rdf-owl2-cardinality n. ))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty R.
+(lambda '(mx-rdf-owl2-onProperty R.))
 
-lambda '(mx-rdf-owl2-cardinality n. 
+(lambda '(mx-rdf-owl2-qualifiedCardinality n.))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '(mx-rdf-owl2-onDataRange D. ))
 
-lambda '(mx-rdf-owl2-onProperty R.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-qualifiedCardinality n.
+(lambda '(mx-rdf-owl2-onProperty R.))
 
-lambda '(mx-rdf-owl2-onDataRange D. 
+(lambda '(mx-rdf-owl2-maxCardinality n.)) 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty R.
+(lambda '(mx-rdf-owl2-onProperty R.))
 
-lambda '(mx-rdf-owl2-maxCardinality n. 
+(lambda '(mx-rdf-owl2-maxQualifiedCardinality n.))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '(mx-rdf-owl2-onDataRange D. ))
 
-lambda '(mx-rdf-owl2-onProperty R.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-maxQualifiedCardinality n.
+(lambda '(mx-rdf-owl2-onProperty R.))
 
-lambda '(mx-rdf-owl2-onDataRange D. 
+(lambda '(mx-rdf-owl2-minCardinality n.)) 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.))))
 
-lambda '(mx-rdf-owl2-onProperty R.
+(lambda '(mx-rdf-owl2-onProperty R.))
 
-lambda '(mx-rdf-owl2-minCardinality n. 
+(lambda '(mx-rdf-owl2-minQualifiedCardinality n.))
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-Restriction.
+(lambda '(mx-rdf-owl2-onDataRange D. ))
 
-lambda '(mx-rdf-owl2-onProperty R.
+(lambda '((mx-rdf-type . mx-rdf-Datatype.)))
 
-lambda '(mx-rdf-owl2-minQualifiedCardinality n.
+(lambda '(mx-rdf-owl2-datatypeComplementOf D.)) 
 
-lambda '(mx-rdf-owl2-onDataRange D. 
+(lambda '((mx-rdf-type . mx-rdf-Datatype.)))
 
-lambda '((mx-rdf-type . mx-rdf-Datatype.
+(lambda '(mx-rdf-owl2-intersectionOf (D1…Dn).)) 
 
-lambda '(mx-rdf-owl2-datatypeComplementOf D. 
+(lambda '((mx-rdf-type . mx-rdf-Datatype.))
 
-lambda '((mx-rdf-type . mx-rdf-Datatype.
+(lambda '(mx-rdf-owl2-unionOf (D1…Dn). ))
 
-lambda '(mx-rdf-owl2-intersectionOf (D1…Dn). 
+(lambda '((mx-rdf-type . mx-rdf-Datatype.)))
 
-lambda '((mx-rdf-type . mx-rdf-Datatype.
+(lambda '(mx-rdf-owl2-oneOf ( v1 … vn ). ))
 
-lambda '(mx-rdf-owl2-unionOf (D1…Dn). 
+(lambda '((mx-rdf-type . mx-rdf-Datatype.)))
 
-lambda '((mx-rdf-type . mx-rdf-Datatype.
+(lambda '(mx-rdf-owl2-onDatatype DN.))
 
-lambda '(mx-rdf-owl2-oneOf ( v1 … vn ). 
+(lambda '(mx-rdf-owl2-withRestrictions ((lambda1 ... (lambdan).))))
 
-lambda '((mx-rdf-type . mx-rdf-Datatype.
-
-lambda '(mx-rdf-owl2-onDatatype DN.
-
-lambda '(mx-rdf-owl2-withRestrictions (lambda1 ... lambdan).
-
-lambdaj fj vj.      j=1…n 
+(lambdaj fj vj.      j=1…n 
 
 C1 mx-rdfs-subClassOf C2. 
 
@@ -301,9 +306,9 @@ Cj '(mx-rdf-owl2-equivalentClass Cj+1. j=1…n-1
 
 C1 '(mx-rdf-owl2-disjointWith C2. 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-AllDisjointClasses.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-AllDisjointClasses.
 
-lambda '(mx-rdf-owl2-members ( C1 … Cn ). 
+(lambda '(mx-rdf-owl2-members ( C1 … Cn ). 
 
 P1 mx-rdf-subPropertyOf P2. 
 
@@ -317,9 +322,9 @@ Pj '(mx-rdf-owl2-equivalentProperty Pj+1. j=1…n-1
 
 P1 '(mx-rdf-owl2-propertyDisjointWith P2. 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-AllDisjointProperties.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-AllDisjointProperties.
 
-lambda '(mx-rdf-owl2-members ( P1 … Pn ). 
+(lambda '(mx-rdf-owl2-members ( P1 … Pn ). 
 
 CN '(mx-rdf-owl2-disjointUnionOf ( C1 … Cn ).
 
@@ -345,9 +350,9 @@ aj '(mx-rdf-owl2-sameAs aj+1. j=1…n-1
 
 a1 '(mx-rdf-owl2-differentFrom a2. 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-AllDifferent.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-AllDifferent.
 
-lambda '(mx-rdf-owl2-members (a1 … an). 
+(lambda '(mx-rdf-owl2-members (a1 … an). 
 
 a '((mx-rdf-type . C. 
 
@@ -355,21 +360,21 @@ a1 PN a2.
 
 a R v. 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-NegativePropertyAssertion.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-NegativePropertyAssertion.
 
-lambda '(mx-rdf-owl2-sourceIndividual a1.
+(lambda '(mx-rdf-owl2-sourceIndividual a1.
 
-lambda '(mx-rdf-owl2-assertionProperty P.
+(lambda '(mx-rdf-owl2-assertionProperty P.
 
-lambda '(mx-rdf-owl2-targetIndividual a2. 
+(lambda '(mx-rdf-owl2-targetIndividual a2. 
 
-lambda '((mx-rdf-type . '(mx-rdf-owl2-NegativePropertyAssertion.
+(lambda '((mx-rdf-type . '(mx-rdf-owl2-NegativePropertyAssertion.
 
-lambda '(mx-rdf-owl2-sourceIndividual a.
+(lambda '(mx-rdf-owl2-sourceIndividual a.
 
-lambda '(mx-rdf-owl2-assertionProperty R.
+(lambda '(mx-rdf-owl2-assertionProperty R.
 
-lambda '(mx-rdf-owl2-targetValue v. 
+(lambda '(mx-rdf-owl2-targetValue v. 
 
 C '(mx-rdf-owl2-hasKey (P1 … Pm R1 … Rn).
 
