@@ -1,4 +1,4 @@
-(defun  mx-rdf-button-panel 
+(defun  mx-button-panel 
    :properties:
    :doc-string  "A panel window with a set of custom buttons for common tasks."
    :import      buffer-buttons.el
@@ -13,7 +13,7 @@
    provide quick access to executions and editing functions. Source
    blocks, like repls, with buttons."
 
-(defun  mx-rdf-button-definitions
+(defun  mx-button-definitions
 (defvar name: mx-rdf-button-definitions
 (defvar BEGIN_SRC emacs-lisp
   ; eval-last-sexp
@@ -75,4 +75,6 @@
 (defvar BEGIN_SRC emacs-lisp
 ; (org-babel-lob-ingest)
 
-(defvar END_SRC
+(defvar END_SRC)
+
+(provide 'mx-org-addons)

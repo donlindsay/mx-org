@@ -1,4 +1,3 @@
-;;; mx-mode.el --- Axiomatic sparse trees and owl2 tagging
 ;; mx-mode.el: A minor mode for GNU Emacs 
 ;; by Don Lindsay 2014
 ;; gpl2 boiler
@@ -18,11 +17,11 @@
 
 ;;; Code:
 
-(define-minor-mode mx-mode "A minor mode for MX Org RL." nil
+(define-minor-mode mx-mode "A minor mode for MX Org." nil
   " mx-rl"
   '(([s-x] . buffer-button-insert))
   :group mx-rl 
-  (load-file "~/src/mx-org-rl/owl2-tags-list.org")
+  (load-file "")
   (message "mx-rl online")
   )
 
@@ -113,12 +112,6 @@
   (setq axiom (org-entry-get point-at-bol "prp-fp"))
 					; (org-custom-properties "subj" "pred" "obj" "axiom")
   (or nil))
-
-(provide 'mx-mode)
-
-
-
-
 
 (provide 'mx-mode)
 
