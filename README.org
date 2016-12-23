@@ -15,7 +15,7 @@
     "Custom agenda commands serve two purposes: to store and quickly access
     frequently used TODO and tags searches, and to create special composite
     agenda buffers. Custom agenda commands will be accessible through the
-    dispatcher (see Agenda dispatcher), just like the default commands."
+    dispatcher ... , just like the default commands."
 
 *** So?
 
