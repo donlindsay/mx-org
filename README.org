@@ -1,0 +1,35 @@
+* mx-org: Descriptive Logic Features For GNU Emacs =org-mode=.
+
+** =org-mode= Functions To Consider
+*** =org-sparse-tree=
+    "An important feature of Org mode is the ability to construct sparse trees
+    for selected information in an outline tree, so that the entire document is
+    folded as much as possible, but the selected information is made visible
+    along with the headline structure above it."
+**** =org-show-context-detail=
+     "Org mode contains a number of variables regulating agenda construction and
+     display. The global variables define the behavior for all agenda commands,
+     including the custom commands. However, if you want to change some settings
+     just for a single custom view, you can do so."
+*** =org-agenda-custom-commands=
+    "Custom agenda commands serve two purposes: to store and quickly access
+    frequently used TODO and tags searches, and to create special composite
+    agenda buffers. Custom agenda commands will be accessible through the
+    dispatcher (see Agenda dispatcher), just like the default commands."
+
+*** So?
+
+    Given these facts, I assert that it's possible to develop custom novel and
+    exploratory agendas and sparse-trees by obeying descriptive logic rules.
+
+    To that end, this project is an effort to codify a set of those rules for
+    GNU Emacs and =org-mode= using OWL2 DL as a guide.
+
+    This project is hardly available as a general release, yet. However, should
+    it approach a general usability and utility, I will consider applying to
+    Melpa or Marmalade for inclusion.
+
+    As I have been given, so I freely give. 
+
+    This software belongs to the GPLv3 license described at:
+    https://www.gnu.org/licenses/gpl.html
