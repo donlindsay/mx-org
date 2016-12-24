@@ -1,4 +1,4 @@
-* tags
+* owl tags 
 #+tags: subpropertyof
 #+tags: alldifferent 
 #+tags: alldisjointclasses 
@@ -77,7 +77,7 @@
 #+tags: versioninfo 
 #+tags: versioniri 
 #+tags: withrestrictions
-* properties
+* owl properties 
 #+property: subpropertyof
 #+property: alldifferent 
 #+property: alldisjointclasses 

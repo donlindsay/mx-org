@@ -1,0 +1,30 @@
+* startup 
+* the block agenda example 
+#+begin_src elisp
+  (setq org-agenda-custom-commands
+           '(("h" "Agenda and Home-related tasks"
+              ((agenda "")
+               (tags-todo "home")
+               (tags "garden")))
+             ("o" "Agenda and Office-related tasks"
+              ((agenda "")
+               (tags-todo "work")
+               (tags "office")))))
+#+end_src
+* org-match-sparse-tree 
+* org-tags-view 
+* match tags and properites, complex example 
+  +work-boss+PRIORITY="A"    \
+  +Coffee="unlimited"        \
+  +Effort<2                  \
+  +With={Sarah\|Denny}       \
+  +SCHEDULED>="<2008-10-11>"
+* sparse-tree example 
+ Calling org-sparse-tree with C-c / 
+ brings up a prompt with several search options:
+
+Sparse tree: [r]egexp [/]regexp [t]odo [T]odo-kwd [m]atch [p]roperty
+             [d]eadlines [b]efore-date [a]fter-date
+
+* identify the axioms to use
+

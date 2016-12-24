@@ -1,125 +1,3 @@
-(defun mx:rdf-start (current-buffer)
-  "Engage the MX-RDF subsystem."
-  (interactive)
-  (message "MX-RDF: ONLINE")
-  (org-entry-put "MX-RS" "ONLINE")
-  (setq org-global-properties '("MX-RDF" . "ONLINE")) 
-  )
-
-(defun mx:org-n3-properties
-  (interactive)
-  (setq org-custom-properties 
-	'(("MX-RDF")
-	  ("MX-SUBX")
-	  ("MX-PRDY")
-	  ("MX-OBJZ")
-	  ("MX-RULE")))
-  (setq org-properties-postprocess-alist '("MX-RULE"
-	  				   lambda("TTL")
-					   )
-	)
-								)
-
-(defconst mx-org-n3-triple '((mx-subx     . (org-entry-get "MX-SUBX"))
-			     (mx-prdy     . (org-entry-get "MX-PRDY"))
-			     (mx-objz     . (org-entry-get "MX-OBJZ"))
-			     (mx-rule     . (org-entry-get "MX-RULE"))
-			     )
-  )
-
-
-(setq mx:beg-ex 
-      '((mx-rdf mx-rdf-property drawer)
-	((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
-			(mx-rdf-type  . drawer))
-		    )
-	 )
-	)
-      )
-
-(setq mx:end-ex 
-      '((mx-rdf mx-rdf-property drawer)
-	((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
-			(mx-rdf-type . drawer)
-			)
-		    )
-	 )
-	)
-      )
-
-(defvar mx-rdf-properties
-  '((mx-rdf_all . mx-rdfs-type)
-    (mx-rdf+    . mx-n3-predicate)
-    (mx-rdf+    . mx-rdf-type)
-    )
-  )
-
-(defvar scm-axioms
-  '((scm-cls   . '(org-entry-put (point) "MX-RULE" "SCM-CLS"))
-    (scm-sco   . '(org-entry-put (point) "MX-RULE" "SCM-SCO"))
-    (scm-eqc1  . '(org-entry-put (point) "MX-RULE" "SCM-EQC1"))
-    (scm-eqc2  . '(org-entry-put (point) "MX-RULE" "SCM-EQC2"))
-    (scm-op    . '(org-entry-put (point) "MX-RULE" "SCM-OP"))
-    (scm-dp    . '(org-entry-put (point) "MX-RULE" "SCM-DP"))
-    (scm-spo   . '(org-entry-put (point) "MX-RULE" "SCM-SPO"))
-    (scm-eqp1  . '(org-entry-put (point) "MX-RULE" "SCM-EQP1"))
-    (scm-eqp2  . '(org-entry-put (point) "MX-RULE" "SCM-EQP2"))
-    (scm-dom1  . '(org-entry-put (point) "MX-RULE" "SCM-DOM1"))
-    (scm-dom2  . '(org-entry-put (point) "MX-RULE" "SCM-DOM2"))
-    (scm-rng1  . '(org-entry-put (point) "MX-RULE" "SCM-RNG1"))
-    (scm-rng2  . '(org-entry-put (point) "MX-RULE" "SCM-RNG2"))
-    (scm-hv    . '(org-entry-put (point) "MX-RULE" "SCM-HV"))
-    (scm-svf1  . '(org-entry-put (point) "MX-RULE" "SCM-SVF1"))
-    (scm-svf2  . '(org-entry-put (point) "MX-RULE" "SCM-SVF2"))
-    (scm-avf1  . '(org-entry-put (point) "MX-RULE" "SCM-AVF1"))
-    (scm-avf2  . '(org-entry-put (point) "MX-RULE" "SCM-AVF2"))
-    (scm-int   . '(org-entry-put (point) "MX-RULE" "SCM-INT"))
-    (scm-uni   . '(org-entry-put (point) "MX-RULE" "SCM-UNI"))
-    )
-  )
-
-(defun mx:put-multivalue ()
-  "org-entry-put-multivalued-property pom property &rest values"
-  (interactive)
-  (message "Set multivalued property")
-  
-
-
-	; equivalence
-(setq mx-eq-axioms '(
-		     (eq-ref   . '(org-entry-put (point) "EQX" "ref"))
-		     (eq-sym   . '(org-entry-put (point) "EQ" "sym"))
-		     (eq-trans . '(org-entry-put (point) "EQ" "trans"))
-		     (eq-rep-s . '(org-entry-put (point) "EQ" "rep-s"))
-		     (eq-rep-p . '(org-entry-put (point) "EQ" "rep-p"))
-		     (eq-rep-o . '(org-entry-put (point) "EQ" "rep-o"))
-		     (eq-diff1 . '(org-entry-put (point) "EQ" "eq-diff1"))
-		     (eq-diff2 . '(org-entry-put (point) "EQ" "eq-diff2"))
-		     (eq-diff3 . '(org-entry-put (point) "EQ" "eq-diff3"))
-		     ))
-
-; property
-(defvar mx-assert-prp-axiom '(
-		      (prp-ap    . '(org-entry-put (point) "PRP" "ap"))
-		      (prp-dom   . '(org-entry-put (point) "PRP" "dom"))
-		      (prp-rng   . '(org-entry-put (point) "PRP" "rng"))
-		      (prp-fp    . '(org-entry-put (point) "PRP" "fp"))
-		      (prp-ifp   . '(org-entry-put (point) "PRP" "ifp"))
-		      (prp-irp   . '(org-entry-put (point) "PRP" "irp"))
-		      (prp-symp  . '(org-entry-put (point) "PRP" "symp"))
-		      (prp-asyp  . '(org-entry-put (point) "PRP" "asymp"))
-		      (prp-trp   . '(org-entry-put (point) "PRP" "trp"))
-		      (prp-spo1  . '(org-entry-put (point) "PRP" "spo1"))
-		      (prp-spo2  . '(org-entry-put (point) "PRP" "spo2"))
-		      (prp-eqp1  . '(org-entry-put (point) "PRP" "eqp1"))
-		      (prp-eqp2  . '(org-entry-put (point) "PRP" "eqp2"))
-		      (prp-pdw   . '(org-entry-put (point) "PRP" "pdw"))
-		      (prp-adp   . '(org-entry-put (point) "PRP" "adp"))
-		      (prp-inv1  . '(org-entry-put (point) "PRP" "inv1"))
-		      (prp-inv2  . '(org-entry-put (point) "PRP" "inv2"))
-		      (prp-key   . '(org-entry-put (point) "PRP" "key"))
-		      (prp-npa1  . '(org-entry-put (point) "PRP" "npa1"))
-		      (prp-npa2  . '(org-entry-put (point) "PRP" "npa2"))))
 
 (defun (defun  Axiomatic Triples for the Facets
 
@@ -212,120 +90,7 @@ mx-xsd-pattern mx-rdf-range mx-rdf-Literal .
 <mx-rdf-seeAlso> <mx-rdf-domain> <mx-rdfs-resource> .
 
 <mx-rdf-seeAlso> <mx-rdf-range> <mx-rdfs-resource> .
-(defun (defun  misc owl2								:rdf:
-      ICEXT(I(ex:c1)) ⊆ ICEXT(I(ex:c2)) ∪ ICEXT(I(ex:c3)) . 
 
-(defun mx/rdf-startup ()
-  "Activate the MX-RDF subsystem."
-  (interactive)
-  (message "MX-RDF: ONLINE"))
-
-(defvar mx-rdf-startup
-  (cond
-   (overview t)
-   (hideblocks t)
-   (org-mode t)
-   
-   mx-rdf-startup "ONLINE")
-
-(defun mx/insert-drawer ()
-  (org-insert-property-drawer))
-
-(defvar mx-rdf-drawer (drawer)
-  '((org-insert-drawer . '((mx-org-hidden       . nil)
-			   (mx-org-state        . nil)
-			   (mx-org-properties   . nil)
-			   (mx-rdfs-owl2        . nil)
-			   (mx-n3               . nil))
-		       )))
-
-
-
-(defun mx/org-header-args ()
-  (setq mx-org-src-block-properties
-	'((mx-org-header-arg . '((:export . results)
-				 (:header-args . mx-rdf)
-				 (:session . *mx-rdf*))
-			     )
-	  )
-	)
-  )
-
-(defun mx/org-rdf-properties () 
-  (setq mx-org-rdf-properties . '(:see-also
-  . org-property-allowed-value-functions)))
-
-(defun mx/org-global-properties ()
-  "'List of property/value pairs that can be inherited by any entry.
-This list will be combined with the constant
-`org-global-properties-fixed'.  The entries in this list are cons
-cells where the car is a property name and cdr is a string with
-the value.'  
-
-Note: it might make sense to make a separate file for holding the
-list since it might be somewhat long and can be imported.A
-related question is if you want to define all the owl2 and rdfs
-only tags."
-  (setq org-global-properties
-	'((mx-org-n3-triple . '((mx-subject     . nil)
-				(mx-predicate   . nil)
-				(mx-object . nil)) ) ) ) )
-	
-(defvar BEGIN_EXAMPLE (mx-rdf mx-rdf-property drawer)
-  '((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
-                   (mx-rdf-type  . drawer))
-	       )
-    )
-  )
-
-(defvar END_EXAMPLE (mx-rdf mx-rdf-property drawer)
-  '((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
-                   (mx-rdf-type . drawer)) ) ) )
-
-(defvar mx-rdf-properties
-  '((mx-rdf_all . mx-rdfs-type)
-    (mx-rdf+    . mx-n3-predicate)
-    (mx-rdf+    . mx-rdf-type)
-    )
-  )
-
-(defun  or elisp via org-file-properties
-   
-     "You can set buffer-local values for the same purpose in the variable
-     `org-file-properties' this by adding lines like
-   
-     (defvar PROPERTY: NAME VALUE"
-
-org-entry-put-multivalued-property pom property &rest values
-
-(defun  calls 
-  
-   "(defvar call [<inside header arguments>] (<arguments>) <end header arguments>"
-
-
-
-
-(defun  tasks 
-(defun  dfa-dg.org
-This file has mainly become about deterministic finite automata and
-directed graphs. This is progress because my targets have been source
-blocks and n3. (defvar begin_src might read as (defvar deterministic-finite-automata
-and n3 might read as directed-graph. My current interest is developing
-this code along those lines and with a focus on producing code that i
-can load into gruff, which at this point means turtle and hence, n3.
-
-(defun  determine the significance of (:how) (:what) and (seq (:how :much))
-(defun  TODO do i want a (defvar property: list of all owl2 and rdfs? 
-
-(defvar property: mx-rdf_all          mx-rdf-rdfs-type
-(defvar property: mx-rdf+             mx-rdf-predicate
-(defvar property: mx-rdf-predicate    rdfs-type
-
-(defun  drawers
-(defvar drawer:   hidden state
-
-
-(defun  (defun  owl2 in n3
 
 (defun '(mx-rdf-owl2-AllDifferent '((mx-rdf-type . 'mx-rdfs-class) .
 
@@ -428,6 +193,7 @@ can load into gruff, which at this point means turtle and hence, n3.
 '(mx-rdf-owl2-TransitiveProperty '((mx-rdf-type . 'mx-rdfs-class) .
 
 '(mx-rdf-owl2-TransitiveProperty mx-rdfs-subClassOf '(mx-rdf-owl2-ObjectProperty .
+
 
 (defun (defun  Axiomatic Triples for the Properties
 
@@ -743,7 +509,97 @@ can load into gruff, which at this point means turtle and hence, n3.
 
 '(mx-rdf-owl2-withRestrictions mx-rdf-range rdf:List .
 	
+(defun (defun  Axiomatic Triples for the Facets
 
+<rdf:langRange> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
+
+<rdf:langRange> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<rdf:langRange> <mx-rdf-range> <mx-rdf-Literal> .
+
+<mx-xsd-length> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
+
+<mx-xsd-length> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-xsd-length> <mx-rdf-range> <mx-rdf-Literal> .
+
+<mx-xsd-maxExclusive> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
+
+<mx-xsd-maxExclusive> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-xsd-maxExclusive> <mx-rdf-range> <mx-rdf-Literal> .
+
+<mx-xsd-maxInclusive> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
+
+<mx-xsd-maxInclusive> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-xsd-maxInclusive> <mx-rdf-range> <mx-rdf-Literal> .
+
+<mx-xsd-maxLength> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
+
+<mx-xsd-maxLength> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-xsd-maxLength> <mx-rdf-range> <mx-rdf-Literal> .
+
+<mx-xsd-minExclusive> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
+
+<mx-xsd-minExclusive> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-xsd-minExclusive> <mx-rdf-range> <mx-rdf-Literal> .
+
+<mx-xsd-minInclusive> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
+
+<mx-xsd-minInclusive> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-xsd-minInclusive> <mx-rdf-range> <mx-rdf-Literal> .
+
+<mx-xsd-minLength> <'((mx-rdf-type .> <'(mx-rdf-owl2-DatatypeProperty> .
+
+mx-xsd-minLength mx-rdf-domain mx-rdfs-resource .
+
+mx-xsd-minLength mx-rdf-range mx-rdf-Literal .
+
+mx-xsd-pattern '((mx-rdf-type . '(mx-rdf-owl2-DatatypeProperty .
+
+mx-xsd-pattern mx-rdf-domain mx-rdfs-resource .
+
+mx-xsd-pattern mx-rdf-range mx-rdf-Literal .
+	
+(defun (defun  Additional Axiomatic Triples for Classes and Properties
+
+<'mx-rdfs-class)> <mx-rdfs-subClassOf> <'(mx-rdf-owl2-Class> .
+
+<mx-rdf-comment> <'((mx-rdf-type .> <'(mx-rdf-owl2-AnnotationProperty> .
+
+<mx-rdf-comment> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-rdf-comment> <mx-rdf-range> <mx-rdf-Literal> .
+
+<mx-rdf-Datatype> <mx-rdfs-subClassOf> <'(mx-rdf-owl2-DataRange> .
+
+<mx-rdf-isDefinedBy> <'((mx-rdf-type .> <'(mx-rdf-owl2-AnnotationProperty> .
+
+<mx-rdf-isDefinedBy> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-rdf-isDefinedBy> <mx-rdf-range> <mx-rdfs-resource> .
+
+<mx-rdf-label> <'((mx-rdf-type .> <'(mx-rdf-owl2-AnnotationProperty> .
+
+<mx-rdf-label> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-rdf-label> <mx-rdf-range> <mx-rdf-Literal> .
+
+<mx-rdf-Literal> <'((mx-rdf-type .> <mx-rdf-Datatype> .
+
+<rdf:Property> <mx-rdfs-subClassOf> <'(mx-rdf-owl2-ObjectProperty> .
+
+<mx-rdfs-resource> <mx-rdfs-subClassOf> <'(mx-rdf-owl2-Thing> .
+
+<mx-rdf-seeAlso> <'((mx-rdf-type .> <'(mx-rdf-owl2-AnnotationProperty> .
+
+<mx-rdf-seeAlso> <mx-rdf-domain> <mx-rdfs-resource> .
+
+<mx-rdf-seeAlso> <mx-rdf-range> <mx-rdfs-resource> .
 	
 
 
