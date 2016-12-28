@@ -1,0 +1,559 @@
+* startup 
+;; mx-axioms.org
+;; id boiler
+;; emacs boiler
+;; w3c boiler
+;; gpl3 boiler
+
+;; Defining an EAV/RDF-compatible labeled, 
+;; directed, multi-graph in GNU Emacs =org-mode=.
+;; Hammertime:
+
+* mx-type 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-resource
+   :mx-range:            mx-class
+   :end:
+* mx-property 
+   :properties: 
+   :mx-type:             mx-property mx-class mx-owlClass
+   :end:
+* mx-predicate 
+   :properties:
+   :mx-type:             mx-property
+   :mx-domain:           mx-statement
+   :mx-seeAlso:          mx-attribute
+   :mx-range:            mx-resource
+   :end:
+* mx-object 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-statement
+   :mx-seeAlso:          mx-entity
+   :mx-range:            mx-resource
+   :end:
+* mx-first 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-list
+   :mx-range:            mx-resource
+   :end:
+* mx-rest 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-list
+   :mx-range:            mx-list
+   :end:
+* mx-value 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-resource
+   :mx-range:            mx-resource
+   :end:
+* mx-nil 
+   :properties: 
+   :mx-type:             mx-property
+   :end:
+* mx-domain 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-property
+   :mx-range:            mx-class
+   :end:
+* mx-range 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-property mx-class
+   :end:
+* mx-subPropertyOf 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-property
+   :mx-range:            mx-property
+   :end:
+* mx-subClassOf 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-class
+   :mx-range:            mx-class
+   :end:
+* mx-subject
+   :properties: 
+   :mx-domain:           mx-statement
+   :mx-seeAlso:          mx-value
+   :mx-range:            mx-resource
+   :end:
+* mx-member 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-resource
+   :mx-range:            mx-resource
+   :end:
+* mx-seeAlso 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-resource
+   :mx-range:            mx-resource
+   :end:
+* mx-isDefinedBy 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-resource
+   :mx-range:            mx-resource
+   :mx-subPropertyOf:    mx-seeAlso
+   :end:
+* mx-comment 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-resource
+   :mx-range:            mx-literal
+   :end:
+* mx-label 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-resource
+   :mx-range:            mx-literal
+   :end:
+* mx-alt 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-container
+   :end:
+* mx-bag 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-container
+   :end:
+* mx-seq 
+   :property: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-container
+   :end:
+* mx-containerMembershipProperty 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-datatype 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-class
+   :end:
+* mx-resource 
+   :properties: 
+   :mx-type:             mx-class
+   :end:
+* mx-class 
+   :properties: 
+   :mx-type:             mx-class
+   :end:
+* mx-literal 
+   :properties: 
+   :mx-type:             mx-class mx-datatype
+   :end:
+* mx-container 
+   :properties: 
+   :mx-type:             mx-class
+   :end:
+* mx-list 
+   :properties: 
+   :mx-type:             mx-class
+   :end:
+* mx-statement 
+   :properties: 
+   :mx-type:             mx-class
+   :end:
+* mx-allDifferent 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-resource
+   :end:
+* mx-allDisjointClasses 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-resource
+   :end:
+* mx-allDisjointProperties 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-resource
+   :end:
+* mx-annotation 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-resource
+   :end:
+* mx-annotationProperty 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-asymmetricProperty 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-owlClass 
+   :properties: 
+   :mx-type:             mx-class
+   :mx-equivalentClass:  mx-class
+   :end:
+* mx-dataRange 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-equivalentClass:  mx-datatype
+   :end:
+* mx-datatypeProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-deprecatedClass 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-class mx-owlClass
+   :end:
+* mx-deprecatedProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-functionalProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-inverseFunctionalProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-irreflexiveProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-namedIndividual 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-equivalentClass:  mx-resource
+   :end:
+* mx-negativePropertyAssertion 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-resource
+   :end:
+* mx-nothing 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-thing
+   :end:
+* mx-objectProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-equivalentClass:  mx-property
+   :end:
+* mx-ontology 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-resource
+   :end:
+* mx-ontologyProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-reflexiveProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-restriction 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-class mx-owlClass
+   :end:
+* mx-symmetricProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-thing 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-resource
+   :end:
+* mx-transitiveProperty 
+   :properties: 
+   :mx-type:             mx-class mx-owlClass
+   :mx-subClassOf:       mx-property
+   :end:
+* mx-allDisjointProperties 
+   :properties: 
+   :mx-type:             mx-owlClass
+   :end:
+* mx-allDisjointClasses 
+   :properties: 
+   :mx-type:             mx-owlClass
+   :end:
+* mx-axiom 
+   :properties: 
+   :mx-type:             mx-owlClass
+   :end:
+* mx-selfRestriction 
+   :properties: 
+   :mx-type:             mx-owlClass
+   :end:
+* mx-allValuesFrom 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-restriction
+   :mx-range:            mx-class
+   :end:
+* mx-assertionProperty 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-negativePropertyAssertion
+   :mx-range:            mx-property
+   :end:
+* mx-backwardCompatibleWith 
+   :properties: 
+   :mx-type:             mx-ontologyProperty mx-annotationProperty
+   :mx-domain:           mx-ontology
+   :mx-range:            mx-ontology
+   :end:
+* mx-bottomDataProperty 
+   :properties: 
+   :mx-type:             mx-datatypeProperty
+   :mx-type:             mx-objectProperty
+   :end:
+* mx-cardinality 
+   :properties: 
+   :mx-type:             mx-property
+   :mx-domain:           mx-restriction
+   :end:
+* mx-comment 
+   :properties: 
+   :mx-type:             mx-annotationProperty
+   :mx-domain:           mx-resource
+   :mx-range:            mx-literal
+   :end:
+
+* mx-complementOf
+   :properties:
+   :mx-type:             mx-property
+   :mx-domain:           mx-class
+   :mx-range:            mx-class
+   :end:
+
+
+* datatypeComplementOf: type: mx-property:end:
+* datatypeComplementOf: mx-domain: Datatype:end:
+* datatypeComplementOf: mx-range: Datatype:end:
+
+
+* deprecated: type: Annotationmx-property:end:
+* deprecated: mx-domain: mx-resource:end:
+* deprecated: mx-range: mx-resource:end:
+
+* differentFrom: type: mx-property:end:
+* differentFrom: mx-domain: mx-resource:end:
+* differentFrom: mx-range: mx-resource:end:
+
+* disjointUnionOf: type: mx-property:end:
+* disjointUnionOf: mx-domain: Class:end:
+* disjointUnionOf: mx-range: List:end:
+
+* disjointWith: type: mx-property:end:
+* disjointWith: mx-domain: Class:end:
+* disjointWith: mx-range: Class:end:
+
+* distinctMembers: type: mx-property:end:
+* distinctMembers: mx-domain: AllDifferent:end:
+* distinctMembers: mx-range: List:end:
+
+* equivalentClass: type: mx-property:end:
+* equivalentClass: mx-domain: Class:end:
+* equivalentClass: mx-range: Class:end:
+
+* equivalentmx-property: type: mx-property:end:
+* equivalentmx-property: mx-domain: mx-property:end:
+* equivalentmx-property: mx-range: mx-property:end:
+
+* hasKey: type: mx-property:end:
+* hasKey: mx-domain: Class:end:
+* hasKey: mx-range: List:end:
+
+* hasValue: type: mx-property:end:
+* hasValue: mx-domain: Restriction:end:
+* hasValue: mx-range: mx-resource:end:
+
+* imports: type: Ontologymx-property:end:
+* imports: mx-domain: Ontology:end:
+* imports: mx-range: Ontology:end:
+
+* incompatibleWith: type: Ontologymx-property:end:
+* incompatibleWith: type: Annotationmx-property:end:
+* incompatibleWith: mx-domain: Ontology:end:
+* incompatibleWith: mx-range: Ontology:end:
+
+* intersectionOf: type: mx-property:end:
+* intersectionOf: mx-domain: Class:end:
+* intersectionOf: mx-range: List:end:
+
+* inverseOf: type: mx-property:end:
+* inverseOf: mx-domain: mx-property:end:
+* inverseOf: mx-range: mx-property:end:
+
+* isDefinedBy: type: Annotationmx-property:end:
+* isDefinedBy: mx-domain: mx-resource:end:
+* isDefinedBy: mx-range: mx-resource:end:
+
+* label: type: Annotationmx-property:end:
+* label: mx-domain: mx-resource:end:
+* label: mx-range: Literal:end:
+
+* maxCardinality: type: mx-property:end:
+* maxCardinality: mx-domain: Restriction:end:
+* maxCardinality: mx-range: ns_xsd["nonNegativeInteger"]:end:
+
+* maxQualifiedCardinality: type: mx-property:end:
+* maxQualifiedCardinality: mx-domain: Restriction:end:
+* maxQualifiedCardinality: mx-range: ns_xsd["nonNegativeInteger"]:end:
+
+* members: type: mx-property:end:
+* members: mx-domain: mx-resource:end:
+* members: mx-range: List:end:
+
+* minCardinality: type: mx-property:end:
+* minCardinality: mx-domain: Restriction:end:
+* minCardinality: mx-range: ns_xsd["nonNegativeInteger"]:end:
+
+* minQualifiedCardinality: type: mx-property:end:
+* minQualifiedCardinality: mx-domain: Restriction:end:
+* minQualifiedCardinality: mx-range: ns_xsd["nonNegativeInteger"]:end:
+
+* annotatedTarget: type: mx-property:end:
+* annotatedTarget: mx-domain: mx-resource:end:
+* annotatedTarget: mx-range: mx-resource:end:
+
+* onClass: type: mx-property:end:
+* onClass: mx-domain: Restriction:end:
+* onClass: mx-range: Class:end:
+
+* onDataMx-Range: type: mx-property:end:
+* onDataMx-Range: mx-domain: Restriction:end:
+* onDataMx-Range: mx-range: Datatype:end:
+
+* onDatatype: type: mx-property:end:
+* onDatatype: mx-domain: Datatype:end:
+* onDatatype: mx-range: Datatype:end:
+
+* oneOf: type: mx-property:end:
+* oneOf: mx-domain: Class:end:
+* oneOf: mx-range: List:end:
+
+* onmx-property: type: mx-property:end:
+* onmx-property: mx-domain: Restriction:end:
+* onmx-property: mx-range: mx-property:end:
+
+* onmx-properties: type: mx-property:end:
+* onmx-properties: mx-domain: Restriction:end:
+* onmx-properties: mx-range: List:end:
+
+* annotatedmx-property: type: mx-property:end:
+* annotatedmx-property: mx-domain: mx-resource:end:
+* annotatedmx-property: mx-range: mx-property:end:
+
+* priorVersion: type: Ontologymx-property:end:
+* priorVersion: type: Annotationmx-property:end:
+* priorVersion: mx-domain: Ontology:end:
+* priorVersion: mx-range: Ontology:end:
+
+* propertyChainAxiom: type: mx-property:end:
+* propertyChainAxiom: mx-domain: mx-property:end:
+* propertyChainAxiom: mx-range: List:end:
+
+* propertyDisjointWith: type: mx-property:end:
+* propertyDisjointWith: mx-domain: mx-property:end:
+* propertyDisjointWith: mx-range: mx-property:end:
+
+* qualifiedCardinality: type: mx-property:end:
+* qualifiedCardinality: mx-domain: Restriction:end:
+* qualifiedCardinality: mx-range: ns_xsd["nonNegativeInteger"]:end:
+
+* sameAs: type: mx-property:end:
+* sameAs: mx-domain: mx-resource:end:
+* sameAs: mx-range: mx-resource:end:
+
+* seeAlso: type: Annotationmx-property:end:
+* seeAlso: mx-domain: mx-resource:end:
+* seeAlso: mx-range: mx-resource:end:
+
+* someValuesFrom: type: mx-property:end:
+* someValuesFrom: mx-domain: Restriction:end:
+* someValuesFrom: mx-range: Class:end:
+
+* sourceIndividual: type: mx-property:end:
+* sourceIndividual: mx-domain: Negativemx-propertyAssertion:end:
+* sourceIndividual: mx-range: mx-resource:end:
+
+* annotatedSource: type: mx-property:end:
+* annotatedSource: mx-domain: mx-resource:end:
+* annotatedSource: mx-range: mx-resource:end:
+
+* targetIndividual: type: mx-property:end:
+* targetIndividual: mx-domain: Negativemx-propertyAssertion:end:
+* targetIndividual: mx-range: mx-resource:end:
+
+* targetValue: type: mx-property:end:
+* targetValue: mx-domain: Negativemx-propertyAssertion:end:
+* targetValue: mx-range: Literal:end:
+
+* topDatamx-property: type: Datatypemx-property:end:
+* topDatamx-property: mx-domain: mx-resource:end:
+* topDatamx-property: mx-range: Literal:end:
+
+* topObjectmx-property: type: Objectmx-property:end:
+* topObjectmx-property: mx-domain: mx-resource:end:
+* topObjectmx-property: mx-range: mx-resource:end:
+
+* unionOf: type: mx-property:end:
+* unionOf: mx-domain: Class:end:
+* unionOf: mx-range: List:end:
+
+* versionInfo: type: Annotationmx-property:end:
+* versionInfo: mx-domain: mx-resource:end:
+* versionInfo: mx-range: mx-resource:end:
+
+* versionIRI: type: Annotationmx-property:end:
+* versionIRI: mx-domain: mx-resource:end:
+* versionIRI: mx-range: mx-resource:end:
+
+* withRestrictions: type: mx-property:end:
+* withRestrictions: mx-domain: Datatype:end:
+* withRestrictions: mx-range: List:end:
+* allValuesFrom: mx-range: OWLClass:end:
+* complementOf: mx-domain: OWLClass:end:
+* complementOf: mx-range: OWLClass:end:
+
+* datatypeComplementOf: mx-domain: DataMx-Range:end:
+* datatypeComplementOf: mx-range: DataMx-Range:end:
+* disjointUnionOf: mx-domain: OWLClass:end:
+* disjointWith: mx-domain: OWLClass:end:
+* disjointWith: mx-range: OWLClass:end:
+* equivalentClass: mx-domain: OWLClass:end:
+* equivalentClass: mx-range: OWLClass:end:
+* hasKey: mx-domain: OWLClass:end:
+* intersectionOf: mx-domain: OWLClass:end:
+* onClass: mx-range: OWLClass:end:
+* onDataMx-Range: mx-range: DataMx-Range:end:
+* onDatatype: mx-domain: DataMx-Range:end:
+* onDatatype: mx-range: DataMx-Range:end:
+* oneOf: mx-domain: OWLClass:end:
+* someValuesFrom: mx-range: OWLClass:end:
+* unionOf: mx-range: OWLClass:end:
+* withRestrictions: mx-domain: DataMx-Range:end:
+
+
