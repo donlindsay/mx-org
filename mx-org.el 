@@ -9,13 +9,16 @@
 ;;    atomic negation
 ;;    concept intersection
 ;;    universal restrictions
-;;    limited existential quantification
+;;    limited existential quantification*
 ;; extention   
 ;;    role hierarchy
 ;;    complex concept negation
 ;;    nominals
 ;;    inverse properties
 ;;    cardinality restrictions
+;;
+;; *note: uniqueness quantification is possibly
+;;        enforceable at buffer and file levels
 ;;
 ;; Hammertime:
 
