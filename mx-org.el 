@@ -2,7 +2,9 @@
 ;; 2014 Donald Lindsay
 ;; emacs boiler
 ;; gpl3 boiler
-;; hammertime:
+;; commentary:
+;; In which we sort out the decidable from the not
+;; Hammertime:
 
 (defun mx:rl-start (current-buffer)
   "Engage the Rule Language subsystem!"
