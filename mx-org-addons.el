@@ -77,4 +77,12 @@
 
 (defvar END_SRC)
 
+(defvar mx-eav-quad
+  "Drawer properties for Entity-Attribute-Value schema."
+;; (org-property-list-custom-properties
+  (org-entry-put point "mx-subj" "value")
+  (org-entry-put point "mx-pred" "attribute")
+  (org-entry-put point "mx-obj" "entity")
+  (org-entry-put point "mx-axiom" "rule"))
+
 (provide 'mx-org-addons)

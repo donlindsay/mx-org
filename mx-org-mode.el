@@ -1,21 +1,12 @@
 ;; mx-mode.el: A minor mode for GNU Emacs 
-;; by Don Lindsay 2014
-;; gpl2 boiler
+;; github: https://github.com/donlindsay/mx-org
+;; by Don Lindsay 2017
+;; gpl3 boiler
 ;; gnu emacs boiler
 ;; code examples
-;; hammertime:
-
-;(define-package "mx" "1" "Axioms from OWL2 RL."
-;  '((emacs "24")
-;					; (mx-rl "1")
-;					; (mx-n3 "1")
-;    ))
-
-
-;;; Commentary:
+;; commentary
 ;; 
-
-;;; Code:
+;;; Hammertime:
 
 (define-minor-mode mx-mode "A minor mode for MX Org." nil
   " mx-rl"
@@ -30,61 +21,77 @@
   :version 1
   )
 
-(defvar mx-first "CAR")
+(defun  (defun  owl2 in n3
 
-(defvar subj mx-car
-  "The subject of the triple.")
+(defun mx:rdf-start (current-buffer)
+  "Engage the MX-RDF subsystem."
+  (interactive)
+  (message "MX-RDF: ONLINE")
+  (org-entry-put "MX-RS" "ONLINE")
+  (setq org-global-properties '("MX-RDF" . "ONLINE")) 
+  )
 
-(defvar mx-car (list (org-find-top-headline)
-		     (setq mx-first t)
+(defun mx-init (current-buffer)
+  "mx-org start"
+  (while (setq mx-mode t)
+    (message "mx-org-initialize")))
+
+
+(defun mx:org-n3-properties
+  (interactive)
+  (setq org-custom-properties 
+	'(("MX-RDF")
+	  ("MX-SUBX")
+	  ("MX-PRDY")
+	  ("MX-OBJZ")
+	  ("MX-RULE")))
+  (setq org-properties-postprocess-alist '("MX-RULE"
+	  				   lambda("TTL")
+					   )
+	)
+
+(defvar mx-first (list (org-find-top-headline)
+		     (setq mx-next t)
 		     (setq mx-rest t)))
 
-(defun pred mx-cdr
-  "The predicate of the N3 triple."
-  (setq mx-cdr (list (org-element-drawer-parser)
-		     (setq mx-rest mx-cdr)
-		     (setq mx-cddr mx-rest)
-		     )))
+(defvar mx-subj 
+  "The subject of a triple. Sometimes called a value in EAV.")
 
-(defun obj mx-cddr
-  "The object of the triple."
-  (setq obj mx-cddr))
-
-(defvar mx-cddr (list (mx-cdr)
-		      (pred)
-		      (setq obj (list (pred)
-				      (axiom)
+(defvar mx-rest (list (mx-next)
+                      (mx-pred)
+		      (setq mx-obj (list (mx-pred)
+				      (mx-axiom)
 				      (org-find-exact-headline-in-buffer)))))
 
-(defvar axiom "prp-fp"
+(defun mx-pred mx-next
+  "The predicate. Sometimes called an attribute in EAV."
+  (setq mx-cdr (list (org-element-drawer-parser)
+		     (setq mx-rest mx-next)
+                     (message "Assign predicate attribute."))))
+
+
+(defun mx-obj mx-rest
+  "The object of the triple. Somtimes called the entity in EAV."
+  (setq obj mx-cddr))
+
+(defvar mx-axiom ()
   "The axiom to apply to the sparse tree.")
 
-(defun make-axiom (list (mx-cddr mx-car org-entry-get point-at-bol))
+(defun mx-make-axiom (list (mx-cddr mx-car org-entry-get point-at-bol))
   "Add an axiom to a stack."
   (interactive "P/n?")
-  (org-sparse-tree prop "axiom")
+  (org-sparse-tree prop "mx-axiom")
   (org-at-drawer-p)
   (message "mx can't find your drawer!"))
 
-(defun mx-start (current-buffer)
-  "Engage the Rule Language subsystem!"
-  (interactive)
-  (message "mx-online")
-  (while (setq mx-mode t)
-    (org-entry-put point-at-bol (org-element-drawer-parser) "REASONER" "ONLINE")
-					;  (setq org-global-properties ("REASONER" . "ONLINE")) 
-    ))
-
 (defun mx-insert-drawer (org-find-top-headline)
-  "Insert a RL property drawer."
+  "Insert a MX-ORG property drawer under the top org-mode headline."
   (interactive)
-  (org-insert-drawer "mx")
-  (setq mx-quad-prop (setq org-custom-properties (list "s" "p" "o" "x")))
-  (org-entry-put point "s" "subj")
-  (org-entry-put point "p" "pred")
-  (org-entry-put point "s" "obj")
-  (org-entry-put point "x" "axiom"))
-  
+  (org-insert-drawer "mx-org")
+  (setq mx-quad-prop (setq org-custom-properties (list "mx-subj"
+                                                       "mx-pred"
+                                                       "mx-obj"
+                                                       "mx-axiom"))))
 (defun mx-sparse-tree tag-exact-match-p
   "Make a sparse-tree, but with a rule."
   (interactive)
@@ -94,24 +101,11 @@
   (message "mx: triplestore edit buffer")
   (mx-start))
 
-(defun mx-make-triple x
+
+(defun mx-make-triple mx-triple
   "Write a triple to a property drawer."
   (interactive)
-  (org-entry-put point-at-bol "x" "prp-fp")
-  (org-entry-put point-at-bol "s" "ready")
-  (org-entry-put point-at-bol "p" "ready")
-  (org-entry-put point-at-bol "o" "ready")
   (message "Writing triple to the drawer."))
-
-;; Example definition of an N3 type tree for the owl:functionalProperty org tag
-(defun mx-prp-fp (subj pred obj)
-  "A model triple with a default axiom of prp-fp."
-  (setq subj (org-entry-get point-at-bol "s"))
-  (setq pred (org-entry-get point-at-bol "p"))
-  (setq objt (org-entry-get point-at-bol "o"))
-  (setq axiom (org-entry-get point-at-bol "prp-fp"))
-					; (org-custom-properties "subj" "pred" "obj" "axiom")
-  (or nil))
 
 (provide 'mx-mode)
 
