@@ -50,31 +50,7 @@
 		      ))
 
 
-(setq mx:beg-ex 
-      '((mx-rdf mx-rdf-property drawer)
-	((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
-			(mx-rdf-type  . drawer))
-		    )
-	 )
-	)
-      )
 
-(setq mx:end-ex 
-      '((mx-rdf mx-rdf-property drawer)
-	((owl2-rdfs . '((doc-string  . "rdfs and owl2 markup element drawer")
-			(mx-rdf-type . drawer)
-			)
-		    )
-	 )
-	)
-      )
-
-(defvar mx-rdf-properties
-  '((mx-rdf_all . mx-rdfs-type)
-    (mx-rdf+    . mx-n3-predicate)
-    (mx-rdf+    . mx-rdf-type)
-    )
-  )
 
 (defvar scm-axioms
   '((scm-cls   . '(org-entry-put (point) "MX-RULE" "SCM-CLS"))
