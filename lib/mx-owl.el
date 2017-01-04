@@ -1,3 +1,11 @@
+(defun mx-rdf-start (current-buffer)
+  "Engage the MX-ORG subsystem."
+  (interactive)
+  (message "mx-rdf: ONLINE")
+  (org-entry-put "mx-rdf" "ONLINE")
+  (setq org-global-properties '("mx-rdf" . "ONLINE")) 
+  )
+
 (defconst mx-org-n3-triple '((mx-subx     . (org-entry-get "MX-SUBX"))
 			     (mx-prdy     . (org-entry-get "MX-PRDY"))
 			     (mx-objz     . (org-entry-get "MX-OBJZ"))

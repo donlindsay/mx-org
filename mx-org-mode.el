@@ -9,27 +9,22 @@
 ;;; Hammertime:
 
 (define-minor-mode mx-mode "A minor mode for MX Org." nil
-  " mx-rl"
+  "mx-org minor mode"
   '(([s-x] . buffer-button-insert))
-  :group mx-rl 
-  (load-file "")
-  (message "mx-rl online")
+  :group mx-org 
+  (load-file "./mx-org.el")
+  (load-file "./lib/mx-axioms.el")
+  (require 'mx-org)
+  (require 'mx-axiom)
+  (message "mx-org: online")
   )
 
-(defgroup MX nil 
+(defgroup mx-org nil 
   "Customizations for MX-RL."
   :version 1
   )
 
-(defun  (defun  owl2 in n3
 
-(defun mx:rdf-start (current-buffer)
-  "Engage the MX-RDF subsystem."
-  (interactive)
-  (message "MX-RDF: ONLINE")
-  (org-entry-put "MX-RS" "ONLINE")
-  (setq org-global-properties '("MX-RDF" . "ONLINE")) 
-  )
 
 (defun mx-init (current-buffer)
   "mx-org start"
@@ -37,18 +32,18 @@
     (message "mx-org-initialize")))
 
 
-(defun mx:org-n3-properties
-  (interactive)
+(defun mx-spo-quad
+  "A SPO quad, of subject, predicate, object, axiom."
   (setq org-custom-properties 
-	'(("MX-RDF")
-	  ("MX-SUBX")
-	  ("MX-PRDY")
-	  ("MX-OBJZ")
-	  ("MX-RULE")))
-  (setq org-properties-postprocess-alist '("MX-RULE"
-	  				   lambda("TTL")
-					   )
-	)
+	'(("mx-subj")
+	  ("mx-pred")
+	  ("mx-obj")
+	  ("mx-axiom")))
+  (setq org-properties-postprocess-alist
+        '("mx-axiom"
+          (mx-make-axiom ()
+                         )
+          )
 
 (defvar mx-first (list (org-find-top-headline)
 		     (setq mx-next t)
