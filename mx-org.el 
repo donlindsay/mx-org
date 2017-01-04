@@ -3,7 +3,20 @@
 ;; emacs boiler
 ;; gpl3 boiler
 ;; commentary:
-;; In which we sort out the decidable from the not
+;; In which we sort out the decidable from the not.
+;;
+;; attribution
+;;    atomic negation
+;;    concept intersection
+;;    universal restrictions
+;;    limited existential quantification
+;; extention   
+;;    role hierarchy
+;;    complex concept negation
+;;    nominals
+;;    inverse properties
+;;    cardinality restrictions
+;;
 ;; Hammertime:
 
 (defun mx:rl-start (current-buffer)
